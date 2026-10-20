@@ -1,0 +1,334 @@
+@import url('../shared/base.css');
+
+.site-header {
+  background: #f4f3ef;
+  border-bottom: 1px solid var(--line);
+}
+.site-header nav {
+  min-height: 62px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.site-header a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 1rem;
+}
+.site-header a:hover {
+  color: var(--ink);
+}
+.page-heading {
+  padding: 4rem 0 3rem;
+  border-bottom: 1px solid var(--line);
+}
+h1 {
+  margin: 0 0 1rem;
+  font-size: clamp(2.4rem, 5.5vw, 4.5rem);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.055em;
+}
+.page-heading p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+.catalogue-layout {
+  display: grid;
+  grid-template-columns: 245px minmax(0, 1fr);
+  gap: 3.5rem;
+  align-items: start;
+  padding: 3rem 0;
+}
+.explorer {
+  position: sticky;
+  top: 1.5rem;
+}
+.explorer h2 {
+  margin: 0 0 1.3rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+.search-field {
+  position: relative;
+  margin-bottom: 0.65rem;
+}
+.search-field input {
+  display: block;
+  width: 100%;
+  background: white;
+  color: var(--ink);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.7rem 2.25rem 0.7rem 0.8rem;
+  font: inherit;
+  font-size: 0.85rem;
+}
+.search-field input::-webkit-search-cancel-button {
+  display: none;
+}
+.search-field input::placeholder {
+  color: #757575;
+}
+.search-field button {
+  position: absolute;
+  inset: 0 0.35rem 0 auto;
+  width: 1.8rem;
+  border: 0;
+  background: transparent;
+  color: var(--muted);
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+.search-field button[hidden] {
+  display: none;
+}
+.explorer select {
+  display: block;
+  width: 100%;
+  background: #fafafa;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 0.65rem 0.55rem;
+  font: inherit;
+  font-size: 0.8rem;
+}
+.section-links {
+  display: grid;
+  gap: 0.5rem;
+  margin: 1.5rem 0;
+  padding-bottom: 1.4rem;
+  border-bottom: 1px solid var(--line);
+}
+.section-links a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--ink);
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+.section-links a:hover {
+  text-decoration: underline;
+}
+.section-links span {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+.issue-index {
+  display: grid;
+  gap: 0.3rem;
+  max-height: 48vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+.issue-index a {
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr);
+  gap: 0.4rem;
+  align-items: baseline;
+  padding: 0.6rem 0.3rem;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+.issue-index a:hover {
+  color: var(--ink);
+  background: #f6f6f6;
+}
+.issue-index a[aria-current='location'] {
+  color: var(--ink);
+  background: #f4f3ef;
+}
+.index-number {
+  font-family: ui-monospace, monospace;
+  font-size: 0.7rem;
+  color: var(--accent);
+}
+.index-empty {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+.issue-section + .issue-section {
+  margin-top: 3.25rem;
+}
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding-bottom: 1.4rem;
+  border-bottom: 1px solid var(--line);
+}
+.section-heading h2 {
+  margin: 0;
+  font-size: 1.7rem;
+  font-weight: 600;
+  letter-spacing: -0.035em;
+}
+.count {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+.issue-row {
+  padding: 1.9rem 0;
+  border-bottom: 1px solid var(--line);
+  scroll-margin-top: 2rem;
+}
+.issue-row:target {
+  background: #fafbff;
+  outline: 8px solid #fafbff;
+}
+.issue-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin-bottom: 1rem;
+}
+.issue-number {
+  display: inline-flex;
+  padding: 0.2rem 0.5rem;
+  color: var(--accent);
+  background: #f6f8ff;
+  border: 1px solid #b9c6e8;
+  border-radius: 4px;
+  font-family: ui-monospace, monospace;
+  font-size: 0.7rem;
+}
+.issue-mode {
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+.issue-row h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.03em;
+  margin: 0 0 0.7rem;
+}
+.issue-row p {
+  margin: 0 0 1rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+.issue-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.issue-actions a {
+  color: var(--muted);
+  font-size: 0.8rem;
+  text-decoration: none;
+}
+.issue-actions a:hover {
+  color: var(--ink);
+  text-decoration: underline;
+}
+.contribution-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.2rem 0 0;
+}
+.contribution-list li {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem 1rem;
+  padding: 0.6rem 0;
+  border-top: 1px solid #f0f0f0;
+  font-size: 0.8rem;
+}
+.contribution-author {
+  margin-right: auto;
+}
+.contribution-list .text-link {
+  font-size: 0.8rem;
+}
+.contribution-status {
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+.section-empty {
+  margin: 1.8rem 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1.5rem 0;
+  margin-top: 1rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.75rem;
+}
+.site-footer a {
+  color: var(--muted);
+  text-decoration: none;
+}
+.site-footer a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 900px) {
+  .catalogue-layout {
+    grid-template-columns: 200px minmax(0, 1fr);
+    gap: 2rem;
+  }
+  .issue-row h3 {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 700px) {
+  .page-heading {
+    padding: 2.5rem 0 2rem;
+  }
+  .catalogue-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+  .explorer {
+    position: static;
+  }
+  .explorer h2 {
+    margin-bottom: 1rem;
+  }
+  .section-links {
+    display: flex;
+    gap: 2rem;
+    padding-bottom: 1rem;
+    margin: 1rem 0 0;
+  }
+  .section-links a {
+    gap: 0.75rem;
+  }
+  .issue-index {
+    max-height: 160px;
+    margin-top: 0.75rem;
+  }
+  .issue-index a {
+    padding: 0.45rem 0;
+  }
+  .section-heading h2 {
+    font-size: 1.5rem;
+  }
+  .issue-row {
+    padding: 1.5rem 0;
+  }
+  .site-header nav {
+    min-height: 54px;
+  }
+  .site-header a {
+    font-size: 0.85rem;
+  }
+}

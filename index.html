@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Issues abiertas y resueltas de las prácticas de Redes Generativas."
+    />
+    <title>Redes Generativas · Prácticas</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23f4f3ef'/%3E%3Ctext x='9' y='44' font-family='Arial' font-size='34' font-weight='bold' fill='%23000'%3Erg%3C/text%3E%3C/svg%3E"
+    />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Ir al contenido</a>
+    <header class="site-header">
+      <nav class="container" aria-label="Enlaces del curso">
+        <a id="course-link" href="https://www.nahuelcosta.com/teaching/generative-networks"
+          >← Curso</a
+        >
+        <a id="repository-link" href="https://github.com/nahuelcostac/redes-generativas-26"
+          >Repositorio ↗</a
+        >
+      </nav>
+    </header>
+    <main id="main" class="container">
+      <header class="page-heading">
+        <h1>Redes Generativas</h1>
+        <p>Prácticas · 2026 / 2027</p>
+      </header>
+      <div class="catalogue-layout">
+        <aside class="explorer" aria-labelledby="explorer-title">
+          <h2 id="explorer-title">Explorador</h2>
+          <label class="sr-only" for="issue-search">Buscar por título, número o autor</label>
+          <div class="search-field">
+            <input
+              id="issue-search"
+              type="search"
+              placeholder="Buscar issues…"
+              autocomplete="off"
+            /><button id="clear-search" type="button" aria-label="Borrar búsqueda" hidden>×</button>
+          </div>
+          <label class="sr-only" for="mode-filter">Tipo de demostración</label>
+          <select id="mode-filter">
+            <option value="all">Todos los tipos</option>
+            <option value="browser">Modelo en navegador</option>
+            <option value="precomputed">Resultados precalculados</option>
+          </select>
+          <nav class="section-links" aria-label="Apartados de issues">
+            <a href="#open-issues">Abiertas <span id="open-total">0</span></a
+            ><a href="#closed-issues">Resueltas <span id="closed-total">0</span></a>
+          </nav>
+          <nav id="issue-index" class="issue-index" aria-label="Índice de issues"></nav>
+          <p id="index-empty" class="index-empty" hidden>Sin coincidencias.</p>
+        </aside>
+        <div class="issue-sections">
+          <p id="search-status" class="sr-only" role="status"></p>
+          <section id="open-issues" class="issue-section" aria-labelledby="open-title">
+            <div class="section-heading">
+              <h2 id="open-title">Issues abiertas</h2>
+              <span id="open-count" class="count">0</span>
+            </div>
+            <div id="open-list" class="issue-list"></div>
+            <p id="open-empty" class="section-empty" hidden>No hay issues abiertas.</p>
+          </section>
+          <section id="closed-issues" class="issue-section" aria-labelledby="closed-title">
+            <div class="section-heading">
+              <h2 id="closed-title">Issues resueltas</h2>
+              <span id="closed-count" class="count">0</span>
+            </div>
+            <div id="closed-list" class="issue-list"></div>
+            <p id="closed-empty" class="section-empty" hidden>No hay issues resueltas.</p>
+          </section>
+        </div>
+      </div>
+      <noscript
+        ><p>
+          Activa JavaScript para consultar el catálogo o abre las issues en el repositorio.
+        </p></noscript
+      >
+    </main>
+    <footer class="site-footer container">
+      <span>Redes Generativas · 2026 / 2027</span
+      ><a id="issues-link" href="https://github.com/nahuelcostac/redes-generativas-26/issues"
+        >Issues en GitHub ↗</a
+      >
+    </footer>
+    <script type="module" src="./src/catalogue.js"></script>
+  </body>
+</html>

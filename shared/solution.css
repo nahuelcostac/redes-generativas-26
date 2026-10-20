@@ -1,0 +1,51 @@
+@import url('./base.css');
+.solution-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--line);
+}
+h1 {
+  font-size: clamp(2rem, 5vw, 3.8rem);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+  max-width: 50rem;
+}
+.solution-summary {
+  font-size: 1.1rem;
+  color: var(--muted);
+  line-height: 1.7;
+  max-width: 45rem;
+}
+.solution-author {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+.workspace {
+  background: var(--surface);
+  padding: 1.5rem;
+  margin: 2rem 0;
+  border: 1px solid var(--line);
+  border-radius: 0.5rem;
+}
+.workspace h2 {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 0 0 1rem;
+}
+.workspace p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+.workspace input,
+.workspace select,
+.workspace textarea,
+.workspace button {
+  font: inherit;
+}
+.workspace textarea {
+  max-width: 100%;
+}

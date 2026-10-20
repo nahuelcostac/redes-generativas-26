@@ -1,0 +1,111 @@
+:root {
+  --paper: #ffffff;
+  --surface: #ffffff;
+  --ink: #090909;
+  --muted: #666666;
+  --accent: #3457a1;
+  --line: #e5e5e5;
+  --tint: #f4f3ef;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: -apple-system, system-ui, 'Segoe UI', Roboto, Arial, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 1.5rem;
+}
+body {
+  margin: 0;
+}
+a {
+  color: var(--accent);
+}
+button,
+a,
+input,
+select,
+textarea {
+  touch-action: manipulation;
+}
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 4px;
+}
+.container {
+  width: min(1104px, calc(100% - 3.5rem));
+  margin-inline: auto;
+}
+.eyebrow {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  font-weight: 600;
+  color: var(--muted);
+  margin: 0;
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  background: var(--accent);
+  border: 1px solid var(--accent);
+  color: var(--surface);
+  padding: 0.85rem 1.1rem;
+  border-radius: 0.3rem;
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+.button:hover {
+  background: #27427b;
+}
+.text-link {
+  color: var(--accent);
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+.text-link:hover {
+  text-decoration: underline;
+}
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  background: var(--surface);
+  padding: 1rem;
+  z-index: 5;
+  transform: translateY(-200%);
+}
+.skip-link:focus {
+  transform: none;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+@media (max-width: 520px) {
+  .container {
+    width: calc(100% - 2rem);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

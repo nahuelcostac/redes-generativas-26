@@ -1,0 +1,24 @@
+{
+  "name": "redes-generativas-26",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "check": "node scripts/check.mjs && npm test",
+    "test": "node --test tests/*.test.mjs",
+    "sync:issues": "node scripts/sync-issues.mjs",
+    "build": "npm run check && vite build",
+    "preview": "vite preview",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "new": "node scripts/new-solution.mjs"
+  },
+  "devDependencies": {
+    "prettier": "3.9.9",
+    "vite": "8.3.4"
+  }
+}

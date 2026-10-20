@@ -1,0 +1,9 @@
+{
+  "issue": 0,
+  "author": "AUTHOR",
+  "title": "TITLE",
+  "summary": "Describe qué permite hacer tu solución.",
+  "mode": "browser",
+  "status": "draft",
+  "entry": "web/index.html"
+}
