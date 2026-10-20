@@ -1,5 +1,22 @@
 {
   "repository": "https://github.com/nahuelcostac/redes-generativas-26",
   "course": "https://www.nahuelcosta.com/teaching/generative-networks",
-  "issues": []
+  "issues": [
+    {
+      "number": 1,
+      "state": "open",
+      "title": "Transcribir audio con un modelo desplegado en el navegador",
+      "summary": "Cargar un audio y obtener su transcripción con un modelo que se ejecuta en el navegador.",
+      "mode": "browser",
+      "displayNumber": 1
+    },
+    {
+      "number": 2,
+      "state": "open",
+      "title": "Construir un generador de texto",
+      "summary": "Generar continuaciones en local y compartir entradas, salidas y parámetros para compararlos.",
+      "mode": "precomputed",
+      "displayNumber": 2
+    }
+  ]
 }
