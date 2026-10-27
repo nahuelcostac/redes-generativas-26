@@ -14,7 +14,7 @@ La solución incluye:
 - El código correspondiente
 - Interfaz web para mostrarla
 
-He preparado una web común que indexará todas las soluciones y sobre la que tenéis que añadir la interfaz de la vuestra.
+He preparado una [web común](https://nahuelcostac.github.io/redes-generativas-26/) que indexará todas las soluciones y sobre la que tenéis que añadir la interfaz de la vuestra.
 
 ## Workflow
 
