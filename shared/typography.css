@@ -1,0 +1,22 @@
+:root {
+  --font-body: 1.125rem;
+  --font-ui: 1rem;
+  --font-label: 1.25rem;
+  --font-heading: clamp(1.5rem, 2.2vw, 1.75rem);
+  --font-page-title: clamp(2.4rem, 5.5vw, 4.5rem);
+}
+body {
+  font-size: var(--font-body);
+}
+h1 {
+  margin: 0 0 1rem;
+  font-size: var(--font-page-title);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+}
+.eyebrow,
+.button,
+.text-link {
+  font-size: var(--font-ui);
+}

@@ -1,4 +1,5 @@
 @import url('./base.css');
+@import url('./typography.css');
 .solution-header {
   display: flex;
   justify-content: space-between;
@@ -8,21 +9,17 @@
   border-bottom: 1px solid var(--line);
 }
 h1 {
-  font-size: clamp(2rem, 5vw, 3.8rem);
-  font-weight: 600;
-  line-height: 1.1;
-  letter-spacing: -0.035em;
   max-width: 50rem;
 }
 .solution-summary {
-  font-size: 1.1rem;
+  font-size: var(--font-body);
   color: var(--muted);
   line-height: 1.7;
   max-width: 45rem;
 }
 .solution-author {
   color: var(--muted);
-  font-size: 0.85rem;
+  font-size: var(--font-ui);
 }
 .workspace {
   background: var(--surface);
@@ -32,8 +29,8 @@ h1 {
   border-radius: 0.5rem;
 }
 .workspace h2 {
-  font-size: 1.3rem;
-  font-weight: 500;
+  font-size: var(--font-heading);
+  font-weight: 600;
   margin: 0 0 1rem;
 }
 .workspace p {
@@ -45,7 +42,9 @@ h1 {
 .workspace textarea,
 .workspace button {
   font: inherit;
+  font-size: var(--font-ui);
 }
 .workspace textarea {
+  font-size: var(--font-body);
   max-width: 100%;
 }

@@ -1,0 +1,9 @@
+{
+  "issue": 1,
+  "author": "nahuelcostac",
+  "title": "Transcribir audio",
+  "summary": "Carga un audio corto y obtén su transcripción en español.",
+  "mode": "browser",
+  "status": "ready",
+  "entry": "web/index.html"
+}
