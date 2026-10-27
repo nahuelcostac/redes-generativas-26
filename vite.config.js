@@ -13,6 +13,7 @@ export default defineConfig(async () => {
     );
   return {
     base: '/redes-generativas-26/',
+    worker: { format: 'es' },
     build: { rollupOptions: { input } },
     plugins: [
       {

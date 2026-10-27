@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-20",
+  "environment": {
+    "browser": "Navegador integrado de la aplicación (IAB)",
+    "browser_version": "No registrada",
+    "os": "macOS",
+    "chip": "Apple M4 Pro",
+    "memory_gb": 48
+  },
+  "model": {
+    "id": "onnx-community/whisper-tiny",
+    "revision": "ff4177021cc41f7db950912b73ea4fdf7d01d8e7",
+    "transformers_js": "4.3.1",
+    "dtype": "q8",
+    "device": "wasm",
+    "threads": 1
+  },
+  "observed_runs": {
+    "clean": {
+      "audio": "ejemplo-es.wav · 4,9 s",
+      "inference": "1,1 s",
+      "load": "2,7 s",
+      "text": "Hola, esta es una prueba de transcripción, hoy vamos a trabajar con modelos de lenguaje."
+    },
+    "noisy": {
+      "audio": "ejemplo-ruido.wav · 5,9 s",
+      "inference": "2,5 s",
+      "load": "Ya cargado",
+      "text": "Y también hay una gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran gran"
+    },
+    "mp3": {
+      "audio": "transcripcion-es.mp3 · 4,9 s",
+      "inference": "1,1 s",
+      "load": "Ya cargado",
+      "text": "Hola, esta es una prueba de transcripción, hoy vamos a trabajar con modelos de lenguaje."
+    },
+    "afterCancellation": {
+      "audio": "transcripcion-es.mp3 · 4,9 s",
+      "inference": "1,1 s",
+      "load": "1,2 s",
+      "text": "Hola, esta es una prueba de transcripción, hoy vamos a trabajar con modelos de lenguaje."
+    }
+  },
+  "notes": [
+    "Los tiempos se copiaron de la interfaz y están redondeados a una décima de segundo.",
+    "No se vació la caché antes de las pruebas.",
+    "El audio con ruido produjo una transcripción incorrecta y repetitiva."
+  ],
+  "checks": {
+    "invalid_extension": "Rechazado antes de la inferencia.",
+    "corrupt_wav": "Rechazado al decodificar.",
+    "31_second_wav": "Rechazado por superar la duración máxima.",
+    "formats_decoded": [
+      "WAV PCM16",
+      "MP3",
+      "M4A AAC",
+      "OGG Opus",
+      "WebM Opus"
+    ],
+    "playback": "Reproducción desde el control nativo comprobada.",
+    "cancellation": "Cancelación y siguiente transcripción comprobadas.",
+    "download": "El TXT descargado coincide con la salida mostrada.",
+    "mobile": "Vista de 390 px, una columna y sin desbordamiento horizontal."
+  }
+}
