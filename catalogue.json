@@ -17,6 +17,86 @@
       "summary": "Generar continuaciones en local y compartir entradas, salidas y parámetros para compararlos.",
       "mode": "precomputed",
       "displayNumber": 2
+    },
+    {
+      "number": 3,
+      "state": "open",
+      "title": "Buscar textos por su significado",
+      "summary": "Buscar textos de una colección mediante embeddings y comparar su similitud con una consulta.",
+      "mode": "browser",
+      "displayNumber": 3
+    },
+    {
+      "number": 4,
+      "state": "open",
+      "title": "Generar descripciones de imágenes",
+      "summary": "Generar descripciones de imágenes en local y comparar los textos y parámetros utilizados.",
+      "mode": "precomputed",
+      "displayNumber": 4
+    },
+    {
+      "number": 5,
+      "state": "open",
+      "title": "Convertir texto en voz",
+      "summary": "Generar voz a partir de textos en español y comparar audios y parámetros de síntesis.",
+      "mode": "precomputed",
+      "displayNumber": 5
+    },
+    {
+      "number": 6,
+      "state": "open",
+      "title": "Clasificar textos con categorías definidas por el usuario",
+      "summary": "Introducir un texto y comparar la puntuación de categorías elegidas por el usuario.",
+      "mode": "browser",
+      "displayNumber": 6
+    },
+    {
+      "number": 7,
+      "state": "open",
+      "title": "Generar imágenes a partir de texto",
+      "summary": "Generar imágenes en local y comparar resultados al cambiar la semilla y los pasos de inferencia.",
+      "mode": "precomputed",
+      "displayNumber": 7
+    },
+    {
+      "number": 8,
+      "state": "open",
+      "title": "Eliminar el fondo de una imagen",
+      "summary": "Eliminar el fondo de una imagen en el navegador y descargar el resultado con transparencia.",
+      "mode": "browser",
+      "displayNumber": 8
+    },
+    {
+      "number": 9,
+      "state": "open",
+      "title": "Detectar objetos en imágenes",
+      "summary": "Localizar objetos en imágenes y explorar sus categorías y puntuaciones en el navegador.",
+      "mode": "browser",
+      "displayNumber": 9
+    },
+    {
+      "number": 10,
+      "state": "open",
+      "title": "Resumir documentos",
+      "summary": "Generar resúmenes en local y comparar el texto original, las salidas y los parámetros utilizados.",
+      "mode": "precomputed",
+      "displayNumber": 10
+    },
+    {
+      "number": 11,
+      "state": "open",
+      "title": "Aumentar la resolución de una imagen",
+      "summary": "Aumentar la resolución de una imagen en el navegador y comparar el resultado con la original.",
+      "mode": "browser",
+      "displayNumber": 11
+    },
+    {
+      "number": 12,
+      "state": "open",
+      "title": "Responder preguntas sobre documentos",
+      "summary": "Responder preguntas con RAG y explorar los fragmentos recuperados y las respuestas generadas.",
+      "mode": "precomputed",
+      "displayNumber": 12
     }
   ]
 }
