@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Transcribir un audio corto en español con Whisper Tiny en el navegador."
+    />
+    <title>Transcribir audio · Redes Generativas</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Ir al contenido</a>
+    <header class="solution-header container">
+      <a id="catalogue-link" class="text-link" href="../../../../index.html">← Volver al catálogo</a
+      ><a id="issue-link" class="text-link">Ver issue en GitHub ↗</a>
+    </header>
+    <main id="main" class="container transcriber">
+      <p class="eyebrow">Issue 1 · Modelo en navegador</p>
+      <h1>Transcribir audio</h1>
+      <p class="solution-summary">Modelo speech-to-text que se ejecuta en el navegador.</p>
+      <div class="transcriber-grid">
+        <section class="audio-panel" aria-labelledby="audio-title">
+          <h2 id="audio-title">Audio</h2>
+          <button id="choose-file" type="button" class="secondary">Seleccionar audio</button>
+          <input
+            id="audio-file"
+            type="file"
+            accept=".wav,.mp3,.m4a,.ogg,.webm"
+            aria-label="Archivo de audio"
+            aria-describedby="file-limits"
+            hidden
+          />
+          <p id="file-limits" class="hint">
+            Audio en español. Hasta 30 segundos y 15 MB. WAV, MP3, M4A, OGG o WebM.
+          </p>
+          <div class="example-buttons">
+            <button id="example-clean" type="button" class="secondary">Ejemplo en español</button
+            ><button id="example-noisy" type="button" class="secondary">Ejemplo con ruido</button>
+          </div>
+          <p id="audio-info" class="audio-info">Ningún audio seleccionado.</p>
+          <audio id="audio-preview" controls preload="metadata" hidden></audio>
+          <div class="run-buttons">
+            <button id="transcribe" type="button" class="primary" disabled>Transcribir</button
+            ><button id="cancel" type="button" class="secondary" hidden>Cancelar</button>
+          </div>
+          <p id="status" role="status">Selecciona un audio o prueba uno de los ejemplos.</p>
+          <div id="download-progress" hidden>
+            <progress
+              id="model-progress"
+              max="100"
+              aria-label="Progreso de descarga del modelo"
+            ></progress>
+            <p id="progress-detail" class="hint"></p>
+          </div>
+          <p id="error" role="alert" hidden></p>
+        </section>
+        <section class="text-panel" aria-labelledby="text-title" aria-busy="false">
+          <div class="panel-heading">
+            <h2 id="text-title">Transcripción</h2>
+            <button id="download-text" type="button" class="text-button" disabled>
+              Descargar texto ↓
+            </button>
+          </div>
+          <label for="transcript" class="sr-only">Texto transcrito</label
+          ><textarea
+            id="transcript"
+            rows="9"
+            placeholder="El texto aparecerá aquí."
+            readonly
+          ></textarea>
+          <dl class="timings">
+            <div>
+              <dt>Carga del modelo</dt>
+              <dd id="load-time">Pendiente</dd>
+            </div>
+            <div>
+              <dt>Transcripción</dt>
+              <dd id="inference-time">Pendiente</dd>
+            </div>
+          </dl>
+        </section>
+      </div>
+      <details class="model-details">
+        <summary>Modelo y ejecución</summary>
+        <p>
+          <a href="https://huggingface.co/onnx-community/whisper-tiny">Whisper Tiny</a> ·
+          Cuantización de 8 bits · CPU mediante WebAssembly.
+        </p>
+        <p>Transformers.js 4.3.1. El procesamiento se realiza en un Web Worker.</p>
+      </details>
+    </main>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
