@@ -1,0 +1,9 @@
+{
+  "issue": 2,
+  "author": "nahuelcostac",
+  "title": "Construir un generador de texto",
+  "summary": "Compara continuaciones de texto generadas en local con distintas temperaturas y límites de tokens.",
+  "mode": "precomputed",
+  "status": "ready",
+  "entry": "web/index.html"
+}
