@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Issues abiertas y resueltas de las prácticas de Redes Generativas."
+      content="Issues resueltas y abiertas de las prácticas de Redes Generativas."
     />
     <title>Redes Generativas · Prácticas</title>
     <link
@@ -49,22 +49,14 @@
             <option value="precomputed">Resultados precalculados</option>
           </select>
           <nav class="section-links" aria-label="Apartados de issues">
-            <a href="#open-issues">Abiertas <span id="open-total">0</span></a
-            ><a href="#closed-issues">Resueltas <span id="closed-total">0</span></a>
+            <a href="#closed-issues">Resueltas <span id="closed-total">0</span></a
+            ><a href="#open-issues">Abiertas <span id="open-total">0</span></a>
           </nav>
           <nav id="issue-index" class="issue-index" aria-label="Índice de issues"></nav>
           <p id="index-empty" class="index-empty" hidden>Sin coincidencias.</p>
         </aside>
         <div class="issue-sections">
           <p id="search-status" class="sr-only" role="status"></p>
-          <section id="open-issues" class="issue-section" aria-labelledby="open-title">
-            <div class="section-heading">
-              <h2 id="open-title">Issues abiertas</h2>
-              <span id="open-count" class="count">0</span>
-            </div>
-            <div id="open-list" class="issue-list"></div>
-            <p id="open-empty" class="section-empty" hidden>No hay issues abiertas.</p>
-          </section>
           <section id="closed-issues" class="issue-section" aria-labelledby="closed-title">
             <div class="section-heading">
               <h2 id="closed-title">Issues resueltas</h2>
@@ -72,6 +64,14 @@
             </div>
             <div id="closed-list" class="issue-list"></div>
             <p id="closed-empty" class="section-empty" hidden>No hay issues resueltas.</p>
+          </section>
+          <section id="open-issues" class="issue-section" aria-labelledby="open-title">
+            <div class="section-heading">
+              <h2 id="open-title">Issues abiertas</h2>
+              <span id="open-count" class="count">0</span>
+            </div>
+            <div id="open-list" class="issue-list"></div>
+            <p id="open-empty" class="section-empty" hidden>No hay issues abiertas.</p>
           </section>
         </div>
       </div>

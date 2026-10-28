@@ -80,14 +80,14 @@ function renderSection(state, issues) {
 function render() {
   const issues = filterIssues(catalogue.issues, solutions, search.value, modeFilter.value);
   const groups = groupIssues(issues);
-  renderSection('open', groups.open);
   renderSection('closed', groups.closed);
+  renderSection('open', groups.open);
   document.querySelector('#open-total').textContent = String(groups.open.length);
   document.querySelector('#closed-total').textContent = String(groups.closed.length);
   document.querySelector('#clear-search').hidden = !search.value;
   document.querySelector('#search-status').textContent =
     `${issues.length} ${issues.length === 1 ? 'issue encontrada' : 'issues encontradas'}.`;
-  const index = [...groups.open, ...groups.closed].map((issue) => {
+  const index = [...groups.closed, ...groups.open].map((issue) => {
     const anchor = link('', `#issue-${issue.number}`, 'index-link');
     anchor.append(
       element('span', 'index-number', String(issue.displayNumber).padStart(2, '0')),

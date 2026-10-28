@@ -4,7 +4,7 @@
   "issues": [
     {
       "number": 1,
-      "state": "open",
+      "state": "closed",
       "title": "Transcribir audio con un modelo desplegado en el navegador",
       "summary": "Cargar un audio y obtener su transcripción con un modelo que se ejecuta en el navegador.",
       "mode": "browser",
