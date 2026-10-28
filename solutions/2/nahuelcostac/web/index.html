@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Generador de texto · Redes Generativas</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Ir al contenido</a>
+    <header class="solution-header container">
+      <a id="catalogue-link" class="text-link" href="../../../../index.html"
+        >← Volver al catálogo</a
+      >
+      <a
+        id="issue-link"
+        class="text-link"
+        href="https://github.com/nahuelcostac/redes-generativas-26/issues/2"
+        >Ver issue ↗</a
+      >
+    </header>
+    <main id="main" class="container">
+      <p class="eyebrow" id="solution-mode">Resultados calculados previamente</p>
+      <h1>Generador de texto</h1>
+      <p class="solution-summary">Modelo decoder para predicción de siguientes tokens</p>
+      <p class="solution-author" id="solution-author"></p>
+      <p id="load-status" role="status">Cargando los ejemplos…</p>
+      <div id="load-error" role="alert" hidden>
+        <p>No se pudieron cargar los ejemplos. Comprueba la conexión y vuelve a intentarlo.</p>
+        <button id="retry" class="button" type="button">Volver a cargar</button>
+      </div>
+      <div id="explorer" hidden>
+        <section class="input-section" aria-labelledby="input-title">
+          <div class="section-heading">
+            <h2 id="input-title">Texto de entrada</h2>
+            <div class="prompt-control">
+              <label for="prompt">Elegir ejemplo</label>
+              <select id="prompt"></select>
+            </div>
+          </div>
+          <p id="prompt-text" class="prompt-text"></p>
+          <p class="hint">Modelo ejecutado en local. Aquí solo se muestran las salidas.</p>
+        </section>
+        <section class="comparison-section" aria-labelledby="comparison-title">
+          <h2 id="comparison-title">Comparar continuaciones</h2>
+          <p class="hint">La temperatura modifica el muestreo.</p>
+          <div class="comparison" aria-live="polite" aria-atomic="true">
+            <article class="result" aria-labelledby="label-a">
+              <label id="label-a" for="configuration-a">Configuración A</label>
+              <select id="configuration-a"></select>
+              <p class="continuation" id="continuation-a"></p>
+              <p class="run-info" id="run-info-a"></p>
+              <p class="stop-reason" id="stop-reason-a"></p>
+            </article>
+            <article class="result" aria-labelledby="label-b">
+              <label id="label-b" for="configuration-b">Configuración B</label>
+              <select id="configuration-b"></select>
+              <p class="continuation" id="continuation-b"></p>
+              <p class="run-info" id="run-info-b"></p>
+              <p class="stop-reason" id="stop-reason-b"></p>
+            </article>
+          </div>
+        </section>
+        <details class="execution">
+          <summary>Modelo, parámetros y equipo</summary>
+          <dl id="execution-data"></dl>
+        </details>
+      </div>
+      <section class="local-section" aria-labelledby="local-title">
+        <h2 id="local-title">Probar en local</h2>
+        <p>El script acepta un texto, una temperatura y un límite de tokens.</p>
+        <pre><code>python generate.py --prompt "Al abrir la puerta," \
+  --temperature 0.7 --max-new-tokens 96 --output ../results/examples.json</code></pre>
+        <a id="instructions-link" class="text-link">Instalación y ejecución ↗</a>
+      </section>
+    </main>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "prompts": [
+    {
+      "id": "relato",
+      "label": "Un relato",
+      "text": "La biblioteca estaba a punto de cerrar cuando Clara encontró un libro sin título. Al abrir la primera página,"
+    },
+    {
+      "id": "explicacion",
+      "label": "Una explicación",
+      "text": "La energía solar se obtiene al transformar la luz del sol en electricidad. Una de sus principales ventajas es"
+    },
+    {
+      "id": "instrucciones",
+      "label": "Una secuencia de pasos",
+      "text": "Para cuidar una planta de interior, conviene seguir estos pasos:\n1. Colocarla en un lugar con luz indirecta.\n2."
+    }
+  ],
+  "configurations": [
+    { "id": "t03-96", "temperature": 0.3, "max_new_tokens": 96, "seed": 42 },
+    { "id": "t09-96", "temperature": 0.9, "max_new_tokens": 96, "seed": 42 },
+    { "id": "t09-32", "temperature": 0.9, "max_new_tokens": 32, "seed": 42 }
+  ]
+}

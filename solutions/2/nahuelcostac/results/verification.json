@@ -1,0 +1,219 @@
+{
+  "date": "2026-10-28",
+  "browser": "Navegador integrado de Codex (IAB), versión no registrada",
+  "model": {
+    "id": "Qwen/Qwen2.5-0.5B",
+    "revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+    "dtype": "float32",
+    "license": "Apache-2.0"
+  },
+  "runtime": {
+    "python": "3.11.11",
+    "torch": "2.9.0",
+    "transformers": "4.57.1",
+    "tokenizers": "0.22.2",
+    "huggingface_hub": "0.36.0",
+    "device": "cpu",
+    "threads": 4,
+    "hardware": {
+      "system": "Darwin",
+      "release": "27.0.0",
+      "architecture": "arm64",
+      "logical_cpus": 14,
+      "processor": "Apple M4 Pro",
+      "memory_bytes": 51539607552
+    }
+  },
+  "batch": {
+    "generated_at": "2026-10-28T08:27:04.498664+00:00",
+    "load_seconds": 12.204597,
+    "runs": 9,
+    "generation_seconds_range": [
+      0.723557,
+      2.371054
+    ]
+  },
+  "custom_input_offline": {
+    "prompt": "Al abrir la puerta,",
+    "parameters": {
+      "do_sample": true,
+      "temperature": 0.7,
+      "max_new_tokens": 32,
+      "top_p": 0.95,
+      "top_k": 50,
+      "repetition_penalty": 1,
+      "num_beams": 1,
+      "use_cache": true,
+      "bos_token_id": 151643,
+      "eos_token_id": 151643,
+      "pad_token_id": 151643,
+      "seed": 42
+    },
+    "continuation": " oí la voz de una mujer de ocho años que preguntaba si había algún problema con el piso, y yo le respondía: \"No",
+    "generated_token_ids": [
+      297,
+      2426,
+      1187,
+      84090,
+      409,
+      5093,
+      52093,
+      409,
+      297,
+      958,
+      26748,
+      1709,
+      19978,
+      3850,
+      12004,
+      4403,
+      54038,
+      84309,
+      41076,
+      390,
+      655,
+      281,
+      15420,
+      11,
+      379,
+      29496,
+      512,
+      5889,
+      7431,
+      25,
+      330,
+      2753
+    ],
+    "load_seconds": 0.388317,
+    "generation_seconds": 0.839
+  },
+  "checks": {
+    "javascript_tests": 10,
+    "python_tests": 5,
+    "ui_outputs": [
+      {
+        "prompt": "relato",
+        "configuration": "t03-96",
+        "side": "a",
+        "match": true
+      },
+      {
+        "prompt": "relato",
+        "configuration": "t09-96",
+        "side": "b",
+        "match": true
+      },
+      {
+        "prompt": "relato",
+        "configuration": "t09-96",
+        "side": "a",
+        "match": true
+      },
+      {
+        "prompt": "relato",
+        "configuration": "t09-32",
+        "side": "b",
+        "match": true
+      },
+      {
+        "prompt": "relato",
+        "configuration": "t09-32",
+        "side": "a",
+        "match": true
+      },
+      {
+        "prompt": "relato",
+        "configuration": "t03-96",
+        "side": "b",
+        "match": true
+      },
+      {
+        "prompt": "explicacion",
+        "configuration": "t03-96",
+        "side": "a",
+        "match": true
+      },
+      {
+        "prompt": "explicacion",
+        "configuration": "t09-96",
+        "side": "b",
+        "match": true
+      },
+      {
+        "prompt": "explicacion",
+        "configuration": "t09-96",
+        "side": "a",
+        "match": true
+      },
+      {
+        "prompt": "explicacion",
+        "configuration": "t09-32",
+        "side": "b",
+        "match": true
+      },
+      {
+        "prompt": "explicacion",
+        "configuration": "t09-32",
+        "side": "a",
+        "match": true
+      },
+      {
+        "prompt": "explicacion",
+        "configuration": "t03-96",
+        "side": "b",
+        "match": true
+      },
+      {
+        "prompt": "instrucciones",
+        "configuration": "t03-96",
+        "side": "a",
+        "match": true
+      },
+      {
+        "prompt": "instrucciones",
+        "configuration": "t09-96",
+        "side": "b",
+        "match": true
+      },
+      {
+        "prompt": "instrucciones",
+        "configuration": "t09-96",
+        "side": "a",
+        "match": true
+      },
+      {
+        "prompt": "instrucciones",
+        "configuration": "t09-32",
+        "side": "b",
+        "match": true
+      },
+      {
+        "prompt": "instrucciones",
+        "configuration": "t09-32",
+        "side": "a",
+        "match": true
+      },
+      {
+        "prompt": "instrucciones",
+        "configuration": "t03-96",
+        "side": "b",
+        "match": true
+      }
+    ],
+    "missing_results_error": true,
+    "recovered_after_retry": true,
+    "mobile": {
+      "columns": "343px",
+      "control": "16px",
+      "description": "18px",
+      "scrollWidth": 375,
+      "title": "38.4px",
+      "width": 375
+    }
+  },
+  "notes": [
+    "Las nueve continuaciones y sus tokens coinciden con los del lote anterior.",
+    "Los resultados se muestran sin editar. Contienen errores y repeticiones.",
+    "No se han comprobado CUDA, MPS, otros equipos ni otros motores de navegador."
+  ]
+}
