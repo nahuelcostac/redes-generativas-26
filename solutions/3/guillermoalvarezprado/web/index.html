@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Compara búsqueda semántica y por palabras clave en una colección de textos sobre vida universitaria."
+    />
+    <title>Buscar por significado · Redes Generativas</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Ir al contenido</a>
+    <header class="solution-header container">
+      <a id="catalogue-link" class="text-link" href="../../../../index.html"
+        >← Volver al catálogo</a
+      >
+      <a id="issue-link" class="text-link">Ver issue en GitHub ↗</a>
+    </header>
+    <main id="main" class="container">
+      <p class="eyebrow">Issue 3 · Modelo en navegador</p>
+      <h1>Buscar por significado</h1>
+      <p class="solution-summary">
+        Escribe una necesidad en tus palabras y encuentra textos relacionados, aunque no usen los
+        mismos términos.
+      </p>
+
+      <section class="search-panel" aria-labelledby="search-title">
+        <h2 id="search-title">Prueba una consulta</h2>
+        <label for="query">¿Qué quieres encontrar?</label>
+        <textarea
+          id="query"
+          rows="2"
+          maxlength="300"
+          placeholder="Ejemplo: necesito recuperar el acceso a mi cuenta"
+        ></textarea>
+        <div class="suggestions" aria-label="Consultas de ejemplo">
+          <button
+            type="button"
+            class="suggestion"
+            data-query="No recuerdo la clave para entrar en mi cuenta"
+          >
+            No puedo entrar en mi cuenta
+          </button>
+          <button
+            type="button"
+            class="suggestion"
+            data-query="Busco un lugar tranquilo para preparar los exámenes"
+          >
+            Un lugar para estudiar
+          </button>
+          <button
+            type="button"
+            class="suggestion"
+            data-query="¿Cómo consigo ayuda económica para pagar la matrícula?"
+          >
+            Ayuda para pagar los estudios
+          </button>
+          <button
+            type="button"
+            class="suggestion"
+            data-query="Me gustaría apuntarme a actividades deportivas en el campus"
+          >
+            Actividades deportivas
+          </button>
+          <button
+            type="button"
+            class="suggestion"
+            data-query="Necesito hablar con alguien porque estoy pasando una mala época"
+          >
+            Apoyo emocional
+          </button>
+        </div>
+        <button id="search" class="primary" type="button">Buscar</button>
+        <p id="status" role="status" aria-live="polite">
+          Elige una consulta o escribe la tuya. La primera búsqueda prepara el modelo.
+        </p>
+        <progress id="progress" aria-label="Progreso de descarga del modelo" hidden></progress>
+        <p id="error" role="alert" hidden></p>
+      </section>
+
+      <section id="results-section" class="results-section" aria-labelledby="results-title" hidden>
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Resultados</p>
+            <h2 id="results-title">Textos más cercanos</h2>
+          </div>
+          <p id="timing" class="timing"></p>
+        </div>
+        <div class="comparison">
+          <section aria-labelledby="semantic-title">
+            <h3 id="semantic-title">Por significado</h3>
+            <p class="hint">
+              Ordenados por similitud coseno entre embeddings. La puntuación sirve para comparar
+              dentro de esta búsqueda, no es una probabilidad.
+            </p>
+            <ol id="semantic-results" class="result-list"></ol>
+          </section>
+          <section aria-labelledby="keyword-title">
+            <h3 id="keyword-title">Por palabras clave</h3>
+            <p class="hint">
+              Cuenta las palabras compartidas después de quitar palabras frecuentes en español.
+            </p>
+            <ol id="keyword-results" class="result-list"></ol>
+          </section>
+        </div>
+      </section>
+
+      <section class="collection" aria-labelledby="collection-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Colección de ejemplo</p>
+            <h2 id="collection-title">18 textos sobre servicios universitarios</h2>
+          </div>
+        </div>
+        <p>
+          La colección es pequeña y creada para esta práctica. No representa una universidad
+          concreta.
+        </p>
+        <details>
+          <summary>Ver los textos</summary>
+          <ol id="documents" class="document-list"></ol>
+        </details>
+      </section>
+
+      <section class="visualization" aria-labelledby="map-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Proyección 2D</p>
+            <h2 id="map-title">Mapa aproximado de los textos</h2>
+          </div>
+        </div>
+        <p>
+          Los puntos muestran una proyección PCA de los embeddings de la colección. Puntos próximos
+          en el mapa pueden parecerse, pero la proyección pierde información de las 384 dimensiones.
+          El mapa no determina el orden de búsqueda.
+        </p>
+        <div
+          id="map"
+          class="map"
+          role="img"
+          aria-label="Proyección bidimensional de los embeddings de los textos"
+        ></div>
+        <ul class="legend">
+          <li><span class="dot dot-campus"></span>Campus</li>
+          <li><span class="dot dot-study"></span>Estudio</li>
+          <li><span class="dot dot-support"></span>Apoyo</li>
+        </ul>
+        <p class="hint">
+          Pasa el cursor o enfoca un punto para leer el texto. Los ejes PCA no tienen unidades
+          interpretables.
+        </p>
+      </section>
+
+      <section class="conclusion" aria-labelledby="conclusion-title">
+        <p class="eyebrow">Conclusión</p>
+        <h2 id="conclusion-title">Qué aporta la búsqueda semántica</h2>
+        <p>
+          Un embedding representa un texto como un vector de números que resume rasgos de su
+          significado. El modelo convierte la consulta y cada documento en vectores comparables.
+        </p>
+        <p>
+          La búsqueda por palabras funciona cuando la consulta comparte vocabulario con el
+          documento. La semántica puede recuperar ideas expresadas con palabras distintas, por
+          ejemplo, relacionar «no recuerdo la clave» con una guía para restablecer la contraseña. La
+          puntuación coseno ordena candidatos, pero no demuestra que el texto responda bien a la
+          necesidad.
+        </p>
+        <p>
+          En una universidad o empresa, este método puede ayudar a encontrar procedimientos en una
+          colección de preguntas frecuentes aunque la persona no conozca el nombre oficial del
+          trámite.
+        </p>
+        <p>
+          La colección de esta práctica es pequeña y artificial. Los textos breves, el idioma y el
+          dominio limitan lo que el modelo puede recuperar. La consulta que ofrezca los mejores
+          resultados debe elegirse después de ejecutar y revisar los cinco ejemplos; esa comparación
+          empírica sigue pendiente.
+        </p>
+      </section>
+
+      <details class="model-details">
+        <summary>Modelo y limitaciones</summary>
+        <p>
+          Se usa
+          <a href="https://huggingface.co/Xenova/paraphrase-multilingual-MiniLM-L12-v2"
+            >paraphrase-multilingual-MiniLM-L12-v2</a
+          >, un modelo multilingüe de embeddings de frases con soporte para Transformers.js. La
+          primera búsqueda descarga los pesos y los ejecuta en este navegador.
+        </p>
+        <p>
+          La búsqueda recupera textos, no genera respuestas. Un resultado cercano no garantiza que
+          sea correcto ni suficiente. Esta demostración usa frases cortas y una colección
+          artificial.
+        </p>
+      </details>
+    </main>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

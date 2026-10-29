@@ -1,0 +1,9 @@
+{
+  "issue": 3,
+  "author": "GuillermoAlvarezPrado",
+  "title": "Buscar textos por su significado",
+  "summary": "Busca textos de una colección universitaria por significado y compara embeddings con coincidencias literales.",
+  "mode": "browser",
+  "status": "draft",
+  "entry": "web/index.html"
+}
