@@ -1,0 +1,50 @@
+[
+  {
+    "file": "ejemplo-monos.jpg",
+    "title": "Monos en una barandilla",
+    "author": "Jairo-Patallo",
+    "license": "Fotografía propia"
+  },
+  {
+    "file": "ejemplo-calle-noche.jpg",
+    "title": "Calle de noche",
+    "author": "Jairo-Patallo",
+    "license": "Fotografía propia"
+  },
+  {
+    "file": "ejemplo-ciudad.jpg",
+    "title": "Ciudad desde un mirador",
+    "author": "Jairo-Patallo",
+    "license": "Fotografía propia"
+  },
+  {
+    "file": "ejemplo-panda.jpg",
+    "title": "Panda comiendo bambú",
+    "author": "Jairo-Patallo",
+    "license": "Fotografía propia"
+  },
+  {
+    "file": "ejemplo-tejado.jpg",
+    "title": "Detalle de un tejado",
+    "author": "Jairo-Patallo",
+    "license": "Fotografía propia"
+  },
+  {
+    "file": "ejemplo-templo.jpg",
+    "title": "Templo con visitantes",
+    "author": "Jairo-Patallo",
+    "license": "Fotografía propia"
+  },
+  {
+    "file": "ejemplo-muralla.jpg",
+    "title": "Muralla con visitantes",
+    "author": "Jairo-Patallo",
+    "license": "Fotografía propia"
+  },
+  {
+    "file": "ejemplo-callejon.jpg",
+    "title": "Callejón con moto",
+    "author": "Jairo-Patallo",
+    "license": "Fotografía propia"
+  }
+]
