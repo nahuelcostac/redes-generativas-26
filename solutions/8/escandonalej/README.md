@@ -25,12 +25,12 @@ Los ejemplos de `web/examples/` son ilustraciones SVG originales creadas para es
 
 La interfaz valida el tipo MIME, decodifica la imagen y aplica el límite de resolución antes de permitir el procesamiento. Muestra la carga del modelo, el estado de procesamiento, los errores y una vista comparativa con fondo de transparencia cuadriculado.
 
-**Comprobación manual comunicada por el autor:** se probaron imágenes de forma manual. En general, el resultado es correcto, aunque presenta fallos. Cuando el objeto de interés rodea una zona de fondo, el modelo no la reconoce como fondo y la conserva en el resultado. Es una limitación visible de la segmentación.
+**Comprobación manual comunicada por el autor:** se probaron imágenes con fondo uniforme y complejo. En general, el resultado es correcto, aunque presenta fallos. Cuando el objeto de interés rodea una zona de fondo, el modelo no la reconoce como fondo y la conserva en el resultado. Es una limitación visible de la segmentación. También se probó un archivo `.txt`; la interfaz respondió con un error, como se esperaba.
 
-Quedan por anotar el navegador y su versión, el equipo y los tiempos de descarga y procesamiento. También falta dejar constancia explícita del resultado de la entrada inválida. La solución sigue como `draft` hasta completar esos datos y esa comprobación.
+Las pruebas se realizaron en Google Chrome sobre Windows 11, en un equipo con procesador Intel Core i5, gráficos integrados Intel UHD y 16 GB de memoria RAM. La primera carga del modelo tardó aproximadamente 3 minutos y el procesamiento de una imagen, aproximadamente 2 segundos. Los tiempos pueden variar según el equipo y la conexión.
 
 La segmentación puede fallar en sujetos parcialmente ocultos, fondos complejos, bordes finos o imágenes con varios elementos. La carga inicial requiere conexión a Hugging Face. La revisión `main` no garantiza que futuras versiones del modelo produzcan exactamente el mismo resultado.
 
 ## Uso de agentes
 
-El agente preparó la interfaz, la validación de entradas y la conversión del resultado a PNG. Se eligió MODNet porque Transformers.js documenta su uso con la canalización específica de eliminación de fondo. Revisé que el flujo conserve la imagen original para compararla y que la conversión no descarte el canal alfa. Las pruebas manuales del modelo y la inspección de los contornos siguen pendientes.
+El agente preparó la interfaz, la validación de entradas y la conversión del resultado a PNG. Se eligió MODNet porque Transformers.js documenta su uso con la canalización específica de eliminación de fondo. Revisé que el flujo conserve la imagen original para compararla y que la conversión no descarte el canal alfa. El autor comprobó el flujo con imágenes y con un archivo `.txt`, y comunicó la limitación observada en las zonas de fondo rodeadas por el sujeto.
