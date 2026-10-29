@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Eliminar el fondo · Redes Generativas</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Ir al contenido</a>
+    <header class="solution-header container">
+      <a id="catalogue-link" class="text-link" href="../../../../index.html">← Volver al catálogo</a
+      ><a class="text-link" href="https://github.com/nahuelcostac/redes-generativas-26/issues/8"
+        >Ver issue #8 ↗</a
+      >
+    </header>
+    <main id="main" class="container">
+      <p class="eyebrow">MODELO EN TU NAVEGADOR · POR JORGEGR1</p>
+      <h1>Tu imagen, sin fondo.</h1>
+      <p class="solution-summary">
+        Separa el elemento principal y descarga una imagen transparente. La foto se procesa en este
+        dispositivo.
+      </p>
+      <section class="workspace" aria-labelledby="upload-title">
+        <h2 id="upload-title">1. Elige una imagen</h2>
+        <label class="upload" for="file"
+          >Selecciona una imagen de tu ordenador<input
+            id="file"
+            type="file"
+            accept="image/jpeg,image/png,image/webp"
+            aria-describedby="limits"
+        /></label>
+        <p id="limits">
+          JPEG, PNG o WebP estática. Hasta 15 MiB, 4096 píxeles por lado y 16 megapíxeles. No se
+          admiten GIF, SVG, HEIC ni imágenes animadas.
+        </p>
+        <p>También puedes probar un ejemplo incluido.</p>
+        <div class="examples">
+          <button type="button" data-example="fondo-uniforme.jpg">Retrato · fondo uniforme</button
+          ><button type="button" data-example="fondo-complejo.jpg">Jirafas · fondo complejo</button
+          ><button type="button" id="invalid">Probar entrada inválida</button>
+        </div>
+        <p id="selected">No has seleccionado ninguna imagen.</p>
+        <button id="remove" type="button" class="primary" disabled>Eliminar fondo</button
+        ><button id="cancel" type="button" hidden>Cancelar procesamiento</button>
+        <div role="status" aria-live="polite">
+          <p id="status">El modelo se descargará al pulsar Eliminar fondo.</p>
+          <progress
+            id="progress"
+            max="100"
+            hidden
+            aria-label="Progreso del archivo del modelo"
+          ></progress>
+        </div>
+        <p id="error" role="alert" hidden></p>
+      </section>
+      <section class="workspace" aria-labelledby="compare-title">
+        <h2 id="compare-title">2. Compara los contornos</h2>
+        <p>
+          Revisa el pelo, los huecos y las partes finas. El patrón de cuadros indica transparencia.
+        </p>
+        <div class="comparison">
+          <figure>
+            <figcaption>Original</figcaption>
+            <div class="image-box">
+              <canvas id="original" hidden aria-label="Imagen original"></canvas
+              ><span id="original-empty">Tu imagen aparecerá aquí</span>
+            </div>
+          </figure>
+          <figure>
+            <figcaption>Sin fondo</figcaption>
+            <div class="image-box checker">
+              <canvas id="result" hidden aria-label="Imagen con fondo transparente"></canvas
+              ><span id="result-empty">El resultado aparecerá aquí</span>
+            </div>
+          </figure>
+        </div>
+        <p id="timing"></p>
+        <a id="download" class="download" hidden download="imagen-sin-fondo.png"
+          >Descargar PNG transparente</a
+        ><button id="report" type="button" hidden>Descargar registro de la ejecución</button>
+      </section>
+      <section class="workspace" aria-labelledby="notes-title">
+        <h2 id="notes-title">Antes de empezar</h2>
+        <p>
+          La primera ejecución necesita conexión para descargar RMBG-1.4 y el motor WASM. Las
+          siguientes pueden usar la caché del navegador. La foto no se envía al servidor. El
+          procesamiento puede tardar en equipos con poca memoria.
+        </p>
+        <p>
+          El modelo puede perder pelo, transparencias o detalles finos, y conservar partes del
+          fondo. Procesa internamente a 1024 × 1024. El PNG mantiene las dimensiones de entrada.
+        </p>
+        <p>
+          <a href="https://huggingface.co/briaai/RMBG-1.4">BRIA RMBG-1.4</a>. Uso no comercial según
+          su licencia. Transformers.js 4.3.1, WASM y precisión fp32.
+        </p>
+        <p>
+          Ejemplos incluidos. Retrato de
+          <a href="https://www.pexels.com/photo/man-in-black-suit-jacket-532220/"
+            >Pixabay en Pexels, foto 532220</a
+          >, bajo licencia Pexels. Jirafas del
+          <a
+            href="https://huggingface.co/briaai/RMBG-1.4/blob/2ceba5a5efaec153162aedea169f76caf9b46cf8/example_input.jpg"
+            >ejemplo público de BRIA</a
+          >, sujeto a las condiciones del repositorio de origen.
+        </p>
+      </section>
+    </main>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
