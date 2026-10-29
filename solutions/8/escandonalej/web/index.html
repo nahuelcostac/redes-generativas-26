@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Solución · Redes Generativas</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Ir al contenido</a>
+    <header class="solution-header container">
+      <a id="catalogue-link" class="text-link" href="../../../../index.html">← Volver al catálogo</a
+      ><a id="issue-link" class="text-link">Ver issue ↗</a>
+    </header>
+    <main id="main" class="container">
+      <p class="eyebrow" id="solution-mode"></p>
+      <h1 id="solution-title"></h1>
+      <p id="solution-summary" class="solution-summary"></p>
+      <p id="solution-author" class="solution-author"></p>
+      <section class="workspace remover" aria-labelledby="workspace-title">
+        <h2 id="workspace-title">Quita el fondo de una imagen</h2>
+        <p class="intro">
+          Elige una imagen para aislar el elemento principal. El modelo se descarga la primera vez y
+          procesa la imagen en este navegador.
+        </p>
+        <div class="controls">
+          <label class="upload" for="image-input">Elegir imagen</label>
+          <input id="image-input" type="file" accept="image/png,image/jpeg,image/webp,image/avif" />
+          <button id="process-button" type="button" disabled>Eliminar fondo</button>
+          <a id="download-button" class="download" download="imagen-sin-fondo.png" hidden
+            >Descargar PNG</a
+          >
+        </div>
+        <p id="status" class="status" role="status" aria-live="polite">
+          Selecciona una imagen para empezar.
+        </p>
+        <progress
+          id="model-progress"
+          max="100"
+          value="0"
+          hidden
+          aria-label="Progreso de carga del modelo"
+        ></progress>
+        <p id="error" class="error" role="alert" hidden></p>
+        <div class="examples" aria-label="Imágenes de ejemplo">
+          <span>Prueba con un ejemplo:</span>
+          <button type="button" data-example="./examples/fondo-uniforme.svg">Fondo uniforme</button>
+          <button type="button" data-example="./examples/fondo-complejo.svg">Fondo complejo</button>
+          <small>Ilustraciones SVG creadas para esta práctica.</small>
+        </div>
+        <div class="comparison">
+          <figure>
+            <figcaption>Original</figcaption>
+            <div class="image-frame">
+              <img id="original-image" alt="Imagen original seleccionada" hidden /><span
+                id="original-placeholder"
+                >Aquí aparecerá tu imagen</span
+              >
+            </div>
+          </figure>
+          <figure>
+            <figcaption>Resultado con transparencia</figcaption>
+            <div class="image-frame checkerboard">
+              <img id="result-image" alt="Resultado sin fondo" hidden /><span
+                id="result-placeholder"
+                >El resultado aparecerá aquí</span
+              >
+            </div>
+          </figure>
+        </div>
+        <p class="limits">
+          Formatos admitidos: PNG, JPEG, WebP y AVIF. Máximo: 12 megapíxeles y 4096 px por lado. El
+          navegador puede imponer límites menores según la memoria disponible.
+        </p>
+      </section>
+      <section class="workspace" aria-labelledby="notes-title">
+        <h2 id="notes-title">Cómo usarla</h2>
+        <p>
+          Selecciona una imagen y pulsa «Eliminar fondo». La primera ejecución descarga el modelo;
+          después, el procesamiento se realiza localmente. Revisa los bordes antes de descargar. La
+          segmentación puede borrar partes del sujeto o conservar restos del fondo, sobre todo en
+          escenas complejas.
+        </p>
+      </section>
+    </main>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

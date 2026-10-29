@@ -1,0 +1,9 @@
+{
+  "issue": 8,
+  "author": "escandonalej",
+  "title": "Eliminar el fondo de una imagen",
+  "summary": "Elimina el fondo de una imagen en el navegador y permite comparar y descargar el resultado PNG transparente.",
+  "mode": "browser",
+  "status": "draft",
+  "entry": "web/index.html"
+}
