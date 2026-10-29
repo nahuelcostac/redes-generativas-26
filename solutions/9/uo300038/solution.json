@@ -4,6 +4,6 @@
   "title": "Detectar objetos en imágenes",
   "summary": "Carga una imagen y localiza sus objetos con DETR ResNet-50 en el navegador. Filtra las detecciones por puntuación.",
   "mode": "browser",
-  "status": "draft",
+  "status": "ready",
   "entry": "web/index.html"
 }

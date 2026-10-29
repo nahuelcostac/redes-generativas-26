@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-29",
+  "environment": {
+    "browser": "Google Chrome",
+    "browser_version": "156.0.8078.47 (Official Build) (x86_64)",
+    "os": "Linux (máquina virtual del agente en la nube, sin GPU)",
+    "cache": "No se vació la caché antes de las pruebas."
+  },
+  "model": {
+    "id": "Xenova/detr-resnet-50",
+    "revision": "8be7ab59ff663484ee9ba2e8d8f267330d5ad03e",
+    "base_model": "facebook/detr-resnet-50",
+    "transformers_js": "4.3.1",
+    "dtype": "q8",
+    "weights_file": "onnx/model_quantized.onnx · 43,1 MB",
+    "device": "wasm",
+    "threads": 1,
+    "inference_threshold": 0.1
+  },
+  "observed_runs": {
+    "gato": {
+      "image": "gato.jpg · 1280 × 1280 px",
+      "load": "1,9 s",
+      "inference": "7,8 s",
+      "summary_70": "1 de 1 detecciones superan el umbral. 1 gato.",
+      "rows_70": [{ "label": "gato (cat)", "score": "100 %", "box": "238, 182, 981, 960" }]
+    },
+    "gato_repetido": {
+      "image": "gato.jpg · 1280 × 1280 px",
+      "load": "Ya cargado",
+      "inference": "7,1 s",
+      "summary_70": "1 de 1 detecciones superan el umbral. 1 gato."
+    },
+    "calle": {
+      "image": "calle.jpg · 1280 × 853 px",
+      "load": "Ya cargado",
+      "inference": "4,5 s",
+      "summary_70": "43 de 60 detecciones superan el umbral. 20 persona · 13 moto · 7 coche · 3 camión.",
+      "summary_90": "25 de 60 detecciones superan el umbral. 12 persona · 8 moto · 4 coche · 1 camión.",
+      "summary_30": "60 de 60 detecciones superan el umbral. 27 persona · 17 moto · 11 coche · 5 camión.",
+      "repeated_inference": "4,9 s"
+    },
+    "mesa": {
+      "image": "mesa.jpg · 1280 × 945 px",
+      "load": "Ya cargado",
+      "inference": "5,1 s",
+      "summary_70": "28 de 36 detecciones superan el umbral. 24 zanahoria · 1 cuchillo · 1 mesa · 1 taza · 1 tenedor.",
+      "first_rows_70": [
+        { "label": "taza (cup)", "score": "100 %" },
+        { "label": "tenedor (fork)", "score": "100 %" },
+        { "label": "zanahoria (carrot)", "score": "98 %" },
+        { "label": "zanahoria (carrot)", "score": "98 %" }
+      ]
+    }
+  },
+  "checks": {
+    "invalid_extension": "texto.txt rechazado antes de la inferencia con «Formato no admitido. Usa una imagen JPEG, PNG o WebP.»",
+    "corrupt_png": "danada.png (texto con extensión PNG) rechazado con «No se pudo leer la imagen. El archivo puede estar dañado.»",
+    "threshold": "Al mover el umbral cambian los recuadros y la tabla. El estado no vuelve a «Detectando objetos…».",
+    "hover": "Al pasar el ratón por una fila se resalta su recuadro y se oscurece el resto de la imagen.",
+    "model_reuse": "Tras los errores, el ejemplo del gato muestra «Ya cargado».",
+    "narrow_layout": "Con 400 px de ancho la página pasa a una columna.",
+    "cancellation": "Comprobada en Chrome 156 sin interfaz gráfica mediante el protocolo de DevTools. Durante la carga del modelo, «Cancelar» muestra «Detección cancelada.». No llega ningún resultado tardío en los 8 s siguientes. La nueva detección tarda 2,2 s en cargar el modelo y 4,9 s en detectar, con el mismo resumen de 43 de 60 detecciones."
+  },
+  "notes": [
+    "Los tiempos se leyeron de las capturas de la interfaz y están redondeados a una décima de segundo.",
+    "Las pruebas las ejecutó un subagente del agente de Cursor. Su informe de texto contenía datos que no coinciden con las capturas. Solo se registran los valores visibles en las capturas."
+  ]
+}
