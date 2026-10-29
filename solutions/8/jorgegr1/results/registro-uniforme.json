@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-29T17:32:36.870Z",
+  "input": "fondo-uniforme.jpg",
+  "width": 800,
+  "height": 1199,
+  "model": "briaai/RMBG-1.4",
+  "revision": "2ceba5a5efaec153162aedea169f76caf9b46cf8",
+  "transformers": "4.3.1",
+  "device": "wasm",
+  "dtype": "fp32",
+  "modelLoadMs": 0,
+  "inferenceMs": 14060,
+  "totalMs": 14085.800000000745,
+  "browser": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+  "threads": 8,
+  "review": "Conserva cabeza, pelo, manos y chaqueta. Elimina pared y casi todo el mueble. Queda un resto fino del borde del mueble bajo el codo izquierdo de la imagen. El borde del pelo tiene un halo tenue. No se aprecian pérdidas grandes del sujeto a la escala revisada.",
+  "equipment": "MacBook Air, Apple M2, 8 núcleos, 16 GB RAM, macOS 26.6.2",
+  "testContext": "Navegador integrado de Codex, Chrome/155.0.0.0 según userAgent. WASM con un hilo."
+}

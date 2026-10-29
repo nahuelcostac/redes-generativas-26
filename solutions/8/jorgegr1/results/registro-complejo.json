@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-29T17:31:20.726Z",
+  "input": "fondo-complejo.jpg",
+  "width": 933,
+  "height": 1405,
+  "model": "briaai/RMBG-1.4",
+  "revision": "2ceba5a5efaec153162aedea169f76caf9b46cf8",
+  "transformers": "4.3.1",
+  "device": "wasm",
+  "dtype": "fp32",
+  "modelLoadMs": 0,
+  "inferenceMs": 13336.300000000745,
+  "totalMs": 13383.89999999851,
+  "browser": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36",
+  "threads": 8,
+  "review": "Conserva las dos jirafas, cuernos y patas. Elimina cielo, vegetación y cebras del fondo, aunque queda un fragmento de cebra junto al flanco derecho. Persisten restos de hierba y suelo entre las patas y bajo las pezuñas. Los contornos finos tienen halos. No se aprecian pérdidas grandes de las jirafas a la escala revisada.",
+  "equipment": "MacBook Air, Apple M2, 8 núcleos, 16 GB RAM, macOS 26.6.2",
+  "testContext": "Navegador integrado de Codex, Chrome/155.0.0.0 según userAgent. WASM con un hilo."
+}

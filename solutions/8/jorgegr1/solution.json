@@ -1,0 +1,9 @@
+{
+  "issue": 8,
+  "author": "jorgegr1",
+  "title": "Eliminar el fondo de una imagen",
+  "summary": "Carga una imagen, elimina su fondo en tu navegador y descarga un PNG transparente.",
+  "mode": "browser",
+  "status": "ready",
+  "entry": "web/index.html"
+}
