@@ -25,7 +25,9 @@ Los ejemplos de `web/examples/` son ilustraciones SVG originales creadas para es
 
 La interfaz valida el tipo MIME, decodifica la imagen y aplica el límite de resolución antes de permitir el procesamiento. Muestra la carga del modelo, el estado de procesamiento, los errores y una vista comparativa con fondo de transparencia cuadriculado.
 
-**Pendiente de comprobación manual:** ejecutar los dos ejemplos y una entrada inválida en un navegador, inspeccionar los contornos y anotar si se pierden partes del sujeto o quedan restos del fondo. También faltan por registrar el nombre y versión del navegador, el equipo y los tiempos de descarga y procesamiento. No se marca como `ready` hasta completar esa prueba.
+**Comprobación manual comunicada por el autor:** se probaron imágenes de forma manual. En general, el resultado es correcto, aunque presenta fallos. Cuando el objeto de interés rodea una zona de fondo, el modelo no la reconoce como fondo y la conserva en el resultado. Es una limitación visible de la segmentación.
+
+Quedan por anotar el navegador y su versión, el equipo y los tiempos de descarga y procesamiento. También falta dejar constancia explícita del resultado de la entrada inválida. La solución sigue como `draft` hasta completar esos datos y esa comprobación.
 
 La segmentación puede fallar en sujetos parcialmente ocultos, fondos complejos, bordes finos o imágenes con varios elementos. La carga inicial requiere conexión a Hugging Face. La revisión `main` no garantiza que futuras versiones del modelo produzcan exactamente el mismo resultado.
 
