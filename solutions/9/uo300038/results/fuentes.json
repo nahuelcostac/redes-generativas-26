@@ -1,0 +1,47 @@
+[
+  {
+    "file": "gato.jpg",
+    "title": "File:20231125 housecat south meadows PD100306.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:20231125_housecat_south_meadows_PD100306.jpg",
+    "author": "Paul Danese",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "originalSize": [
+      3493,
+      3493
+    ],
+    "downloadedWidth": 1280,
+    "downloadedHeight": 1280,
+    "bytes": 504354
+  },
+  {
+    "file": "calle.jpg",
+    "title": "File:DFC 3731 Busy city street with motorcycles cars and pedestrians passing shops and colorful buildings under tangled overhead wires.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:DFC_3731_Busy_city_street_with_motorcycles_cars_and_pedestrians_passing_shops_and_colorful_buildings_under_tangled_overhead_wires.jpg",
+    "author": "PattayaPatrol",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "originalSize": [
+      5568,
+      3712
+    ],
+    "downloadedWidth": 1280,
+    "downloadedHeight": 853,
+    "bytes": 415044
+  },
+  {
+    "file": "mesa.jpg",
+    "title": "File:A brunch at Capel Manor College Gardens Enfield London England.jpg",
+    "page": "https://commons.wikimedia.org/wiki/File:A_brunch_at_Capel_Manor_College_Gardens_Enfield_London_England.jpg",
+    "author": "Acabashi",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "originalSize": [
+      4341,
+      3206
+    ],
+    "downloadedWidth": 1280,
+    "downloadedHeight": 945,
+    "bytes": 301425
+  }
+]
