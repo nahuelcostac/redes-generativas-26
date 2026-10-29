@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Responder preguntas sobre documentos · Redes Generativas</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Ir al contenido</a>
+    <header class="solution-header container">
+      <a id="catalogue-link" class="text-link" href="../../../../index.html"
+        >← Volver al catálogo</a
+      >
+      <a
+        id="issue-link"
+        class="text-link"
+        href="https://github.com/nahuelcostac/redes-generativas-26/issues/12"
+        >Ver issue ↗</a
+      >
+    </header>
+    <main id="main" class="container">
+      <p class="eyebrow" id="solution-mode">Resultados calculados previamente</p>
+      <h1 id="solution-title">Responder preguntas sobre documentos</h1>
+      <p class="solution-summary" id="solution-summary"></p>
+      <p class="solution-author" id="solution-author"></p>
+      <p id="load-status" role="status">Cargando las preguntas…</p>
+      <div id="load-error" role="alert" hidden>
+        <p>No se pudieron cargar los resultados. Comprueba la conexión y vuelve a intentarlo.</p>
+        <button id="retry" class="button" type="button">Volver a cargar</button>
+      </div>
+      <div id="explorer" hidden>
+        <section class="question-section" aria-labelledby="question-title">
+          <div class="section-heading">
+            <h2 id="question-title">Pregunta</h2>
+            <div class="question-control">
+              <label for="question">Elegir pregunta</label>
+              <select id="question"></select>
+            </div>
+          </div>
+          <p id="question-text" class="question-text"></p>
+          <p id="question-type" class="hint"></p>
+          <p class="hint">
+            Los modelos se ejecutaron en local. Esta página solo muestra las respuestas guardadas.
+          </p>
+        </section>
+        <section class="comparison-section" aria-labelledby="comparison-title">
+          <h2 id="comparison-title">Respuestas con y sin contexto</h2>
+          <div class="comparison" aria-live="polite">
+            <article class="result" aria-labelledby="with-title">
+              <h3 id="with-title">Con los fragmentos recuperados (RAG)</h3>
+              <p class="answer" id="answer-with"></p>
+              <p class="run-info" id="info-with"></p>
+              <ul class="checks" id="checks-with"></ul>
+            </article>
+            <article class="result" aria-labelledby="without-title">
+              <h3 id="without-title">Sin contexto documental</h3>
+              <p class="answer" id="answer-without"></p>
+              <p class="run-info" id="info-without"></p>
+              <ul class="checks" id="checks-without"></ul>
+            </article>
+          </div>
+          <p class="hint">
+            La comprobación busca los datos esperados en el texto. No sustituye una revisión manual.
+          </p>
+        </section>
+        <section class="chunks-section" aria-labelledby="chunks-title">
+          <h2 id="chunks-title">Fragmentos recuperados</h2>
+          <p class="hint" id="chunks-info"></p>
+          <ol class="chunks" id="chunks"></ol>
+        </section>
+        <details class="execution">
+          <summary>Instrucciones enviadas al modelo</summary>
+          <h3>Con contexto</h3>
+          <pre id="prompt-with"></pre>
+          <h3>Sin contexto</h3>
+          <pre id="prompt-without"></pre>
+        </details>
+        <details class="execution">
+          <summary>Modelos, parámetros y equipo</summary>
+          <dl id="execution-data"></dl>
+        </details>
+        <details class="execution">
+          <summary>Documentos de la colección</summary>
+          <ul class="documents" id="documents"></ul>
+        </details>
+      </div>
+      <section class="local-section" aria-labelledby="local-title">
+        <h2 id="local-title">Probar en local</h2>
+        <p>El script recupera fragmentos de la colección y genera las dos respuestas.</p>
+        <pre><code>python rag.py --question "¿Dónde nació Severo Ochoa?" \
+  --output ../results/mi-pregunta.json</code></pre>
+        <a id="instructions-link" class="text-link">Instalación y ejecución ↗</a>
+      </section>
+    </main>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

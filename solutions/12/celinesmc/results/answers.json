@@ -1,0 +1,559 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-29T17:37:16.928984+00:00",
+  "models": {
+    "embedding": {
+      "id": "intfloat/multilingual-e5-small",
+      "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+      "dtype": "float32",
+      "license": "MIT"
+    },
+    "generator": {
+      "id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+      "dtype": "float16",
+      "license": "Apache-2.0"
+    }
+  },
+  "runtime": {
+    "python": "3.13.12",
+    "torch": "2.9.0+cu126",
+    "transformers": "4.57.1",
+    "tokenizers": "0.22.2",
+    "device": "cuda",
+    "gpu": "NVIDIA GeForce RTX 3050 Ti Laptop GPU",
+    "hardware": {
+      "system": "Windows",
+      "release": "11",
+      "architecture": "AMD64",
+      "logical_cpus": 12,
+      "processor": "Intel64 Family 6 Model 141 Stepping 1, GenuineIntel",
+      "memory_bytes": 16948453376
+    }
+  },
+  "parameters": {
+    "chunk_max_chars": 800,
+    "top_k": 4,
+    "similarity": "coseno",
+    "system_rag": "Eres un asistente que responde en español. Usa solo la información de los fragmentos. Cita los fragmentos que utilices con su número entre corchetes, por ejemplo [2]. Si los fragmentos no contienen la respuesta, responde exactamente: No encuentro la respuesta en los documentos.",
+    "system_plain": "Eres un asistente que responde en español de forma breve y precisa.",
+    "generation": {
+      "do_sample": false,
+      "max_new_tokens": 256,
+      "num_beams": 1,
+      "repetition_penalty": 1.0,
+      "use_cache": true,
+      "eos_token_id": [
+        151645,
+        151643
+      ],
+      "pad_token_id": 151643
+    }
+  },
+  "collection": {
+    "documents": 3,
+    "chunks": 98,
+    "source": "Wikipedia en español",
+    "license": "CC BY-SA 4.0"
+  },
+  "load_seconds": 350.37403,
+  "index_seconds": 3.129315,
+  "questions": [
+    {
+      "id": "nobel-cajal",
+      "label": "Respuesta en un fragmento · Nobel de Cajal",
+      "type": "direct",
+      "text": "¿En qué año recibió Santiago Ramón y Cajal el Premio Nobel y con quién lo compartió?",
+      "answerable": true,
+      "expected": [
+        "1906",
+        "Golgi"
+      ]
+    },
+    {
+      "id": "salas-phi29",
+      "label": "Respuesta en un fragmento · Margarita Salas y Φ29",
+      "type": "direct",
+      "text": "¿Qué enzima del virus bacteriófago Φ29 estudió Margarita Salas?",
+      "answerable": true,
+      "expected": [
+        "polimerasa"
+      ]
+    },
+    {
+      "id": "ochoa-salas",
+      "label": "Varios fragmentos · Ochoa y Salas",
+      "type": "combined",
+      "text": "¿Qué relación hubo entre Severo Ochoa y Margarita Salas y en qué universidad de Estados Unidos coincidieron?",
+      "answerable": true,
+      "expected": [
+        "discípula",
+        "Nueva York"
+      ]
+    },
+    {
+      "id": "nobel-medicina",
+      "label": "Varios fragmentos · Premios Nobel de Medicina",
+      "type": "combined",
+      "text": "¿Qué científicos de la colección recibieron el Premio Nobel de Fisiología o Medicina y en qué años?",
+      "answerable": true,
+      "expected": [
+        "1906",
+        "1959"
+      ]
+    },
+    {
+      "id": "cela-nobel",
+      "label": "Sin respuesta en la colección · Nobel de Cela",
+      "type": "unanswerable",
+      "text": "¿En qué año recibió Camilo José Cela el Premio Nobel de Literatura?",
+      "answerable": false,
+      "expected": []
+    }
+  ],
+  "runs": [
+    {
+      "question_id": "nobel-cajal",
+      "retrieval_seconds": 0.185394,
+      "retrieved": [
+        {
+          "id": "doc-1-29",
+          "document_id": "doc-1",
+          "title": "Santiago Ramón y Cajal",
+          "section": "El Premio Nobel",
+          "text": "Más tarde, en 1954, y con motivo del primer centenario del nacimiento de su fundador, hubo una edición preparada por el Instituto Cajal.",
+          "rank": 1,
+          "score": 0.923634
+        },
+        {
+          "id": "doc-1-26",
+          "document_id": "doc-1",
+          "title": "Santiago Ramón y Cajal",
+          "section": "El Premio Nobel",
+          "text": "Sus trabajos y aportaciones a la neurociencia —difundidos en Europa por su amigo el anatomista suizo Rudolph Albert von Kölliker— fueron reconocidos en 1906 con la concesión del Premio Nobel en Fisiología o Medicina, galardón que compartió con el investigador italiano Camillo Golgi, cuyo método de tinción aplicó Ramón y Cajal durante años, pero con cuyas tesis, curiosamente, no estaba ni estuvo nunca de acuerdo.Sobre lo que significó aquel primer Premio Nobel español en Ciencias, pueden compararse dos opiniones, la de Ortega y Gasset que opinó que el caso de Ramón y Cajal era una vergüenza para España, en lugar de un orgullo, porque constituía una excepción.",
+          "rank": 2,
+          "score": 0.908905
+        },
+        {
+          "id": "doc-1-1",
+          "document_id": "doc-1",
+          "title": "Santiago Ramón y Cajal",
+          "section": "Introducción",
+          "text": "Santiago Ramón y Cajal (Petilla de Aragón, Navarra, 1 de mayo de 1852-Madrid, 17 de octubre de 1934) fue un médico y científico español especializado en histología y anatomía patológica. Compartió el Premio Nobel de Medicina en 1906 con Camillo Golgi «en reconocimiento de su trabajo sobre la estructura del sistema nervioso».\nFue pionero en la descripción de las diez sinapsis que componen la retina. Mediante sus investigaciones sobre los mecanismos que gobiernan la morfología y los procesos conectivos de las células nerviosas, desarrolló una teoría nueva y revolucionaria que empezó a ser llamada la «doctrina de la neurona», basada en que el tejido cerebral está compuesto por células individuales.",
+          "rank": 3,
+          "score": 0.906429
+        },
+        {
+          "id": "doc-1-27",
+          "document_id": "doc-1",
+          "title": "Santiago Ramón y Cajal",
+          "section": "El Premio Nobel",
+          "text": "Años después, Severo Ochoa, otro galardonado con el Nobel, concluyó que la investigación en biología y medicina en España era pobre, pero sin Ramón y Cajal habría sido nula.",
+          "rank": 4,
+          "score": 0.903254
+        }
+      ],
+      "with_context": {
+        "messages": [
+          {
+            "role": "system",
+            "content": "Eres un asistente que responde en español. Usa solo la información de los fragmentos. Cita los fragmentos que utilices con su número entre corchetes, por ejemplo [2]. Si los fragmentos no contienen la respuesta, responde exactamente: No encuentro la respuesta en los documentos."
+          },
+          {
+            "role": "user",
+            "content": "Fragmentos:\n\n[1] Santiago Ramón y Cajal · El Premio Nobel\nMás tarde, en 1954, y con motivo del primer centenario del nacimiento de su fundador, hubo una edición preparada por el Instituto Cajal.\n\n[2] Santiago Ramón y Cajal · El Premio Nobel\nSus trabajos y aportaciones a la neurociencia —difundidos en Europa por su amigo el anatomista suizo Rudolph Albert von Kölliker— fueron reconocidos en 1906 con la concesión del Premio Nobel en Fisiología o Medicina, galardón que compartió con el investigador italiano Camillo Golgi, cuyo método de tinción aplicó Ramón y Cajal durante años, pero con cuyas tesis, curiosamente, no estaba ni estuvo nunca de acuerdo.Sobre lo que significó aquel primer Premio Nobel español en Ciencias, pueden compararse dos opiniones, la de Ortega y Gasset que opinó que el caso de Ramón y Cajal era una vergüenza para España, en lugar de un orgullo, porque constituía una excepción.\n\n[3] Santiago Ramón y Cajal · Introducción\nSantiago Ramón y Cajal (Petilla de Aragón, Navarra, 1 de mayo de 1852-Madrid, 17 de octubre de 1934) fue un médico y científico español especializado en histología y anatomía patológica. Compartió el Premio Nobel de Medicina en 1906 con Camillo Golgi «en reconocimiento de su trabajo sobre la estructura del sistema nervioso».\nFue pionero en la descripción de las diez sinapsis que componen la retina. Mediante sus investigaciones sobre los mecanismos que gobiernan la morfología y los procesos conectivos de las células nerviosas, desarrolló una teoría nueva y revolucionaria que empezó a ser llamada la «doctrina de la neurona», basada en que el tejido cerebral está compuesto por células individuales.\n\n[4] Santiago Ramón y Cajal · El Premio Nobel\nAños después, Severo Ochoa, otro galardonado con el Nobel, concluyó que la investigación en biología y medicina en España era pobre, pero sin Ramón y Cajal habría sido nula.\n\nPregunta: ¿En qué año recibió Santiago Ramón y Cajal el Premio Nobel y con quién lo compartió?"
+          }
+        ],
+        "answer": "Santiago Ramón y Cajal recibió el Premio Nobel de Medicina en 1906 y lo compartió con Camillo Golgi.",
+        "input_tokens": 634,
+        "output_tokens": 33,
+        "generation_seconds": 9.993934,
+        "stop_reason": "eos"
+      },
+      "without_context": {
+        "messages": [
+          {
+            "role": "system",
+            "content": "Eres un asistente que responde en español de forma breve y precisa."
+          },
+          {
+            "role": "user",
+            "content": "¿En qué año recibió Santiago Ramón y Cajal el Premio Nobel y con quién lo compartió?"
+          }
+        ],
+        "answer": "Santiago Ramón y Cajal recibió el Premio Nobel de Medicina en 1906. Conocido como el \"padre de la neurociencia\", compartió este premio con Camillo Golgi.",
+        "input_tokens": 54,
+        "output_tokens": 49,
+        "generation_seconds": 8.883955,
+        "stop_reason": "eos"
+      },
+      "checks": {
+        "in_retrieved": {
+          "1906": true,
+          "Golgi": true
+        },
+        "in_answer_with_context": {
+          "1906": true,
+          "Golgi": true
+        },
+        "in_answer_without_context": {
+          "1906": true,
+          "Golgi": true
+        },
+        "declined_with_context": false
+      }
+    },
+    {
+      "question_id": "salas-phi29",
+      "retrieval_seconds": 0.017857,
+      "retrieved": [
+        {
+          "id": "doc-3-8",
+          "document_id": "doc-3",
+          "title": "Margarita Salas",
+          "section": "ADN polimerasa del virus bacteriófago Φ29",
+          "text": "Fue profesora ad honorem en el Centro de Biología Molecular Severo Ochoa, centro de investigación mixto del CSIC y de la Universidad Autónoma de Madrid, donde siguió trabajando con el fago (virus bacteriófago) Φ29, de gran utilidad en la investigación en biotecnología y el cual infecta una bacteria no patógena, Bacillus subtilis. Durante la pandemia de 2020 se puso en marcha en España un proyecto de investigación para aplicar la ADN polimerasa del fago Φ29 para lograr un método de detección de la COVID-19.",
+          "rank": 1,
+          "score": 0.928906
+        },
+        {
+          "id": "doc-3-7",
+          "document_id": "doc-3",
+          "title": "Margarita Salas",
+          "section": "ADN polimerasa del virus bacteriófago Φ29",
+          "text": "Entre sus mayores contribuciones científicas destaca la determinación de la direccionalidad de la lectura de la información genética, durante su etapa en el laboratorio de Severo Ochoa, y el descubrimiento y caracterización de la ADN polimerasa del fago Φ29, que tiene múltiples aplicaciones biotecnológicas debido a su altísima capacidad de amplificación del ADN.",
+          "rank": 2,
+          "score": 0.911429
+        },
+        {
+          "id": "doc-3-10",
+          "document_id": "doc-3",
+          "title": "Margarita Salas",
+          "section": "Actividad científica",
+          "text": "Entre sus aportaciones científicas más importantes, destacan la determinación de que la lectura del mensaje genético transcurre en la dirección 5' a 3'; la demostración de que la p6, proteína de tipo histona, coopera con la proteína p4 en la represión del promotor temprano A2c y en la activación del promotor tardío A3; la demostración de que el triplete sin sentido UAA da lugar a la terminación de la cadena polipeptídica en un sistema de Escherichia coli; el descubrimiento de una glucoquinasa específica para la fosforilación de glucosa en hígado de rata cuya síntesis depende de insulina; y su investigación acerca de la ADN polimerasa del virus bacteriófago Φ29.",
+          "rank": 3,
+          "score": 0.890477
+        },
+        {
+          "id": "doc-3-4",
+          "document_id": "doc-3",
+          "title": "Margarita Salas",
+          "section": "Biografía",
+          "text": "Estudió en el Colegio de la Asunción de Gijón desde los tres hasta los dieciséis años, cuando terminó el PREU y se marchó a Madrid para realizar las pruebas de acceso de Química y Medicina. Ingresó en la facultad de Químicas y en el verano de 1958 conoció a Severo Ochoa , quien tuvo influencia en su vida y carrera y la orientó hacia la bioquímica. Obtuvo la licenciatura en Ciencias Químicas por la Universidad Complutense en 1960, con la calificación de sobresaliente. Realizó su doctorado bajo la dirección de Alberto Sols, obteniendo el grado de doctora en Ciencias por la Universidad Complutense en 1963 (tesis: Especificidad anomérica de la glucosafosfato isomerasa y otros enzimas y anomerización de hexosafosfatos). Doctora honoris causa por la UNED en 2011",
+          "rank": 4,
+          "score": 0.886667
+        }
+      ],
+      "with_context": {
+        "messages": [
+          {
+            "role": "system",
+            "content": "Eres un asistente que responde en español. Usa solo la información de los fragmentos. Cita los fragmentos que utilices con su número entre corchetes, por ejemplo [2]. Si los fragmentos no contienen la respuesta, responde exactamente: No encuentro la respuesta en los documentos."
+          },
+          {
+            "role": "user",
+            "content": "Fragmentos:\n\n[1] Margarita Salas · ADN polimerasa del virus bacteriófago Φ29\nFue profesora ad honorem en el Centro de Biología Molecular Severo Ochoa, centro de investigación mixto del CSIC y de la Universidad Autónoma de Madrid, donde siguió trabajando con el fago (virus bacteriófago) Φ29, de gran utilidad en la investigación en biotecnología y el cual infecta una bacteria no patógena, Bacillus subtilis. Durante la pandemia de 2020 se puso en marcha en España un proyecto de investigación para aplicar la ADN polimerasa del fago Φ29 para lograr un método de detección de la COVID-19.\n\n[2] Margarita Salas · ADN polimerasa del virus bacteriófago Φ29\nEntre sus mayores contribuciones científicas destaca la determinación de la direccionalidad de la lectura de la información genética, durante su etapa en el laboratorio de Severo Ochoa, y el descubrimiento y caracterización de la ADN polimerasa del fago Φ29, que tiene múltiples aplicaciones biotecnológicas debido a su altísima capacidad de amplificación del ADN.\n\n[3] Margarita Salas · Actividad científica\nEntre sus aportaciones científicas más importantes, destacan la determinación de que la lectura del mensaje genético transcurre en la dirección 5' a 3'; la demostración de que la p6, proteína de tipo histona, coopera con la proteína p4 en la represión del promotor temprano A2c y en la activación del promotor tardío A3; la demostración de que el triplete sin sentido UAA da lugar a la terminación de la cadena polipeptídica en un sistema de Escherichia coli; el descubrimiento de una glucoquinasa específica para la fosforilación de glucosa en hígado de rata cuya síntesis depende de insulina; y su investigación acerca de la ADN polimerasa del virus bacteriófago Φ29.\n\n[4] Margarita Salas · Biografía\nEstudió en el Colegio de la Asunción de Gijón desde los tres hasta los dieciséis años, cuando terminó el PREU y se marchó a Madrid para realizar las pruebas de acceso de Química y Medicina. Ingresó en la facultad de Químicas y en el verano de 1958 conoció a Severo Ochoa , quien tuvo influencia en su vida y carrera y la orientó hacia la bioquímica. Obtuvo la licenciatura en Ciencias Químicas por la Universidad Complutense en 1960, con la calificación de sobresaliente. Realizó su doctorado bajo la dirección de Alberto Sols, obteniendo el grado de doctora en Ciencias por la Universidad Complutense en 1963 (tesis: Especificidad anomérica de la glucosafosfato isomerasa y otros enzimas y anomerización de hexosafosfatos). Doctora honoris causa por la UNED en 2011\n\nPregunta: ¿Qué enzima del virus bacteriófago Φ29 estudió Margarita Salas?"
+          }
+        ],
+        "answer": "Margarita Salas estudió la ADN polimerasa del virus bacteriófago Φ29.",
+        "input_tokens": 850,
+        "output_tokens": 26,
+        "generation_seconds": 7.527061,
+        "stop_reason": "eos"
+      },
+      "without_context": {
+        "messages": [
+          {
+            "role": "system",
+            "content": "Eres un asistente que responde en español de forma breve y precisa."
+          },
+          {
+            "role": "user",
+            "content": "¿Qué enzima del virus bacteriófago Φ29 estudió Margarita Salas?"
+          }
+        ],
+        "answer": "Margarita Salas estudió la enzima llamada \"Tetrahymena thermophila enzima de proteínas\" (TPEP) del virus bacteriófago Φ29.",
+        "input_tokens": 54,
+        "output_tokens": 48,
+        "generation_seconds": 8.986064,
+        "stop_reason": "eos"
+      },
+      "checks": {
+        "in_retrieved": {
+          "polimerasa": true
+        },
+        "in_answer_with_context": {
+          "polimerasa": true
+        },
+        "in_answer_without_context": {
+          "polimerasa": false
+        },
+        "declined_with_context": false
+      }
+    },
+    {
+      "question_id": "ochoa-salas",
+      "retrieval_seconds": 0.049732,
+      "retrieved": [
+        {
+          "id": "doc-3-4",
+          "document_id": "doc-3",
+          "title": "Margarita Salas",
+          "section": "Biografía",
+          "text": "Estudió en el Colegio de la Asunción de Gijón desde los tres hasta los dieciséis años, cuando terminó el PREU y se marchó a Madrid para realizar las pruebas de acceso de Química y Medicina. Ingresó en la facultad de Químicas y en el verano de 1958 conoció a Severo Ochoa , quien tuvo influencia en su vida y carrera y la orientó hacia la bioquímica. Obtuvo la licenciatura en Ciencias Químicas por la Universidad Complutense en 1960, con la calificación de sobresaliente. Realizó su doctorado bajo la dirección de Alberto Sols, obteniendo el grado de doctora en Ciencias por la Universidad Complutense en 1963 (tesis: Especificidad anomérica de la glucosafosfato isomerasa y otros enzimas y anomerización de hexosafosfatos). Doctora honoris causa por la UNED en 2011",
+          "rank": 1,
+          "score": 0.888254
+        },
+        {
+          "id": "doc-3-6",
+          "document_id": "doc-3",
+          "title": "Margarita Salas",
+          "section": "Trabajo temprano",
+          "text": "Después de su graduación en Ciencias Químicas, Margarita Salas ingresó en el laboratorio de Alberto Sols, pionero de la bioquímica en España. Bajo la dirección de Sols, realizó su tesis doctoral sobre la especificidad anomérica de la glucosa-6-fosfato isomerasa, y una vez finalizada, marchó durante tres años (1964-1967) a Estados Unidos con su marido, para trabajar como investigadora en la Universidad de Nueva York junto a Severo Ochoa. Fue una de las mejores etapas de su vida desde el punto de vista científico y cultural.",
+          "rank": 2,
+          "score": 0.8858
+        },
+        {
+          "id": "doc-3-1",
+          "document_id": "doc-3",
+          "title": "Margarita Salas",
+          "section": "Introducción",
+          "text": "Margarita Salas Falgueras (Canero, Asturias, 30 de noviembre de 1938-Madrid, 7 de noviembre de 2019), I  marquesa de Canero, fue una bioquímica española. Licenciada en ciencias químicas, fue discípula de Severo Ochoa, con quien trabajó en los Estados Unidos después de hacerlo con Alberto Sols en Madrid con el también científico Eladio Viñuela, ambos se encargaron de impulsar la investigación española en el campo de la bioquímica y de la biología molecular.",
+          "rank": 3,
+          "score": 0.882013
+        },
+        {
+          "id": "doc-3-3",
+          "document_id": "doc-3",
+          "title": "Margarita Salas",
+          "section": "Biografía",
+          "text": "Sus padres fueron un psiquiatra y neurólogo, José Salas Martínez (1905-1962), y una maestra, Margarita Falgueras Gatell (1912/1913-2014), y tuvo dos hermanos, también científicos: José Salas Falgueras (1937-2008) y María Luisa \"Marisa\" Salas Falgueras. Severo Ochoa —de quien se puede considerar discípula— influyó en ella, alentando su interés por las ciencias.",
+          "rank": 4,
+          "score": 0.869266
+        }
+      ],
+      "with_context": {
+        "messages": [
+          {
+            "role": "system",
+            "content": "Eres un asistente que responde en español. Usa solo la información de los fragmentos. Cita los fragmentos que utilices con su número entre corchetes, por ejemplo [2]. Si los fragmentos no contienen la respuesta, responde exactamente: No encuentro la respuesta en los documentos."
+          },
+          {
+            "role": "user",
+            "content": "Fragmentos:\n\n[1] Margarita Salas · Biografía\nEstudió en el Colegio de la Asunción de Gijón desde los tres hasta los dieciséis años, cuando terminó el PREU y se marchó a Madrid para realizar las pruebas de acceso de Química y Medicina. Ingresó en la facultad de Químicas y en el verano de 1958 conoció a Severo Ochoa , quien tuvo influencia en su vida y carrera y la orientó hacia la bioquímica. Obtuvo la licenciatura en Ciencias Químicas por la Universidad Complutense en 1960, con la calificación de sobresaliente. Realizó su doctorado bajo la dirección de Alberto Sols, obteniendo el grado de doctora en Ciencias por la Universidad Complutense en 1963 (tesis: Especificidad anomérica de la glucosafosfato isomerasa y otros enzimas y anomerización de hexosafosfatos). Doctora honoris causa por la UNED en 2011\n\n[2] Margarita Salas · Trabajo temprano\nDespués de su graduación en Ciencias Químicas, Margarita Salas ingresó en el laboratorio de Alberto Sols, pionero de la bioquímica en España. Bajo la dirección de Sols, realizó su tesis doctoral sobre la especificidad anomérica de la glucosa-6-fosfato isomerasa, y una vez finalizada, marchó durante tres años (1964-1967) a Estados Unidos con su marido, para trabajar como investigadora en la Universidad de Nueva York junto a Severo Ochoa. Fue una de las mejores etapas de su vida desde el punto de vista científico y cultural.\n\n[3] Margarita Salas · Introducción\nMargarita Salas Falgueras (Canero, Asturias, 30 de noviembre de 1938-Madrid, 7 de noviembre de 2019), I  marquesa de Canero, fue una bioquímica española. Licenciada en ciencias químicas, fue discípula de Severo Ochoa, con quien trabajó en los Estados Unidos después de hacerlo con Alberto Sols en Madrid con el también científico Eladio Viñuela, ambos se encargaron de impulsar la investigación española en el campo de la bioquímica y de la biología molecular.\n\n[4] Margarita Salas · Biografía\nSus padres fueron un psiquiatra y neurólogo, José Salas Martínez (1905-1962), y una maestra, Margarita Falgueras Gatell (1912/1913-2014), y tuvo dos hermanos, también científicos: José Salas Falgueras (1937-2008) y María Luisa \"Marisa\" Salas Falgueras. Severo Ochoa —de quien se puede considerar discípula— influyó en ella, alentando su interés por las ciencias.\n\nPregunta: ¿Qué relación hubo entre Severo Ochoa y Margarita Salas y en qué universidad de Estados Unidos coincidieron?"
+          }
+        ],
+        "answer": "Severo Ochoa y Margarita Salas estuvieron influenciados mutuamente. Severo Ochoa les enseñó a Margarita Salas en el laboratorio de Alberto Sols en Madrid. Posteriormente, Margarita Salas y Severo Ochoa se trasladaron a Estados Unidos para trabajar en la Universidad de Nueva York.",
+        "input_tokens": 823,
+        "output_tokens": 81,
+        "generation_seconds": 21.334448,
+        "stop_reason": "eos"
+      },
+      "without_context": {
+        "messages": [
+          {
+            "role": "system",
+            "content": "Eres un asistente que responde en español de forma breve y precisa."
+          },
+          {
+            "role": "user",
+            "content": "¿Qué relación hubo entre Severo Ochoa y Margarita Salas y en qué universidad de Estados Unidos coincidieron?"
+          }
+        ],
+        "answer": "Severo Ochoa y Margarita Salas se conocieron en la Universidad de California en San Diego (UCSD).",
+        "input_tokens": 59,
+        "output_tokens": 28,
+        "generation_seconds": 4.956509,
+        "stop_reason": "eos"
+      },
+      "checks": {
+        "in_retrieved": {
+          "discípula": true,
+          "Nueva York": true
+        },
+        "in_answer_with_context": {
+          "discípula": false,
+          "Nueva York": true
+        },
+        "in_answer_without_context": {
+          "discípula": false,
+          "Nueva York": false
+        },
+        "declined_with_context": false
+      }
+    },
+    {
+      "question_id": "nobel-medicina",
+      "retrieval_seconds": 0.022175,
+      "retrieved": [
+        {
+          "id": "doc-1-26",
+          "document_id": "doc-1",
+          "title": "Santiago Ramón y Cajal",
+          "section": "El Premio Nobel",
+          "text": "Sus trabajos y aportaciones a la neurociencia —difundidos en Europa por su amigo el anatomista suizo Rudolph Albert von Kölliker— fueron reconocidos en 1906 con la concesión del Premio Nobel en Fisiología o Medicina, galardón que compartió con el investigador italiano Camillo Golgi, cuyo método de tinción aplicó Ramón y Cajal durante años, pero con cuyas tesis, curiosamente, no estaba ni estuvo nunca de acuerdo.Sobre lo que significó aquel primer Premio Nobel español en Ciencias, pueden compararse dos opiniones, la de Ortega y Gasset que opinó que el caso de Ramón y Cajal era una vergüenza para España, en lugar de un orgullo, porque constituía una excepción.",
+          "rank": 1,
+          "score": 0.868311
+        },
+        {
+          "id": "doc-2-1",
+          "document_id": "doc-2",
+          "title": "Severo Ochoa",
+          "section": "Introducción",
+          "text": "Severo Ochoa de Albornoz (Luarca, Asturias, 24 de septiembre de 1905-Madrid, 1 de noviembre de 1993) fue un médico y científico español, nacionalizado estadounidense en 1956, de renombre internacional. En 1959 fue galardonado con el Premio Nobel de Fisiología o Medicina, junto al estadounidense Arthur Kornberg.",
+          "rank": 2,
+          "score": 0.850739
+        },
+        {
+          "id": "doc-1-27",
+          "document_id": "doc-1",
+          "title": "Santiago Ramón y Cajal",
+          "section": "El Premio Nobel",
+          "text": "Años después, Severo Ochoa, otro galardonado con el Nobel, concluyó que la investigación en biología y medicina en España era pobre, pero sin Ramón y Cajal habría sido nula.",
+          "rank": 3,
+          "score": 0.847458
+        },
+        {
+          "id": "doc-1-28",
+          "document_id": "doc-1",
+          "title": "Santiago Ramón y Cajal",
+          "section": "El Premio Nobel",
+          "text": "Tras el Nobel, Ramón y Cajal publicó algunas obras biográficas, además de sus Estudios sobre la degeneración y regeneración del sistema nervioso (Madrid, 1913-1914). Su último artículo científico, una suma de sus ideas, fue ¿Neuronismo o reticularismo?: Las pruebas objetivas de la unidad anatómica de las células nerviosas. Había sido encargado por una revista alemana, pero los cuatro años de retraso en recibir las pruebas de Alemania hicieron temer a Ramón y Cajal que moriría antes de corregirlo y verlo impreso, como así fue. Sin esperar la respuesta de los germanos, el científico procedió a aligerar su texto y publicarlo en España. Esta suma científica apareció también en francés y, ya póstumo, en Alemania (1935).",
+          "rank": 4,
+          "score": 0.841019
+        }
+      ],
+      "with_context": {
+        "messages": [
+          {
+            "role": "system",
+            "content": "Eres un asistente que responde en español. Usa solo la información de los fragmentos. Cita los fragmentos que utilices con su número entre corchetes, por ejemplo [2]. Si los fragmentos no contienen la respuesta, responde exactamente: No encuentro la respuesta en los documentos."
+          },
+          {
+            "role": "user",
+            "content": "Fragmentos:\n\n[1] Santiago Ramón y Cajal · El Premio Nobel\nSus trabajos y aportaciones a la neurociencia —difundidos en Europa por su amigo el anatomista suizo Rudolph Albert von Kölliker— fueron reconocidos en 1906 con la concesión del Premio Nobel en Fisiología o Medicina, galardón que compartió con el investigador italiano Camillo Golgi, cuyo método de tinción aplicó Ramón y Cajal durante años, pero con cuyas tesis, curiosamente, no estaba ni estuvo nunca de acuerdo.Sobre lo que significó aquel primer Premio Nobel español en Ciencias, pueden compararse dos opiniones, la de Ortega y Gasset que opinó que el caso de Ramón y Cajal era una vergüenza para España, en lugar de un orgullo, porque constituía una excepción.\n\n[2] Severo Ochoa · Introducción\nSevero Ochoa de Albornoz (Luarca, Asturias, 24 de septiembre de 1905-Madrid, 1 de noviembre de 1993) fue un médico y científico español, nacionalizado estadounidense en 1956, de renombre internacional. En 1959 fue galardonado con el Premio Nobel de Fisiología o Medicina, junto al estadounidense Arthur Kornberg.\n\n[3] Santiago Ramón y Cajal · El Premio Nobel\nAños después, Severo Ochoa, otro galardonado con el Nobel, concluyó que la investigación en biología y medicina en España era pobre, pero sin Ramón y Cajal habría sido nula.\n\n[4] Santiago Ramón y Cajal · El Premio Nobel\nTras el Nobel, Ramón y Cajal publicó algunas obras biográficas, además de sus Estudios sobre la degeneración y regeneración del sistema nervioso (Madrid, 1913-1914). Su último artículo científico, una suma de sus ideas, fue ¿Neuronismo o reticularismo?: Las pruebas objetivas de la unidad anatómica de las células nerviosas. Había sido encargado por una revista alemana, pero los cuatro años de retraso en recibir las pruebas de Alemania hicieron temer a Ramón y Cajal que moriría antes de corregirlo y verlo impreso, como así fue. Sin esperar la respuesta de los germanos, el científico procedió a aligerar su texto y publicarlo en España. Esta suma científica apareció también en francés y, ya póstumo, en Alemania (1935).\n\nPregunta: ¿Qué científicos de la colección recibieron el Premio Nobel de Fisiología o Medicina y en qué años?"
+          }
+        ],
+        "answer": "Los científicos que recibieron el Premio Nobel de Fisiología o Medicina son Santiago Ramón y Cajal y Severo Ochoa. Santiago Ramón y Cajal recibió el premio en 1906 y Severo Ochoa en 1959.",
+        "input_tokens": 703,
+        "output_tokens": 62,
+        "generation_seconds": 14.713309,
+        "stop_reason": "eos"
+      },
+      "without_context": {
+        "messages": [
+          {
+            "role": "system",
+            "content": "Eres un asistente que responde en español de forma breve y precisa."
+          },
+          {
+            "role": "user",
+            "content": "¿Qué científicos de la colección recibieron el Premio Nobel de Fisiología o Medicina y en qué años?"
+          }
+        ],
+        "answer": "Los científicos de la colección que recibieron el Premio Nobel de Fisiología o Medicina son:\n\n1. Albert Claude (1974)\n2. Christian de Duve (1974)\n3. George Wald (1967)\n\nEstos tres científicos recibieron el premio por sus contribuciones a la comprensión de la fisiología celular y la biología molecular.",
+        "input_tokens": 56,
+        "output_tokens": 87,
+        "generation_seconds": 17.552567,
+        "stop_reason": "eos"
+      },
+      "checks": {
+        "in_retrieved": {
+          "1906": true,
+          "1959": true
+        },
+        "in_answer_with_context": {
+          "1906": true,
+          "1959": true
+        },
+        "in_answer_without_context": {
+          "1906": false,
+          "1959": false
+        },
+        "declined_with_context": false
+      }
+    },
+    {
+      "question_id": "cela-nobel",
+      "retrieval_seconds": 0.022743,
+      "retrieved": [
+        {
+          "id": "doc-1-29",
+          "document_id": "doc-1",
+          "title": "Santiago Ramón y Cajal",
+          "section": "El Premio Nobel",
+          "text": "Más tarde, en 1954, y con motivo del primer centenario del nacimiento de su fundador, hubo una edición preparada por el Instituto Cajal.",
+          "rank": 1,
+          "score": 0.83627
+        },
+        {
+          "id": "doc-1-26",
+          "document_id": "doc-1",
+          "title": "Santiago Ramón y Cajal",
+          "section": "El Premio Nobel",
+          "text": "Sus trabajos y aportaciones a la neurociencia —difundidos en Europa por su amigo el anatomista suizo Rudolph Albert von Kölliker— fueron reconocidos en 1906 con la concesión del Premio Nobel en Fisiología o Medicina, galardón que compartió con el investigador italiano Camillo Golgi, cuyo método de tinción aplicó Ramón y Cajal durante años, pero con cuyas tesis, curiosamente, no estaba ni estuvo nunca de acuerdo.Sobre lo que significó aquel primer Premio Nobel español en Ciencias, pueden compararse dos opiniones, la de Ortega y Gasset que opinó que el caso de Ramón y Cajal era una vergüenza para España, en lugar de un orgullo, porque constituía una excepción.",
+          "rank": 2,
+          "score": 0.825994
+        },
+        {
+          "id": "doc-1-28",
+          "document_id": "doc-1",
+          "title": "Santiago Ramón y Cajal",
+          "section": "El Premio Nobel",
+          "text": "Tras el Nobel, Ramón y Cajal publicó algunas obras biográficas, además de sus Estudios sobre la degeneración y regeneración del sistema nervioso (Madrid, 1913-1914). Su último artículo científico, una suma de sus ideas, fue ¿Neuronismo o reticularismo?: Las pruebas objetivas de la unidad anatómica de las células nerviosas. Había sido encargado por una revista alemana, pero los cuatro años de retraso en recibir las pruebas de Alemania hicieron temer a Ramón y Cajal que moriría antes de corregirlo y verlo impreso, como así fue. Sin esperar la respuesta de los germanos, el científico procedió a aligerar su texto y publicarlo en España. Esta suma científica apareció también en francés y, ya póstumo, en Alemania (1935).",
+          "rank": 3,
+          "score": 0.820143
+        },
+        {
+          "id": "doc-1-27",
+          "document_id": "doc-1",
+          "title": "Santiago Ramón y Cajal",
+          "section": "El Premio Nobel",
+          "text": "Años después, Severo Ochoa, otro galardonado con el Nobel, concluyó que la investigación en biología y medicina en España era pobre, pero sin Ramón y Cajal habría sido nula.",
+          "rank": 4,
+          "score": 0.818914
+        }
+      ],
+      "with_context": {
+        "messages": [
+          {
+            "role": "system",
+            "content": "Eres un asistente que responde en español. Usa solo la información de los fragmentos. Cita los fragmentos que utilices con su número entre corchetes, por ejemplo [2]. Si los fragmentos no contienen la respuesta, responde exactamente: No encuentro la respuesta en los documentos."
+          },
+          {
+            "role": "user",
+            "content": "Fragmentos:\n\n[1] Santiago Ramón y Cajal · El Premio Nobel\nMás tarde, en 1954, y con motivo del primer centenario del nacimiento de su fundador, hubo una edición preparada por el Instituto Cajal.\n\n[2] Santiago Ramón y Cajal · El Premio Nobel\nSus trabajos y aportaciones a la neurociencia —difundidos en Europa por su amigo el anatomista suizo Rudolph Albert von Kölliker— fueron reconocidos en 1906 con la concesión del Premio Nobel en Fisiología o Medicina, galardón que compartió con el investigador italiano Camillo Golgi, cuyo método de tinción aplicó Ramón y Cajal durante años, pero con cuyas tesis, curiosamente, no estaba ni estuvo nunca de acuerdo.Sobre lo que significó aquel primer Premio Nobel español en Ciencias, pueden compararse dos opiniones, la de Ortega y Gasset que opinó que el caso de Ramón y Cajal era una vergüenza para España, en lugar de un orgullo, porque constituía una excepción.\n\n[3] Santiago Ramón y Cajal · El Premio Nobel\nTras el Nobel, Ramón y Cajal publicó algunas obras biográficas, además de sus Estudios sobre la degeneración y regeneración del sistema nervioso (Madrid, 1913-1914). Su último artículo científico, una suma de sus ideas, fue ¿Neuronismo o reticularismo?: Las pruebas objetivas de la unidad anatómica de las células nerviosas. Había sido encargado por una revista alemana, pero los cuatro años de retraso en recibir las pruebas de Alemania hicieron temer a Ramón y Cajal que moriría antes de corregirlo y verlo impreso, como así fue. Sin esperar la respuesta de los germanos, el científico procedió a aligerar su texto y publicarlo en España. Esta suma científica apareció también en francés y, ya póstumo, en Alemania (1935).\n\n[4] Santiago Ramón y Cajal · El Premio Nobel\nAños después, Severo Ochoa, otro galardonado con el Nobel, concluyó que la investigación en biología y medicina en España era pobre, pero sin Ramón y Cajal habría sido nula.\n\nPregunta: ¿En qué año recibió Camilo José Cela el Premio Nobel de Literatura?"
+          }
+        ],
+        "answer": "No encuentro la respuesta en los documentos.",
+        "input_tokens": 631,
+        "output_tokens": 10,
+        "generation_seconds": 3.084558,
+        "stop_reason": "eos"
+      },
+      "without_context": {
+        "messages": [
+          {
+            "role": "system",
+            "content": "Eres un asistente que responde en español de forma breve y precisa."
+          },
+          {
+            "role": "user",
+            "content": "¿En qué año recibió Camilo José Cela el Premio Nobel de Literatura?"
+          }
+        ],
+        "answer": "Camilo José Cela recibió el Premio Nobel de Literatura en 1989.",
+        "input_tokens": 49,
+        "output_tokens": 22,
+        "generation_seconds": 3.987032,
+        "stop_reason": "eos"
+      },
+      "checks": {
+        "in_retrieved": {},
+        "in_answer_with_context": {},
+        "in_answer_without_context": {},
+        "declined_with_context": true
+      }
+    }
+  ]
+}

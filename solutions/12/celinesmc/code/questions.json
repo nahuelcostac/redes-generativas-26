@@ -1,0 +1,44 @@
+{
+  "questions": [
+    {
+      "id": "nobel-cajal",
+      "label": "Respuesta en un fragmento · Nobel de Cajal",
+      "type": "direct",
+      "text": "¿En qué año recibió Santiago Ramón y Cajal el Premio Nobel y con quién lo compartió?",
+      "answerable": true,
+      "expected": ["1906", "Golgi"]
+    },
+    {
+      "id": "salas-phi29",
+      "label": "Respuesta en un fragmento · Margarita Salas y Φ29",
+      "type": "direct",
+      "text": "¿Qué enzima del virus bacteriófago Φ29 estudió Margarita Salas?",
+      "answerable": true,
+      "expected": ["polimerasa"]
+    },
+    {
+      "id": "ochoa-salas",
+      "label": "Varios fragmentos · Ochoa y Salas",
+      "type": "combined",
+      "text": "¿Qué relación hubo entre Severo Ochoa y Margarita Salas y en qué universidad de Estados Unidos coincidieron?",
+      "answerable": true,
+      "expected": ["discípula", "Nueva York"]
+    },
+    {
+      "id": "nobel-medicina",
+      "label": "Varios fragmentos · Premios Nobel de Medicina",
+      "type": "combined",
+      "text": "¿Qué científicos de la colección recibieron el Premio Nobel de Fisiología o Medicina y en qué años?",
+      "answerable": true,
+      "expected": ["1906", "1959"]
+    },
+    {
+      "id": "cela-nobel",
+      "label": "Sin respuesta en la colección · Nobel de Cela",
+      "type": "unanswerable",
+      "text": "¿En qué año recibió Camilo José Cela el Premio Nobel de Literatura?",
+      "answerable": false,
+      "expected": []
+    }
+  ]
+}

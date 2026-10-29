@@ -1,0 +1,154 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-29T17:38:07.288750+00:00",
+  "models": {
+    "embedding": {
+      "id": "intfloat/multilingual-e5-small",
+      "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+      "dtype": "float32",
+      "license": "MIT"
+    },
+    "generator": {
+      "id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+      "dtype": "float16",
+      "license": "Apache-2.0"
+    }
+  },
+  "runtime": {
+    "python": "3.13.12",
+    "torch": "2.9.0+cu126",
+    "transformers": "4.57.1",
+    "tokenizers": "0.22.2",
+    "device": "cuda",
+    "gpu": "NVIDIA GeForce RTX 3050 Ti Laptop GPU",
+    "hardware": {
+      "system": "Windows",
+      "release": "11",
+      "architecture": "AMD64",
+      "logical_cpus": 12,
+      "processor": "Intel64 Family 6 Model 141 Stepping 1, GenuineIntel",
+      "memory_bytes": 16948453376
+    }
+  },
+  "parameters": {
+    "chunk_max_chars": 800,
+    "top_k": 4,
+    "similarity": "coseno",
+    "system_rag": "Eres un asistente que responde en español. Usa solo la información de los fragmentos. Cita los fragmentos que utilices con su número entre corchetes, por ejemplo [2]. Si los fragmentos no contienen la respuesta, responde exactamente: No encuentro la respuesta en los documentos.",
+    "system_plain": "Eres un asistente que responde en español de forma breve y precisa.",
+    "generation": {
+      "do_sample": false,
+      "max_new_tokens": 256,
+      "num_beams": 1,
+      "repetition_penalty": 1.0,
+      "use_cache": true,
+      "eos_token_id": [
+        151645,
+        151643
+      ],
+      "pad_token_id": 151643
+    }
+  },
+  "collection": {
+    "documents": 3,
+    "chunks": 98,
+    "source": "Wikipedia en español",
+    "license": "CC BY-SA 4.0"
+  },
+  "load_seconds": 10.952931,
+  "index_seconds": 2.872674,
+  "questions": [
+    {
+      "id": "pregunta",
+      "label": "Pregunta propia",
+      "type": "custom",
+      "text": "¿Dónde nació Severo Ochoa?",
+      "expected": []
+    }
+  ],
+  "runs": [
+    {
+      "question_id": "pregunta",
+      "retrieval_seconds": 0.155987,
+      "retrieved": [
+        {
+          "id": "doc-2-1",
+          "document_id": "doc-2",
+          "title": "Severo Ochoa",
+          "section": "Introducción",
+          "text": "Severo Ochoa de Albornoz (Luarca, Asturias, 24 de septiembre de 1905-Madrid, 1 de noviembre de 1993) fue un médico y científico español, nacionalizado estadounidense en 1956, de renombre internacional. En 1959 fue galardonado con el Premio Nobel de Fisiología o Medicina, junto al estadounidense Arthur Kornberg.",
+          "rank": 1,
+          "score": 0.881151
+        },
+        {
+          "id": "doc-2-2",
+          "document_id": "doc-2",
+          "title": "Severo Ochoa",
+          "section": "Biografía",
+          "text": "Sus padres fueron Severo Manuel Ochoa, abogado, y Carmen de Albornoz (hermana del político y, posteriormente, presidente del Gobierno de España en el exilio, Álvaro de Albornoz). Tras la muerte de su padre en 1912, su madre y él se trasladaron a vivir a Málaga, donde Ochoa terminó sus estudios de primaria y realizó el bachillerato en el ilustre centro IES Vicente Espinel.\nPronto desarrolló interés por la biología, y se centró en el estudio del metabolismo energético, con especial atención a las moléculas fosforiladas.",
+          "rank": 2,
+          "score": 0.876523
+        },
+        {
+          "id": "doc-2-7",
+          "document_id": "doc-2",
+          "title": "Severo Ochoa",
+          "section": "Alemania y Estados Unidos",
+          "text": "Al estallar la guerra, decidió trasladarse a Estados Unidos, y en 1940 comenzó a trabajar en el laboratorio de Carl y Gerty Cori, en la Universidad de Washington en San Luis. En 1945 pasó a la Universidad de Nueva York. Se dedicó a realizar investigaciones sobre farmacología y bioquímica que le valieron la medalla Bewberg en 1951.\nEn 1954, prosiguiendo con sus trabajos sobre la fosforilación oxidativa, descubrió una enzima, la polinucleótido fosforilasa, capaz de sintetizar ARN in vitro a partir de ribonucleosidodifosfatos.",
+          "rank": 3,
+          "score": 0.863477
+        },
+        {
+          "id": "doc-2-4",
+          "document_id": "doc-2",
+          "title": "Severo Ochoa",
+          "section": "Carrera investigadora",
+          "text": "Terminó su licenciatura en medicina en 1928 y decidió seguir dedicándose a la investigación. Gracias a su publicación acerca de la creatinina, en 1929 consiguió una invitación para unirse al laboratorio de Otto Meyerhof en el instituto de biología Kaiser Wilhelm (hoy Instituto Max Planck) en Berlín. En aquella época, el instituto era una importante cuna de la bioquímica, por lo que tuvo la oportunidad de conocer y trabajar con científicos como Otto Heinrich Warburg, Carl Neuberg, Einar Lundsgaard, y Fritz Lipmann, además del propio Meyerhof, que había recibido el premio Nobel de Medicina en 1922.",
+          "rank": 4,
+          "score": 0.856647
+        }
+      ],
+      "with_context": {
+        "messages": [
+          {
+            "role": "system",
+            "content": "Eres un asistente que responde en español. Usa solo la información de los fragmentos. Cita los fragmentos que utilices con su número entre corchetes, por ejemplo [2]. Si los fragmentos no contienen la respuesta, responde exactamente: No encuentro la respuesta en los documentos."
+          },
+          {
+            "role": "user",
+            "content": "Fragmentos:\n\n[1] Severo Ochoa · Introducción\nSevero Ochoa de Albornoz (Luarca, Asturias, 24 de septiembre de 1905-Madrid, 1 de noviembre de 1993) fue un médico y científico español, nacionalizado estadounidense en 1956, de renombre internacional. En 1959 fue galardonado con el Premio Nobel de Fisiología o Medicina, junto al estadounidense Arthur Kornberg.\n\n[2] Severo Ochoa · Biografía\nSus padres fueron Severo Manuel Ochoa, abogado, y Carmen de Albornoz (hermana del político y, posteriormente, presidente del Gobierno de España en el exilio, Álvaro de Albornoz). Tras la muerte de su padre en 1912, su madre y él se trasladaron a vivir a Málaga, donde Ochoa terminó sus estudios de primaria y realizó el bachillerato en el ilustre centro IES Vicente Espinel.\nPronto desarrolló interés por la biología, y se centró en el estudio del metabolismo energético, con especial atención a las moléculas fosforiladas.\n\n[3] Severo Ochoa · Alemania y Estados Unidos\nAl estallar la guerra, decidió trasladarse a Estados Unidos, y en 1940 comenzó a trabajar en el laboratorio de Carl y Gerty Cori, en la Universidad de Washington en San Luis. En 1945 pasó a la Universidad de Nueva York. Se dedicó a realizar investigaciones sobre farmacología y bioquímica que le valieron la medalla Bewberg en 1951.\nEn 1954, prosiguiendo con sus trabajos sobre la fosforilación oxidativa, descubrió una enzima, la polinucleótido fosforilasa, capaz de sintetizar ARN in vitro a partir de ribonucleosidodifosfatos.\n\n[4] Severo Ochoa · Carrera investigadora\nTerminó su licenciatura en medicina en 1928 y decidió seguir dedicándose a la investigación. Gracias a su publicación acerca de la creatinina, en 1929 consiguió una invitación para unirse al laboratorio de Otto Meyerhof en el instituto de biología Kaiser Wilhelm (hoy Instituto Max Planck) en Berlín. En aquella época, el instituto era una importante cuna de la bioquímica, por lo que tuvo la oportunidad de conocer y trabajar con científicos como Otto Heinrich Warburg, Carl Neuberg, Einar Lundsgaard, y Fritz Lipmann, además del propio Meyerhof, que había recibido el premio Nobel de Medicina en 1922.\n\nPregunta: ¿Dónde nació Severo Ochoa?"
+          }
+        ],
+        "answer": "Nació en Larua, Asturias, España.",
+        "input_tokens": 740,
+        "output_tokens": 14,
+        "generation_seconds": 4.980602,
+        "stop_reason": "eos"
+      },
+      "without_context": {
+        "messages": [
+          {
+            "role": "system",
+            "content": "Eres un asistente que responde en español de forma breve y precisa."
+          },
+          {
+            "role": "user",
+            "content": "¿Dónde nació Severo Ochoa?"
+          }
+        ],
+        "answer": "Severo Ochoa nació en Madrid, España.",
+        "input_tokens": 43,
+        "output_tokens": 15,
+        "generation_seconds": 3.949007,
+        "stop_reason": "eos"
+      },
+      "checks": {
+        "in_retrieved": {},
+        "in_answer_with_context": {},
+        "in_answer_without_context": {},
+        "declined_with_context": false
+      }
+    }
+  ]
+}

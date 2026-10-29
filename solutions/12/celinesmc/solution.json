@@ -1,0 +1,9 @@
+{
+  "issue": 12,
+  "author": "celinesmc",
+  "title": "Responder preguntas sobre documentos",
+  "summary": "Recupera fragmentos de artículos de Wikipedia con embeddings y compara las respuestas de un modelo generativo con y sin ese contexto.",
+  "mode": "precomputed",
+  "status": "ready",
+  "entry": "web/index.html"
+}
