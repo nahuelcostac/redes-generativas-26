@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Detectar objetos en una imagen con DETR ResNet-50 en el navegador."
+    />
+    <title>Detectar objetos · Redes Generativas</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Ir al contenido</a>
+    <header class="solution-header container">
+      <a id="catalogue-link" class="text-link" href="../../../../index.html">← Volver al catálogo</a
+      ><a id="issue-link" class="text-link">Ver issue en GitHub ↗</a>
+    </header>
+    <main id="main" class="container detector">
+      <p class="eyebrow">Issue 9 · Modelo en navegador</p>
+      <h1>Detectar objetos en imágenes</h1>
+      <p class="solution-summary">
+        Carga una imagen. El modelo localiza los objetos y muestra su categoría y su puntuación. El
+        modelo se ejecuta en tu navegador. La imagen no se envía a ningún servidor.
+      </p>
+      <p class="solution-author">Por uo300038</p>
+      <div class="detector-grid">
+        <section class="input-panel" aria-labelledby="input-title">
+          <h2 id="input-title">Imagen</h2>
+          <div id="drop-zone" class="drop-zone">
+            <p>Arrastra una imagen aquí o</p>
+            <button id="choose-file" type="button" class="secondary">Seleccionar imagen</button>
+          </div>
+          <input
+            id="image-file"
+            type="file"
+            accept=".jpg,.jpeg,.png,.webp,image/jpeg,image/png,image/webp"
+            aria-label="Archivo de imagen"
+            aria-describedby="file-limits"
+            hidden
+          />
+          <p id="file-limits" class="hint">
+            JPEG, PNG o WebP. Hasta 10 MB. Lado mayor de 4096 px como máximo y lado menor de 32 px
+            como mínimo.
+          </p>
+          <p class="hint">Ejemplos de Wikimedia Commons</p>
+          <div class="example-buttons">
+            <button type="button" class="secondary" data-example="gato">Un gato</button
+            ><button type="button" class="secondary" data-example="calle">Calle con tráfico</button
+            ><button type="button" class="secondary" data-example="mesa">Mesa con comida</button>
+          </div>
+          <p id="image-info" class="image-info">Ninguna imagen seleccionada.</p>
+          <div class="run-buttons">
+            <button id="detect" type="button" class="primary" disabled>Detectar objetos</button
+            ><button id="cancel" type="button" class="secondary" hidden>Cancelar</button>
+          </div>
+          <p id="status" role="status">Selecciona una imagen o prueba uno de los ejemplos.</p>
+          <div id="download-progress" hidden>
+            <progress
+              id="model-progress"
+              max="100"
+              aria-label="Progreso de descarga del modelo"
+            ></progress>
+            <p id="progress-detail" class="hint"></p>
+          </div>
+          <p id="error" role="alert" hidden></p>
+          <div class="threshold">
+            <label for="threshold">
+              Umbral de puntuación <output id="threshold-value" for="threshold"></output>
+            </label>
+            <input id="threshold" type="range" min="0.1" max="1" step="0.05" />
+            <p class="hint">
+              Solo se muestran las detecciones con una puntuación igual o mayor que el umbral. Al
+              cambiarlo no se vuelve a ejecutar el modelo.
+            </p>
+          </div>
+          <dl class="timings">
+            <div>
+              <dt>Carga del modelo</dt>
+              <dd id="load-time">Pendiente</dd>
+            </div>
+            <div>
+              <dt>Detección</dt>
+              <dd id="inference-time">Pendiente</dd>
+            </div>
+          </dl>
+        </section>
+        <section class="result-panel" aria-labelledby="result-title" aria-busy="false">
+          <h2 id="result-title">Detecciones</h2>
+          <figure id="stage" class="stage" hidden>
+            <div class="stage-inner">
+              <img id="preview" alt="" />
+              <div id="boxes" class="boxes" aria-hidden="true"></div>
+            </div>
+            <figcaption id="caption" class="hint"></figcaption>
+          </figure>
+          <p id="empty" class="hint">Las detecciones aparecerán aquí.</p>
+          <p id="summary" class="summary" hidden></p>
+          <div class="table-wrap">
+            <table id="table" hidden>
+              <caption class="sr-only">
+                Objetos detectados ordenados por puntuación
+              </caption>
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Categoría</th>
+                  <th scope="col">Puntuación</th>
+                  <th scope="col">Recuadro (x, y, ancho, alto)</th>
+                </tr>
+              </thead>
+              <tbody id="rows"></tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+      <details class="model-details">
+        <summary>Modelo y ejecución</summary>
+        <p>
+          <a href="https://huggingface.co/Xenova/detr-resnet-50">DETR ResNet-50</a> (Xenova/ONNX, a
+          partir de
+          <a href="https://huggingface.co/facebook/detr-resnet-50">facebook/detr-resnet-50</a>) ·
+          Cuantización de 8 bits · CPU mediante WebAssembly.
+        </p>
+        <p>
+          Entrenado con COCO 2017. Reconoce 80 categorías, como personas, vehículos, animales,
+          muebles, comida y objetos domésticos. Los nombres se muestran traducidos al español.
+        </p>
+        <p>
+          Transformers.js 4.3.1. El procesamiento se realiza en un Web Worker. El modelo
+          redimensiona la imagen para que su lado menor mida 800 px y su lado mayor no supere 1333
+          px.
+        </p>
+      </details>
+    </main>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
