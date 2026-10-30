@@ -4,6 +4,6 @@
   "title": "Resumir documentos",
   "summary": "Compara resúmenes de textos en español generados en local con distintas longitudes y anota sus omisiones.",
   "mode": "precomputed",
-  "status": "draft",
+  "status": "ready",
   "entry": "web/index.html"
 }

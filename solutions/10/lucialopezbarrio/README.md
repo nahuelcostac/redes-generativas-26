@@ -91,7 +91,7 @@ Cada tiempo corresponde a una sola ejecución de la llamada de generación. El l
 
 ## Resultado y limitaciones
 
-La revisión completa de cada resumen está en `results/review.json` y se ve en la web. **La revisión la preparó un agente y falta que la confirme quien firma la solución.** Para confirmarla, cambia `status` a `confirmada` en ese archivo.
+La revisión completa de cada resumen está en `results/review.json` y se ve en la web. La revisión la preparó un agente y la confirmó quien firma la solución.
 
 - **Longitud.** Con un mínimo de 24 tokens, el modelo termina solo en 30 a 37 tokens. Por eso las configuraciones de 80 y 150 tokens dan el mismo resumen en los cuatro textos. El mismo resumen sale con 40 tokens en tres de ellos. Solo Ada Lovelace llega al límite de 40 y queda cortado a mitad de frase.
 - **Omisiones.** Es el problema principal. Los resúmenes de una frase pierden datos centrales. En la noticia de la sonda, el resumen de una frase con 4 haces no dice que la sonda es china. En la de los riñones, ninguna configuración menciona que la técnica aún no se puede aplicar en humanos. En el Ebro, el resumen de una frase trata solo de la cuenca y no dice que es un río.
