@@ -1,0 +1,65 @@
+{
+  "preparation": "Recorte indicado y resize Lanczos3 a 192 × 192 con sharp 0.35.5. Reducción bilineal Canvas a 96 × 96 en el navegador.",
+  "examples": [
+    {
+      "name": "astronauta",
+      "filename": "astronaut.png",
+      "sha256": "88431cd9653ccd539741b555fb0a46b61558b301d4110412b5bc28b5e3ea6cb5",
+      "author": "NASA, retrato de Eileen Collins",
+      "license": "Dominio público",
+      "crop": {
+        "left": 100,
+        "top": 20,
+        "width": 320,
+        "height": 320
+      },
+      "url": "https://raw.githubusercontent.com/scikit-image/scikit-image/v0.19.3/skimage/data/astronaut.png",
+      "reference": "astronauta.png",
+      "referenceSize": [
+        192,
+        192
+      ],
+      "inputSize": [
+        96,
+        96
+      ]
+    },
+    {
+      "name": "cafe",
+      "filename": "coffee.png",
+      "sha256": "cc02f8ca188b167c775a7101b5d767d1e71792cf762c33d6fa15a4599b5a8de7",
+      "author": "Rachel Michetti, cortesía de Pikolo Espresso Bar",
+      "license": "CC0",
+      "crop": {
+        "left": 100,
+        "top": 0,
+        "width": 400,
+        "height": 400
+      },
+      "url": "https://raw.githubusercontent.com/scikit-image/scikit-image/v0.19.3/skimage/data/coffee.png",
+      "reference": "cafe.png",
+      "referenceSize": [
+        192,
+        192
+      ],
+      "inputSize": [
+        96,
+        96
+      ]
+    },
+    {
+      "name": "geometria",
+      "author": "Patrón creado mediante código para esta solución",
+      "license": "CC0",
+      "reference": "geometria.png",
+      "referenceSize": [
+        192,
+        192
+      ],
+      "inputSize": [
+        96,
+        96
+      ]
+    }
+  ]
+}

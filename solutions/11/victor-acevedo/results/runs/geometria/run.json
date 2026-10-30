@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-30T15:41:45.892Z",
+  "model": "Xenova/swin2SR-lightweight-x2-64",
+  "revision": "92a21aca5713f20faf9a87590cdfbdce2e34112c",
+  "transformers": "4.3.1",
+  "dtype": "fp32",
+  "device": "wasm",
+  "numThreads": 1,
+  "scale": 2,
+  "tileSize": 64,
+  "halo": 8,
+  "source": "Geometría",
+  "inputSize": [
+    96,
+    96
+  ],
+  "outputSize": [
+    192,
+    192
+  ],
+  "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+  "hardwareConcurrency": 8,
+  "loadMs": 0,
+  "inferenceMs": 2833.899999976158,
+  "reusedModel": true,
+  "reduction": "Canvas 2D, imageSmoothingQuality low, factor 0.5",
+  "interpolation": "Canvas 2D, imageSmoothingQuality low, factor 2",
+  "psnr": {
+    "modelPsnrDb": 21.75093842802072,
+    "interpolationPsnrDb": 17.137842986912542
+  },
+  "files": {
+    "input": {
+      "path": "input.png",
+      "sha256": "14256490213225ef4e3fbaf7c5d13a9b2a556f85710add1961a1cbd7b73b10c8"
+    },
+    "output": {
+      "path": "output.png",
+      "sha256": "97a8f07dfd7d74356663149754b7e63f2db4297aeb47b4c06accb96d18e7c466"
+    },
+    "interpolation": {
+      "path": "interpolation.png",
+      "sha256": "0f6533db8ce044d9e7d1ae3383d3286df07b9832ad0782edd4328ca3e6e6c4ee"
+    },
+    "reference": {
+      "path": "reference.png",
+      "sha256": "5642c164ac202885657df99f8ebbb5b86656208c718e6764a30be190fa55c758"
+    }
+  }
+}

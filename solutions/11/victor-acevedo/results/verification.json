@@ -1,0 +1,114 @@
+{
+  "date": "2026-10-30",
+  "issue": "https://github.com/nahuelcostac/redes-generativas-26/issues/11",
+  "status": "Flujo principal comprobado en navegador sobre npm run preview",
+  "equipment": {
+    "cpu": "Intel Core i7-1185G7 @ 3.00GHz",
+    "logicalProcessors": 8,
+    "ramGiB": 15.825050354003906,
+    "os": "Windows, núcleo 10.0.26300",
+    "browser": "Navegador integrado de Codex, Chrome/156.0.0.0 según navigator.userAgent"
+  },
+  "runs": "measurements.json",
+  "comparison": "comparacion.png",
+  "initialPass": [
+    {
+      "example": "Astronauta",
+      "loadSeconds": 30.95,
+      "inferenceSeconds": 2.69,
+      "modelPsnrDb": 28.87,
+      "interpolationPsnrDb": 27.25
+    },
+    {
+      "example": "Café",
+      "reusedModel": true,
+      "inferenceSeconds": 2.68,
+      "modelPsnrDb": 29.57,
+      "interpolationPsnrDb": 27.37
+    },
+    {
+      "example": "Geometría",
+      "reusedModel": true,
+      "inferenceSeconds": 2.44,
+      "modelPsnrDb": 21.75,
+      "interpolationPsnrDb": 17.14
+    }
+  ],
+  "browserChecks": [
+    {
+      "action": "Procesar los tres ejemplos PNG, reducidos de 192 × 192 a 96 × 96",
+      "result": "Salida 192 × 192, PSNR calculada respecto a cada referencia. Registros exactos en runs/."
+    },
+    {
+      "action": "Seleccionar entrada, interpolación y referencia; mover el separador a ambos extremos",
+      "result": "El selector y el rango cambian la comparación visible."
+    },
+    {
+      "action": "Descargar PNG y registro JSON mediante sus enlaces de la interfaz",
+      "result": "Archivos descargados. Los registros contienen imágenes, entorno, parámetros y tiempos reales."
+    },
+    {
+      "action": "Cargar README.md como archivo local",
+      "result": "Formato no admitido. Inferencia y descarga desactivadas."
+    },
+    {
+      "action": "Cargar archivo danada.png con texto en lugar de una imagen",
+      "result": "El archivo no contiene una imagen válida o está dañado."
+    },
+    {
+      "action": "Cargar PNG de 257 × 32",
+      "result": "Rechazado por el límite de 256 píxeles por lado."
+    },
+    {
+      "action": "Cancelar y repetir una inferencia sobre WebP semitransparente de 91 × 137",
+      "result": "Cancelación inmediata y nueva ejecución correcta. Salida 182 × 274. El primer píxel preparado fue [144,174,164,255], compuesto sobre blanco."
+    },
+    {
+      "action": "Procesar JPEG de 256 × 256",
+      "result": "16 bloques, salida 512 × 512. Registro en runs/maxima."
+    },
+    {
+      "action": "Volver al catálogo y abrir la contribución de victor-acevedo en la issue #11",
+      "result": "La contribución ofrece Abrir solución y la issue permanece en Issues abiertas."
+    }
+  ],
+  "independentVerification": "code/verify-runs.mjs verifica dimensiones, SHA-256 y PSNR RGB de los PNG reales de las cinco ejecuciones.",
+  "observations": [
+    "Astronauta mejora bordes del casco respecto a interpolación, con pérdida de textura fina en piel y ojos.",
+    "Café mejora el borde de la taza, pero no reproduce exactamente las pequeñas marcas de madera ni los reflejos.",
+    "Geometría conserva aliasing, cambia la frecuencia del damero y dentella la diagonal."
+  ],
+  "limits": [
+    "Solo se verificó este navegador y equipo.",
+    "No se midió el pico de memoria.",
+    "No se verificó el diseño en un dispositivo móvil real.",
+    "No se forzó un error de red ni el límite de espera de 10 minutos."
+  ],
+  "reproducibility": "Cargar en la interfaz los ejemplos o las imágenes input.png de runs/. Para obtener los tiempos y las métricas, volver a ejecutar el modelo. Los resultados de ejemplo no se cargan como salida precalculada.",
+  "commands": [
+    {
+      "command": "npm run check",
+      "result": "Correcto. 20 pruebas superadas."
+    },
+    {
+      "command": "npm run format",
+      "result": "Aplicado. Sin diferencias de contenido en archivos compartidos."
+    },
+    {
+      "command": "npm run format:check",
+      "result": "Correcto."
+    },
+    {
+      "command": "npm run build",
+      "result": "Correcto. Vite avisa de bundles de Transformers.js mayores de 500 kB."
+    },
+    {
+      "command": "npm run preview -- --port 4173 --strictPort",
+      "result": "Probado en el navegador, bajo /redes-generativas-26/."
+    },
+    {
+      "command": "node solutions/11/victor-acevedo/code/verify-runs.mjs",
+      "result": "Cinco ejecuciones verificadas contra sus PNG exportados."
+    }
+  ]
+}
