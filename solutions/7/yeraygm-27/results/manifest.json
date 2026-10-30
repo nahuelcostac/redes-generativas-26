@@ -1,0 +1,470 @@
+{
+  "model": "stabilityai/sd-turbo",
+  "revision": "0096a99066b73650354282eeef18114cf0dab75c",
+  "resolution": {
+    "width": 512,
+    "height": 512
+  },
+  "device": "cpu",
+  "dtype": "torch.float32",
+  "modelLoadSeconds": 0.772,
+  "prompts": [
+    {
+      "id": "taza",
+      "title": "Una taza roja",
+      "description": "Una taza roja de cerámica sobre una mesa de madera, con luz suave de mañana.",
+      "modelPrompt": "A single red ceramic mug on a wooden table, soft morning window light, simple composition, realistic photograph",
+      "observation": "La taza roja aparece en las nueve imágenes. Cambian el fondo, el encuadre y algunos detalles de forma."
+    },
+    {
+      "id": "parque",
+      "title": "Perro, bicicleta y globo",
+      "description": "Un perro marrón junto a una bicicleta azul y un globo rojo atado al manillar, en un parque.",
+      "modelPrompt": "A small brown dog beside one blue bicycle with one red balloon tied to its handlebar in a green city park, all three subjects clearly visible, sunny afternoon, realistic photograph",
+      "observation": "El perro y la bicicleta aparecen en las nueve; algunas imágenes cambian el color de la bicicleta o añaden globos."
+    },
+    {
+      "id": "bodegon",
+      "title": "Manzana, plátano y botella",
+      "description": "Una manzana roja, un plátano amarillo y una botella de vidrio transparente sobre una mesa blanca.",
+      "modelPrompt": "Exactly one red apple, one yellow banana and one clear glass bottle, spaced apart on a plain white table, all three objects fully visible, simple product photograph, soft natural daylight",
+      "observation": "La manzana, el plátano y la botella aparecen en las nueve; algunas imágenes añaden fruta o recortan objetos en los bordes."
+    }
+  ],
+  "generations": [
+    {
+      "promptId": "taza",
+      "prompt": "A single red ceramic mug on a wooden table, soft morning window light, simple composition, realistic photograph",
+      "seed": 17,
+      "steps": 1,
+      "guidanceScale": 0.0,
+      "width": 512,
+      "height": 512,
+      "image": "taza-semilla-17-pasos-1.png"
+    },
+    {
+      "promptId": "taza",
+      "prompt": "A single red ceramic mug on a wooden table, soft morning window light, simple composition, realistic photograph",
+      "seed": 17,
+      "steps": 2,
+      "guidanceScale": 0.0,
+      "width": 512,
+      "height": 512,
+      "image": "taza-semilla-17-pasos-2.png"
+    },
+    {
+      "promptId": "taza",
+      "prompt": "A single red ceramic mug on a wooden table, soft morning window light, simple composition, realistic photograph",
+      "seed": 17,
+      "steps": 4,
+      "guidanceScale": 0.0,
+      "width": 512,
+      "height": 512,
+      "image": "taza-semilla-17-pasos-4.png"
+    },
+    {
+      "promptId": "taza",
+      "prompt": "A single red ceramic mug on a wooden table, soft morning window light, simple composition, realistic photograph",
+      "seed": 41,
+      "steps": 1,
+      "guidanceScale": 0.0,
+      "width": 512,
+      "height": 512,
+      "image": "taza-semilla-41-pasos-1.png"
+    },
+    {
+      "promptId": "taza",
+      "prompt": "A single red ceramic mug on a wooden table, soft morning window light, simple composition, realistic photograph",
+      "seed": 41,
+      "steps": 2,
+      "guidanceScale": 0.0,
+      "width": 512,
+      "height": 512,
+      "image": "taza-semilla-41-pasos-2.png"
+    },
+    {
+      "promptId": "taza",
+      "prompt": "A single red ceramic mug on a wooden table, soft morning window light, simple composition, realistic photograph",
+      "seed": 41,
+      "steps": 4,
+      "guidanceScale": 0.0,
+      "width": 512,
+      "height": 512,
+      "image": "taza-semilla-41-pasos-4.png"
+    },
+    {
+      "promptId": "taza",
+      "prompt": "A single red ceramic mug on a wooden table, soft morning window light, simple composition, realistic photograph",
+      "seed": 99,
+      "steps": 1,
+      "guidanceScale": 0.0,
+      "width": 512,
+      "height": 512,
+      "image": "taza-semilla-99-pasos-1.png"
+    },
+    {
+      "promptId": "taza",
+      "prompt": "A single red ceramic mug on a wooden table, soft morning window light, simple composition, realistic photograph",
+      "seed": 99,
+      "steps": 2,
+      "guidanceScale": 0.0,
+      "width": 512,
+      "height": 512,
+      "image": "taza-semilla-99-pasos-2.png"
+    },
+    {
+      "promptId": "taza",
+      "prompt": "A single red ceramic mug on a wooden table, soft morning window light, simple composition, realistic photograph",
+      "seed": 99,
+      "steps": 4,
+      "guidanceScale": 0.0,
+      "width": 512,
+      "height": 512,
+      "image": "taza-semilla-99-pasos-4.png"
+    },
+    {
+      "promptId": "parque",
+      "prompt": "A small brown dog beside one blue bicycle with one red balloon tied to its handlebar in a green city park, all three subjects clearly visible, sunny afternoon, realistic photograph",
+      "seed": 17,
+      "steps": 1,
+      "guidanceScale": 0.0,
+      "width": 512,
+      "height": 512,
+      "image": "parque-semilla-17-pasos-1.png"
+    },
+    {
+      "promptId": "parque",
+      "prompt": "A small brown dog beside one blue bicycle with one red balloon tied to its handlebar in a green city park, all three subjects clearly visible, sunny afternoon, realistic photograph",
+      "seed": 17,
+      "steps": 2,
+      "guidanceScale": 0.0,
+      "width": 512,
+      "height": 512,
+      "image": "parque-semilla-17-pasos-2.png"
+    },
+    {
+      "promptId": "parque",
+      "prompt": "A small brown dog beside one blue bicycle with one red balloon tied to its handlebar in a green city park, all three subjects clearly visible, sunny afternoon, realistic photograph",
+      "seed": 17,
+      "steps": 4,
+      "guidanceScale": 0.0,
+      "width": 512,
+      "height": 512,
+      "image": "parque-semilla-17-pasos-4.png"
+    },
+    {
+      "promptId": "parque",
+      "prompt": "A small brown dog beside one blue bicycle with one red balloon tied to its handlebar in a green city park, all three subjects clearly visible, sunny afternoon, realistic photograph",
+      "seed": 41,
+      "steps": 1,
+      "guidanceScale": 0.0,
+      "width": 512,
+      "height": 512,
+      "image": "parque-semilla-41-pasos-1.png"
+    },
+    {
+      "promptId": "parque",
+      "prompt": "A small brown dog beside one blue bicycle with one red balloon tied to its handlebar in a green city park, all three subjects clearly visible, sunny afternoon, realistic photograph",
+      "seed": 41,
+      "steps": 2,
+      "guidanceScale": 0.0,
+      "width": 512,
+      "height": 512,
+      "image": "parque-semilla-41-pasos-2.png"
+    },
+    {
+      "promptId": "parque",
+      "prompt": "A small brown dog beside one blue bicycle with one red balloon tied to its handlebar in a green city park, all three subjects clearly visible, sunny afternoon, realistic photograph",
+      "seed": 41,
+      "steps": 4,
+      "guidanceScale": 0.0,
+      "width": 512,
+      "height": 512,
+      "image": "parque-semilla-41-pasos-4.png"
+    },
+    {
+      "promptId": "parque",
+      "prompt": "A small brown dog beside one blue bicycle with one red balloon tied to its handlebar in a green city park, all three subjects clearly visible, sunny afternoon, realistic photograph",
+      "seed": 99,
+      "steps": 1,
+      "guidanceScale": 0.0,
+      "width": 512,
+      "height": 512,
+      "image": "parque-semilla-99-pasos-1.png"
+    },
+    {
+      "promptId": "parque",
+      "prompt": "A small brown dog beside one blue bicycle with one red balloon tied to its handlebar in a green city park, all three subjects clearly visible, sunny afternoon, realistic photograph",
+      "seed": 99,
+      "steps": 2,
+      "guidanceScale": 0.0,
+      "width": 512,
+      "height": 512,
+      "image": "parque-semilla-99-pasos-2.png"
+    },
+    {
+      "promptId": "parque",
+      "prompt": "A small brown dog beside one blue bicycle with one red balloon tied to its handlebar in a green city park, all three subjects clearly visible, sunny afternoon, realistic photograph",
+      "seed": 99,
+      "steps": 4,
+      "guidanceScale": 0.0,
+      "width": 512,
+      "height": 512,
+      "image": "parque-semilla-99-pasos-4.png"
+    },
+    {
+      "promptId": "bodegon",
+      "prompt": "Exactly one red apple, one yellow banana and one clear glass bottle, spaced apart on a plain white table, all three objects fully visible, simple product photograph, soft natural daylight",
+      "seed": 17,
+      "steps": 1,
+      "guidanceScale": 0.0,
+      "width": 512,
+      "height": 512,
+      "image": "bodegon-semilla-17-pasos-1.png"
+    },
+    {
+      "promptId": "bodegon",
+      "prompt": "Exactly one red apple, one yellow banana and one clear glass bottle, spaced apart on a plain white table, all three objects fully visible, simple product photograph, soft natural daylight",
+      "seed": 17,
+      "steps": 2,
+      "guidanceScale": 0.0,
+      "width": 512,
+      "height": 512,
+      "image": "bodegon-semilla-17-pasos-2.png"
+    },
+    {
+      "promptId": "bodegon",
+      "prompt": "Exactly one red apple, one yellow banana and one clear glass bottle, spaced apart on a plain white table, all three objects fully visible, simple product photograph, soft natural daylight",
+      "seed": 17,
+      "steps": 4,
+      "guidanceScale": 0.0,
+      "width": 512,
+      "height": 512,
+      "image": "bodegon-semilla-17-pasos-4.png"
+    },
+    {
+      "promptId": "bodegon",
+      "prompt": "Exactly one red apple, one yellow banana and one clear glass bottle, spaced apart on a plain white table, all three objects fully visible, simple product photograph, soft natural daylight",
+      "seed": 41,
+      "steps": 1,
+      "guidanceScale": 0.0,
+      "width": 512,
+      "height": 512,
+      "image": "bodegon-semilla-41-pasos-1.png"
+    },
+    {
+      "promptId": "bodegon",
+      "prompt": "Exactly one red apple, one yellow banana and one clear glass bottle, spaced apart on a plain white table, all three objects fully visible, simple product photograph, soft natural daylight",
+      "seed": 41,
+      "steps": 2,
+      "guidanceScale": 0.0,
+      "width": 512,
+      "height": 512,
+      "image": "bodegon-semilla-41-pasos-2.png"
+    },
+    {
+      "promptId": "bodegon",
+      "prompt": "Exactly one red apple, one yellow banana and one clear glass bottle, spaced apart on a plain white table, all three objects fully visible, simple product photograph, soft natural daylight",
+      "seed": 41,
+      "steps": 4,
+      "guidanceScale": 0.0,
+      "width": 512,
+      "height": 512,
+      "image": "bodegon-semilla-41-pasos-4.png"
+    },
+    {
+      "promptId": "bodegon",
+      "prompt": "Exactly one red apple, one yellow banana and one clear glass bottle, spaced apart on a plain white table, all three objects fully visible, simple product photograph, soft natural daylight",
+      "seed": 99,
+      "steps": 1,
+      "guidanceScale": 0.0,
+      "width": 512,
+      "height": 512,
+      "image": "bodegon-semilla-99-pasos-1.png"
+    },
+    {
+      "promptId": "bodegon",
+      "prompt": "Exactly one red apple, one yellow banana and one clear glass bottle, spaced apart on a plain white table, all three objects fully visible, simple product photograph, soft natural daylight",
+      "seed": 99,
+      "steps": 2,
+      "guidanceScale": 0.0,
+      "width": 512,
+      "height": 512,
+      "image": "bodegon-semilla-99-pasos-2.png"
+    },
+    {
+      "promptId": "bodegon",
+      "prompt": "Exactly one red apple, one yellow banana and one clear glass bottle, spaced apart on a plain white table, all three objects fully visible, simple product photograph, soft natural daylight",
+      "seed": 99,
+      "steps": 4,
+      "guidanceScale": 0.0,
+      "width": 512,
+      "height": 512,
+      "image": "bodegon-semilla-99-pasos-4.png"
+    }
+  ],
+  "timingsSeconds": [
+    {
+      "promptId": "taza",
+      "seed": 17,
+      "steps": 1,
+      "seconds": 24.783
+    },
+    {
+      "promptId": "taza",
+      "seed": 17,
+      "steps": 2,
+      "seconds": 18.897
+    },
+    {
+      "promptId": "taza",
+      "seed": 17,
+      "steps": 4,
+      "seconds": 24.888
+    },
+    {
+      "promptId": "taza",
+      "seed": 41,
+      "steps": 1,
+      "seconds": 13.688
+    },
+    {
+      "promptId": "taza",
+      "seed": 41,
+      "steps": 2,
+      "seconds": 17.122
+    },
+    {
+      "promptId": "taza",
+      "seed": 41,
+      "steps": 4,
+      "seconds": 25.411
+    },
+    {
+      "promptId": "taza",
+      "seed": 99,
+      "steps": 1,
+      "seconds": 13.673
+    },
+    {
+      "promptId": "taza",
+      "seed": 99,
+      "steps": 2,
+      "seconds": 17.809
+    },
+    {
+      "promptId": "taza",
+      "seed": 99,
+      "steps": 4,
+      "seconds": 26.221
+    },
+    {
+      "promptId": "parque",
+      "seed": 17,
+      "steps": 1,
+      "seconds": 14.903
+    },
+    {
+      "promptId": "parque",
+      "seed": 17,
+      "steps": 2,
+      "seconds": 18.654
+    },
+    {
+      "promptId": "parque",
+      "seed": 17,
+      "steps": 4,
+      "seconds": 26.799
+    },
+    {
+      "promptId": "parque",
+      "seed": 41,
+      "steps": 1,
+      "seconds": 14.484
+    },
+    {
+      "promptId": "parque",
+      "seed": 41,
+      "steps": 2,
+      "seconds": 18.267
+    },
+    {
+      "promptId": "parque",
+      "seed": 41,
+      "steps": 4,
+      "seconds": 26.301
+    },
+    {
+      "promptId": "parque",
+      "seed": 99,
+      "steps": 1,
+      "seconds": 14.41
+    },
+    {
+      "promptId": "parque",
+      "seed": 99,
+      "steps": 2,
+      "seconds": 18.523
+    },
+    {
+      "promptId": "parque",
+      "seed": 99,
+      "steps": 4,
+      "seconds": 26.886
+    },
+    {
+      "promptId": "bodegon",
+      "seed": 17,
+      "steps": 1,
+      "seconds": 14.388
+    },
+    {
+      "promptId": "bodegon",
+      "seed": 17,
+      "steps": 2,
+      "seconds": 18.557
+    },
+    {
+      "promptId": "bodegon",
+      "seed": 17,
+      "steps": 4,
+      "seconds": 28.02
+    },
+    {
+      "promptId": "bodegon",
+      "seed": 41,
+      "steps": 1,
+      "seconds": 14.286
+    },
+    {
+      "promptId": "bodegon",
+      "seed": 41,
+      "steps": 2,
+      "seconds": 18.568
+    },
+    {
+      "promptId": "bodegon",
+      "seed": 41,
+      "steps": 4,
+      "seconds": 26.608
+    },
+    {
+      "promptId": "bodegon",
+      "seed": 99,
+      "steps": 1,
+      "seconds": 14.458
+    },
+    {
+      "promptId": "bodegon",
+      "seed": 99,
+      "steps": 2,
+      "seconds": 18.829
+    },
+    {
+      "promptId": "bodegon",
+      "seed": 99,
+      "steps": 4,
+      "seconds": 26.493
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "issue": 7,
+  "author": "YerayGM-27",
+  "title": "Generar imágenes a partir de texto",
+  "summary": "Compara imágenes precalculadas de SD-Turbo al variar la semilla y los pasos para varios textos.",
+  "mode": "precomputed",
+  "status": "ready",
+  "entry": "web/index.html"
+}
