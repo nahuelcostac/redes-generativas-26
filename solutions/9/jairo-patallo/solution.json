@@ -1,0 +1,9 @@
+{
+  "issue": 9,
+  "author": "Jairo-Patallo",
+  "title": "Detectar objetos en imágenes",
+  "summary": "Carga una imagen y localiza sus objetos con recuadros, categorías y puntuaciones. Ajusta el umbral para filtrar las detecciones.",
+  "mode": "browser",
+  "status": "ready",
+  "entry": "web/index.html"
+}

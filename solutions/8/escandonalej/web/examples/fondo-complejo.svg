@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="#7294a0"/><stop offset="1" stop-color="#e3b87d"/></linearGradient><pattern id="leaves" width="58" height="58" patternUnits="userSpaceOnUse"><path d="M4 48Q10 10 42 8 38 40 4 48Zm26 9Q26 30 53 19q4 28-23 38Z" fill="#54735c"/><circle cx="6" cy="8" r="4" fill="#e9d49a"/></pattern></defs>
+  <rect width="800" height="600" fill="url(#sky)"/><path d="M0 370q110-120 220 0t220 0 220 0 220 0v230H0Z" fill="#61745a"/><path d="M0 410h800v190H0Z" fill="url(#leaves)" opacity=".9"/>
+  <path d="M398 156c-48 0-85 39-85 87v54h170v-54c0-48-37-87-85-87Z" fill="#edb58c"/><path d="M310 299c-58 22-88 74-88 137v77h352v-77c0-63-30-115-88-137l-49 36h-78Z" fill="#c35c43"/><path d="M318 190c14-75 154-92 171 5-44-10-71-30-88-61-20 29-46 46-83 56Z" fill="#3b3028"/><circle cx="370" cy="246" r="5"/><circle cx="426" cy="246" r="5"/><path d="M375 276q23 17 46 0" fill="none" stroke="#9d5149" stroke-width="5" stroke-linecap="round"/>
+</svg>

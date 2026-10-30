@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Detectar objetos en una imagen con DETR ResNet-50 en el navegador."
+    />
+    <title>Detectar objetos en imágenes · Redes Generativas</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Ir al contenido</a>
+    <header class="solution-header container">
+      <a id="catalogue-link" class="text-link" href="../../../../index.html">← Volver al catálogo</a
+      ><a id="issue-link" class="text-link">Ver issue en GitHub ↗</a>
+    </header>
+    <main id="main" class="container detector">
+      <p class="eyebrow">Issue 9 · Modelo en navegador</p>
+      <h1>Detectar objetos en imágenes</h1>
+      <p class="solution-summary">
+        Carga una imagen y el modelo marca los objetos que reconoce, con su categoría y su
+        puntuación.
+      </p>
+      <div class="detector-grid">
+        <section class="input-panel" aria-labelledby="input-title">
+          <h2 id="input-title">Imagen</h2>
+          <button id="choose-file" type="button" class="secondary">Seleccionar imagen</button>
+          <input
+            id="image-file"
+            type="file"
+            accept=".jpg,.jpeg,.png,.webp"
+            aria-label="Archivo de imagen"
+            aria-describedby="file-limits"
+            hidden
+          />
+          <p id="file-limits" class="hint">JPG, PNG o WebP. Hasta 8 MB y 4096 píxeles por lado.</p>
+          <div id="examples" class="example-buttons" aria-label="Imágenes de ejemplo"></div>
+          <div class="run-buttons">
+            <button id="detect" type="button" class="primary" disabled>Detectar objetos</button
+            ><button id="cancel" type="button" class="secondary" hidden>Cancelar</button>
+          </div>
+          <p id="status" role="status">Selecciona una imagen o prueba un ejemplo.</p>
+          <div id="download-progress" hidden>
+            <progress
+              id="model-progress"
+              max="100"
+              aria-label="Progreso de descarga del modelo"
+            ></progress>
+            <p id="progress-detail" class="hint"></p>
+          </div>
+          <p id="error" role="alert" hidden></p>
+          <div class="threshold">
+            <label for="threshold"
+              >Umbral de puntuación: <output id="threshold-value">0,70</output></label
+            >
+            <input id="threshold" type="range" min="0.05" max="0.99" step="0.01" value="0.7" />
+          </div>
+          <dl class="timings">
+            <div>
+              <dt>Carga del modelo</dt>
+              <dd id="load-time">Pendiente</dd>
+            </div>
+            <div>
+              <dt>Detección</dt>
+              <dd id="inference-time">Pendiente</dd>
+            </div>
+          </dl>
+        </section>
+        <section class="result-panel" aria-labelledby="result-title" aria-busy="false">
+          <h2 id="result-title">Resultado</h2>
+          <div id="stage" class="stage" hidden>
+            <img id="preview" alt="Imagen cargada para detectar objetos" />
+            <div id="boxes" class="boxes"></div>
+          </div>
+          <p id="placeholder" class="hint">La imagen y los recuadros aparecerán aquí.</p>
+          <p id="count" class="hint" aria-live="polite"></p>
+          <ul id="detection-list" class="detection-list"></ul>
+        </section>
+      </div>
+      <section class="credits" aria-labelledby="credits-title">
+        <h2 id="credits-title">Procedencia de los ejemplos</h2>
+        <ul id="credits-list"></ul>
+      </section>
+      <details class="model-details">
+        <summary>Modelo y ejecución</summary>
+        <p>
+          <a href="https://huggingface.co/Xenova/detr-resnet-50">DETR ResNet-50</a> (Xenova,
+          conversión ONNX de facebook/detr-resnet-50, licencia Apache 2.0) · Cuantización de 8 bits
+          · CPU mediante WebAssembly.
+        </p>
+        <p>
+          Transformers.js 4.3.1. El procesamiento se realiza en un Web Worker. La imagen no se envía
+          a ningún servicio de inferencia.
+        </p>
+      </details>
+    </main>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
