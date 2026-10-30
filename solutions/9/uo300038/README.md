@@ -38,7 +38,7 @@ He elegido DETR ResNet-50 porque es el modelo de detección de referencia en la 
 
 El navegador comprueba el archivo y lee sus dimensiones. El worker convierte la imagen a RGB y ejecuta el pipeline `object-detection` una sola vez con un umbral de 0,1. Las coordenadas se piden en proporción a la imagen (`percentage: true`). La interfaz recorta los recuadros a la imagen, los ordena por puntuación y filtra en el navegador según el umbral elegido. El umbral inicial es 0,7.
 
-`config.mjs` contiene el modelo y los límites. `detections.mjs` contiene la validación, el filtrado, el recuento y la traducción de las categorías. Este módulo no depende del navegador y tiene pruebas en `tests/object-detection.test.mjs`. `worker.js` ejecuta el modelo. `app.js` controla la interfaz.
+`config.mjs` contiene el modelo y los límites. `detections.mjs` contiene la validación, el filtrado, el recuento y la traducción de las categorías. Este módulo no depende del navegador y tiene pruebas en `tests/object-detection-uo300038.test.mjs`. `worker.js` ejecuta el modelo. `app.js` controla la interfaz.
 
 ### Categorías
 
