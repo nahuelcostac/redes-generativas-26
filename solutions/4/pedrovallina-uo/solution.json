@@ -1,0 +1,9 @@
+{
+  "issue": 4,
+  "author": "pedrovallina-uo",
+  "title": "Generar descripciones de imágenes",
+  "summary": "Explora imágenes de ejemplo y compara descripciones precalculadas con búsqueda voraz y muestreo.",
+  "mode": "precomputed",
+  "status": "ready",
+  "entry": "web/index.html"
+}

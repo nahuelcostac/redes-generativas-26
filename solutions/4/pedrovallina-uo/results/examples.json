@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-30T14:44:52.710Z",
+  "model": {
+    "id": "Xenova/vit-gpt2-image-captioning",
+    "revision": "215b4edcb7ec1fad5905a18a03f7b2007f6fabd0",
+    "baseModel": "nlpconnect/vit-gpt2-image-captioning",
+    "license": "Apache-2.0",
+    "architecture": "ViT encoder y GPT-2 decoder"
+  },
+  "runtime": {
+    "transformers": "4.3.1",
+    "node": "v24.22.1",
+    "device": "CPU, ONNX Runtime con pesos q8",
+    "hardware": "Intel(R) Core(TM) i5-10310U CPU @ 1.70GHz; 8 procesadores lógicos; 16 GiB de RAM",
+    "platform": "win32 10.0.22621 (x64)"
+  },
+  "images": [
+    {
+      "id": "teapot",
+      "file": "images/teapot.jpg",
+      "title": "Una tetera",
+      "kind": "Un objeto principal",
+      "alt": "Tetera oscura con tapa, asa y pico sobre una mesa.",
+      "source": {
+        "label": "mishig/sample_images, teapot.jpg",
+        "url": "https://huggingface.co/datasets/mishig/sample_images/blob/6003d93/teapot.jpg"
+      },
+      "captions": [
+        {
+          "id": "greedy",
+          "label": "Búsqueda voraz",
+          "generatedText": "a small ceramic pot with a flower on it",
+          "parameters": {
+            "search": "voraz",
+            "numBeams": 1,
+            "maxNewTokens": 32
+          },
+          "elapsedSeconds": 0.867
+        },
+        {
+          "id": "beam-4",
+          "label": "Muestreo",
+          "generatedText": "a small cup with a green and white handle on a table",
+          "parameters": {
+            "search": "muestreo",
+            "numBeams": 1,
+            "maxNewTokens": 32,
+            "doSample": true,
+            "temperature": 0.8,
+            "topK": 50,
+            "seed": 42
+          },
+          "elapsedSeconds": 1.152
+        }
+      ]
+    },
+    {
+      "id": "airport",
+      "file": "images/airport.jpg",
+      "title": "Pista de aeropuerto",
+      "kind": "Escena con varios elementos",
+      "alt": "Un autobús en primer plano y aviones al fondo en la pista de un aeropuerto.",
+      "source": {
+        "label": "mishig/sample_images, airport.jpg",
+        "url": "https://huggingface.co/datasets/mishig/sample_images/blob/6003d93/airport.jpg"
+      },
+      "captions": [
+        {
+          "id": "greedy",
+          "label": "Búsqueda voraz",
+          "generatedText": "a plane is on the tarmac with a bus",
+          "parameters": {
+            "search": "voraz",
+            "numBeams": 1,
+            "maxNewTokens": 32
+          },
+          "elapsedSeconds": 0.961
+        },
+        {
+          "id": "beam-4",
+          "label": "Muestreo",
+          "generatedText": "airplanes are parked at the tarmac of an airport",
+          "parameters": {
+            "search": "muestreo",
+            "numBeams": 1,
+            "maxNewTokens": 32,
+            "doSample": true,
+            "temperature": 0.8,
+            "topK": 50,
+            "seed": 42
+          },
+          "elapsedSeconds": 1.016
+        }
+      ]
+    }
+  ]
+}

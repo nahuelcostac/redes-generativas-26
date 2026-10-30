@@ -1,0 +1,73 @@
+{
+  "model": {
+    "id": "Xenova/vit-gpt2-image-captioning",
+    "revision": "215b4edcb7ec1fad5905a18a03f7b2007f6fabd0",
+    "baseModel": "nlpconnect/vit-gpt2-image-captioning",
+    "license": "Apache-2.0",
+    "architecture": "ViT encoder y GPT-2 decoder"
+  },
+  "images": [
+    {
+      "id": "teapot",
+      "file": "images/teapot.jpg",
+      "title": "Una tetera",
+      "kind": "Un objeto principal",
+      "alt": "Tetera oscura con tapa, asa y pico sobre una mesa.",
+      "source": {
+        "label": "mishig/sample_images, teapot.jpg",
+        "url": "https://huggingface.co/datasets/mishig/sample_images/blob/6003d93/teapot.jpg"
+      },
+      "captions": [
+        {
+          "id": "greedy",
+          "label": "Búsqueda voraz",
+          "parameters": { "search": "voraz", "numBeams": 1, "maxNewTokens": 32 }
+        },
+        {
+          "id": "beam-4",
+          "label": "Muestreo",
+          "parameters": {
+            "search": "muestreo",
+            "numBeams": 1,
+            "maxNewTokens": 32,
+            "doSample": true,
+            "temperature": 0.8,
+            "topK": 50,
+            "seed": 42
+          }
+        }
+      ]
+    },
+    {
+      "id": "airport",
+      "file": "images/airport.jpg",
+      "title": "Pista de aeropuerto",
+      "kind": "Escena con varios elementos",
+      "alt": "Un autobús en primer plano y aviones al fondo en la pista de un aeropuerto.",
+      "source": {
+        "label": "mishig/sample_images, airport.jpg",
+        "url": "https://huggingface.co/datasets/mishig/sample_images/blob/6003d93/airport.jpg"
+      },
+      "captions": [
+        {
+          "id": "greedy",
+          "label": "Búsqueda voraz",
+          "parameters": { "search": "voraz", "numBeams": 1, "maxNewTokens": 32 }
+        },
+        {
+          "id": "beam-4",
+          "label": "Muestreo",
+          "parameters": {
+            "search": "muestreo",
+            "numBeams": 1,
+            "maxNewTokens": 32,
+            "doSample": true,
+            "temperature": 0.8,
+            "topK": 50,
+            "seed": 42
+          }
+        }
+      ]
+    }
+  ]
+}

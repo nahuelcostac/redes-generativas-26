@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f2ec" />
+    <title>Descripciones de imágenes</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Ir al contenido</a>
+    <header class="solution-header container">
+      <a id="catalogue-link" class="text-link" href="../../../../index.html"
+        >← Volver al catálogo</a
+      >
+      <a id="issue-link" class="text-link">Ver issue ↗</a>
+    </header>
+    <main id="main" class="container">
+      <p class="eyebrow" id="solution-mode"></p>
+      <h1 id="solution-title"></h1>
+      <p id="solution-summary" class="solution-summary"></p>
+      <p id="solution-author" class="solution-author"></p>
+
+      <section class="intro" aria-labelledby="intro-title">
+        <div>
+          <p class="kicker">Visión por computador · Issue 04</p>
+          <h2 id="intro-title">¿Qué ve el modelo?</h2>
+          <p>
+            Elige una imagen y compara dos estrategias de generación. El modelo calculó todas las
+            descripciones en local.
+          </p>
+        </div>
+        <span class="model-chip">ViT + GPT-2</span>
+      </section>
+
+      <section class="viewer" aria-label="Explorador de descripciones">
+        <aside class="image-list-panel">
+          <div class="section-heading">
+            <div>
+              <p class="kicker">Colección</p>
+              <h2>Imágenes</h2>
+            </div>
+            <span id="image-count" class="count-pill"></span>
+          </div>
+          <div id="image-list" class="image-list" role="list"></div>
+        </aside>
+
+        <div class="detail-panel">
+          <div id="status" class="status" role="status" aria-live="polite">
+            Cargando resultados…
+          </div>
+          <div id="detail" hidden>
+            <div class="image-stage">
+              <img id="selected-image" alt="" />
+              <span id="image-kind" class="image-kind"></span>
+            </div>
+            <div class="caption-heading">
+              <div>
+                <p class="kicker">Descripción generada</p>
+                <h2 id="selected-title"></h2>
+              </div>
+              <span id="caption-count" class="count-pill"></span>
+            </div>
+            <div id="captions" class="captions"></div>
+            <details class="metadata">
+              <summary>Ver parámetros, modelo y procedencia</summary>
+              <dl id="metadata-list"></dl>
+              <a id="source-link" class="text-link" target="_blank" rel="noreferrer"
+                >Abrir fuente de la imagen ↗</a
+              >
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="how-it-works" aria-labelledby="how-title">
+        <p class="kicker">Cómo se hizo</p>
+        <h2 id="how-title">Misma imagen, dos estrategias de generación</h2>
+        <p>
+          La búsqueda voraz elige siempre el siguiente token más probable. En el muestreo, el modelo
+          selecciona entre varias opciones según sus probabilidades. La interfaz muestra resultados
+          guardados y no ejecuta el modelo.
+        </p>
+      </section>
+      <footer class="page-footer">
+        <span>Resultados calculados previamente</span
+        ><span>Modelo en inglés · interfaz en español</span>
+      </footer>
+    </main>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
