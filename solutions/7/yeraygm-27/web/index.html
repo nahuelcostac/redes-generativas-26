@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Explora generaciones de SD-Turbo y compara el efecto de la semilla y los pasos."
+    />
+    <title>Generar imágenes a partir de texto · Redes Generativas</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Ir al contenido</a>
+    <header class="solution-header container">
+      <a id="catalogue-link" class="text-link" href="../../../../index.html"
+        >← Volver al catálogo</a
+      >
+      <a id="issue-link" class="text-link">Ver issue ↗</a>
+    </header>
+    <main id="main" class="container">
+      <p class="eyebrow" id="solution-mode"></p>
+      <h1 id="solution-title"></h1>
+      <p id="solution-summary" class="solution-summary"></p>
+      <p id="solution-author" class="solution-author"></p>
+
+      <section class="workspace" aria-labelledby="explore-title">
+        <p class="eyebrow">Laboratorio visual · SD-Turbo</p>
+        <h2 id="explore-title">Explora una generación</h2>
+        <p>
+          Los resultados se calcularon previamente en local. Elige un texto y una configuración
+          disponible.
+        </p>
+        <div class="controls">
+          <label for="prompt-select">Descripción</label>
+          <select id="prompt-select"></select>
+          <label for="seed-select">Semilla</label>
+          <select id="seed-select"></select>
+          <label for="steps-select">Pasos de inferencia</label>
+          <select id="steps-select"></select>
+        </div>
+        <p id="prompt-text" class="prompt-text"></p>
+        <details class="prompt-details">
+          <summary>Ver texto enviado al modelo</summary>
+          <p id="model-prompt"></p>
+        </details>
+        <p class="prompt-observation">
+          <strong>Observación al revisar</strong>
+          <span id="prompt-observation"></span>
+        </p>
+        <div id="generation" class="generation" aria-live="polite"></div>
+      </section>
+
+      <section class="workspace" aria-labelledby="compare-title">
+        <h2 id="compare-title">Compara configuraciones</h2>
+        <p>Se mantiene el mismo texto y se cambia solo la semilla o los pasos.</p>
+        <div class="controls comparison-controls">
+          <label for="compare-axis">Cambiar</label>
+          <select id="compare-axis">
+            <option value="seed">Semilla</option>
+            <option value="steps">Pasos de inferencia</option>
+          </select>
+          <label for="compare-value">Valor para comparar</label>
+          <select id="compare-value"></select>
+        </div>
+        <div id="comparison" class="comparison" aria-live="polite"></div>
+      </section>
+
+      <section class="workspace notes" aria-labelledby="notes-title">
+        <h2 id="notes-title">Sobre estos resultados</h2>
+        <p>
+          Resolución: 512 × 512 píxeles. SD-Turbo está destilado para generar en 1–4 pasos. La guía
+          de texto se fija en 0, como recomienda su ficha. La muestra incluye semillas 17, 41 y 99,
+          y compara 1, 2 y 4 pasos.
+        </p>
+        <p>
+          La interfaz solo muestra las combinaciones exportadas. Para cambiar el texto libremente o
+          generar otros parámetros, ejecuta el script local descrito en el README de la solución.
+        </p>
+      </section>
+    </main>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
