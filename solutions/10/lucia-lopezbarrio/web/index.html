@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Resumir documentos · Redes Generativas</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Ir al contenido</a>
+    <header class="solution-header container">
+      <a id="catalogue-link" class="text-link" href="../../../../index.html"
+        >← Volver al catálogo</a
+      >
+      <a
+        id="issue-link"
+        class="text-link"
+        href="https://github.com/nahuelcostac/redes-generativas-26/issues/10"
+        >Ver issue ↗</a
+      >
+    </header>
+    <main id="main" class="container">
+      <p class="eyebrow" id="solution-mode">Resultados calculados previamente</p>
+      <h1>Resumir documentos</h1>
+      <p class="solution-summary">
+        Compara resúmenes de textos en español generados en local con distintas configuraciones.
+      </p>
+      <p class="solution-author" id="solution-author"></p>
+      <p id="load-status" role="status">Cargando los ejemplos…</p>
+      <div id="load-error" role="alert" hidden>
+        <p>No se pudieron cargar los ejemplos. Comprueba la conexión y vuelve a intentarlo.</p>
+        <button id="retry" class="button" type="button">Volver a cargar</button>
+      </div>
+      <div id="explorer" hidden>
+        <section class="input-section" aria-labelledby="input-title">
+          <div class="section-heading">
+            <h2 id="input-title">Texto original</h2>
+            <div class="prompt-control">
+              <label for="prompt">Elegir texto</label>
+              <select id="prompt"></select>
+            </div>
+          </div>
+          <p class="hint">
+            <a id="prompt-source" class="text-link" target="_blank" rel="noreferrer"></a>
+          </p>
+          <p class="hint" id="prompt-size"></p>
+          <p id="truncation" class="truncation" hidden></p>
+          <div class="prompt-text-frame" tabindex="0" aria-label="Texto original">
+            <p id="prompt-text" class="prompt-text"></p>
+          </div>
+          <p class="hint">Modelo ejecutado en local. Aquí solo se muestran las salidas.</p>
+        </section>
+        <section class="comparison-section" aria-labelledby="comparison-title">
+          <h2 id="comparison-title">Comparar resúmenes</h2>
+          <p class="hint">
+            La longitud máxima limita el resumen. La mínima fuerza a alargarlo. Varios haces
+            exploran más opciones.
+          </p>
+          <div class="comparison" aria-live="polite" aria-atomic="true">
+            <article class="result" aria-labelledby="label-a">
+              <label id="label-a" for="configuration-a">Configuración A</label>
+              <select id="configuration-a"></select>
+              <p class="summary-text" id="summary-a"></p>
+              <p class="run-info" id="run-info-a"></p>
+              <p class="stop-reason" id="stop-reason-a"></p>
+              <h3>Parámetros</h3>
+              <dl class="parameters" id="parameters-a"></dl>
+              <h3>Información importante omitida</h3>
+              <ul id="omissions-a"></ul>
+              <h3>Afirmaciones sin respaldo en el original</h3>
+              <ul id="unsupported-a"></ul>
+            </article>
+            <article class="result" aria-labelledby="label-b">
+              <label id="label-b" for="configuration-b">Configuración B</label>
+              <select id="configuration-b"></select>
+              <p class="summary-text" id="summary-b"></p>
+              <p class="run-info" id="run-info-b"></p>
+              <p class="stop-reason" id="stop-reason-b"></p>
+              <h3>Parámetros</h3>
+              <dl class="parameters" id="parameters-b"></dl>
+              <h3>Información importante omitida</h3>
+              <ul id="omissions-b"></ul>
+              <h3>Afirmaciones sin respaldo en el original</h3>
+              <ul id="unsupported-b"></ul>
+            </article>
+          </div>
+          <p class="hint" id="review-status"></p>
+          <p class="hint" id="review-method"></p>
+        </section>
+        <details class="execution">
+          <summary>Modelo, límites y equipo</summary>
+          <dl id="execution-data"></dl>
+        </details>
+      </div>
+      <section class="local-section" aria-labelledby="local-title">
+        <h2 id="local-title">Probar en local</h2>
+        <p>El script acepta un texto propio y su longitud máxima de resumen.</p>
+        <pre><code>python summarize.py --text "Texto que quieres resumir." --max-new-tokens 80</code></pre>
+        <a id="instructions-link" class="text-link">Instalación y ejecución ↗</a>
+      </section>
+    </main>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

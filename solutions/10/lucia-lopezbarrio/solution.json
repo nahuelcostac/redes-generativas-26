@@ -1,0 +1,9 @@
+{
+  "issue": 10,
+  "author": "lucia-lopezbarrio",
+  "title": "Resumir documentos",
+  "summary": "Compara resúmenes de textos en español generados en local con distintas longitudes y anota sus omisiones.",
+  "mode": "precomputed",
+  "status": "ready",
+  "entry": "web/index.html"
+}
