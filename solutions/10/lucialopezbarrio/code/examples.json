@@ -1,0 +1,93 @@
+{
+  "prompts": [
+    {
+      "id": "noticia-corta",
+      "label": "Noticia corta · Sonda china en la Luna",
+      "text": "La sonda china \"Chang'e-I\" entró hoy en la órbita lunar, después de 11 días de su viaje desde la Tierra, siendo el principal objetivo de esta misión del programa espacial de China para explorar la Luna. La sonda entró en la órbita lunar a las 11:37 (hora local) tras un proceso de desaceleración controlado desde la Tierra.\n\nUna vez en la órbita lunar, la sonda comenzará a tomar imágenes de la superficie lunar durante un año. Tras este lanzamiento se espera que en el año 2012 un vehículo del país asiático alunice y el 2017 se enviaría un vehículo no tripulado que traiga material lunar.",
+      "source": {
+        "site": "Wikinoticias",
+        "title": "Primera sonda china orbita la Luna",
+        "url": "https://es.wikinews.org/w/index.php?oldid=406137",
+        "revision": 406137,
+        "license": "CC BY 4.0",
+        "retrieved_at": "2026-10-30"
+      }
+    },
+    {
+      "id": "noticia-media",
+      "label": "Noticia media · Riñones de laboratorio",
+      "text": "Investigadores del Hospital General de Massachusetts han creado riñones crecidos en laboratorio que son funcionales al trasplantarlos en ratas, según un estudio publicado ayer en línea en la revista médica Nature Medicine.\n\nLos riñones fueron capaces de llevar a cabo la producción de orina tanto en el laboratorio como dentro de las ratas vivas, y fueron creados al usar una matriz originada a partir de un riñón extraído de otra rata y lavado con detergentes para remover las células renales de esta; para finalmente hacer crecer nuevas células alrededor del \"andamiaje\" resultante, la estructura natural conformada por proteínas que queda tras lavar el riñón original.\n\nPuesto que estos riñones tienen tejidos conformados por células del paciente y no de otro individuo, se evitan los problemas de rechazo de órganos y se incrementarían los riñones disponibles para trasplantes en humanos.\n\nEl equipo de investigadores incubó los riñones en un horno especializado durante doce días para imitar el interior de una rata. Asimismo, señaló que producían orina al 23% de los niveles normales de los riñones que trabajan de manera adecuada.\n\nEl Dr. Harald C. Ott, investigador en líder del equipo, dijo que la funcionalidad parcial es suficiente, señalando que \"si estás en hemodiálisis, entonces una funcionalidad renal de 10% a 15% te haría ya independiente de hemodiálisis. No es que tengamos que ir hasta el final\".\n\nLas técnicas que Ott y su equipo desarrollaron tienen que ser investigadas más a fondo antes de poder ser aplicadas en humanos. Cuando llegue el turno de los humanos, los riñones de cerdos podrían ser usados como plantillas para hacer riñones útiles a nosotros, según dijo Ott.\n\nDe acuerdo a sus declaraciones, \"tomarías una matriz de riñón de la repisa. Entonces, en un mundo ideal, tomarías células del paciente y crearías un riñón a pedido\".",
+      "source": {
+        "site": "Wikinoticias",
+        "title": "Investigadores estadounidenses crean riñones de rata en un laboratorio",
+        "url": "https://es.wikinews.org/w/index.php?oldid=611401",
+        "revision": 611401,
+        "license": "CC BY 4.0",
+        "retrieved_at": "2026-10-30"
+      }
+    },
+    {
+      "id": "articulo-largo",
+      "label": "Artículo largo · Río Ebro",
+      "text": "El Ebro es un río del noreste de la península ibérica, el segundo más largo y caudaloso de esta, tras el Tajo y el Duero, respectivamente. Discurre enteramente por España. Entre los ríos que desembocan en el mar Mediterráneo, solo es superado en longitud por el Nilo.\n\nRecorre el extremo nororiental de la península ibérica, a través del valle homónimo, situado en una depresión. Sigue una dirección noroeste-sureste desde su nacimiento en el municipio cántabro de la Hermandad de Campoo de Suso hasta el mar Mediterráneo, en el que desemboca formando el delta del Ebro, entre los términos municipales de Deltebre y San Jaime de Enveija, ambos en la provincia de Tarragona.\n\nEl río tiene una longitud total de 930 km y atraviesa diez provincias o comunidades uniprovinciales: Cantabria (donde nace), Palencia, Burgos, Álava, La Rioja, Navarra, Zaragoza, Huesca, Lérida y Tarragona (donde desemboca). Además, su cuenca hidrográfica también drena territorios de la Comunidad Valenciana (río Bergantes) y Castilla-La Mancha. Dos capitales de comunidad autónoma, Logroño y Zaragoza, son bañadas por el río.\n\nLa cuenca hidrográfica del Ebro, con una superficie de 86 100 km², abarca territorios de España, Andorra y Francia.\n\nSu nombre deriva del antiguo topónimo Hiber (Hiberus flumen), que da también nombre a la península ibérica y a los pueblos íberos, adaptación latina del término griego Ἴβηρ (Íber), que recogen las numerosas fuentes historiográficas griegas, que significaría ribera o margen del río. En efecto, colonos griegos se establecieron un poco más al norte hacia el 575 a. C. en la importante colonia de Ampurias (del griego antiguo Ἐμπόριον, que significa «mercado» o «almacén comercial») en la actual Gerona. De ahí que el término de Iberia originalmente deriva del nombre mismo del río Ebro.\n\nTradicionalmente se ha considerado que el Ebro nace en Fontibre (del latín Fontes Hiberis o fuentes del Ebro), manantial situado a 880m s. n. m. en la Hermandad de Campoo de Suso, en Cantabria.",
+      "source": {
+        "site": "Wikipedia",
+        "title": "Ebro",
+        "url": "https://es.wikipedia.org/w/index.php?oldid=175905347",
+        "revision": 175905347,
+        "license": "CC BY-SA 4.0",
+        "retrieved_at": "2026-10-30"
+      }
+    },
+    {
+      "id": "articulo-muy-largo",
+      "label": "Artículo muy largo · Ada Lovelace",
+      "text": "Augusta Ada King, condesa de Lovelace (pronunciado /ˈlʌv.leɪs/; Londres, 10 de diciembre de 1815-íd., 27 de noviembre de 1852), registrada al nacer como Augusta Ada Byron y conocida habitualmente como Ada Lovelace, fue una matemática y escritora británica, célebre sobre todo por su trabajo acerca de la computadora mecánica de uso general de Charles Babbage, la denominada máquina analítica. Fue la primera en reconocer que la máquina tenía aplicaciones más allá del cálculo puro y en haber publicado lo que se reconoce hoy como el primer algoritmo destinado a ser procesado por una máquina, por lo que se le considera como la primera programadora de ordenadores, aunque no existen pruebas documentales de tales afirmaciones (véase la sección Polémica sobre sus contribuciones).\n\nLovelace fue la única hija legítima del poeta Lord Byron y Anna Isabella Noel Byron. Byron se separó de su esposa un mes después del nacimiento de Ada y dejó Inglaterra para siempre cuatro meses después. Conmemoró la despedida en un poema que comienza: «¿Es tu rostro como el de tu madre, mi bella hija? ¡ADA! Hija única de mi casa y mi corazón». Murió en la guerra de Independencia de Grecia cuando Ada tenía ocho años.\n\nDedujo y previó la capacidad de los ordenadores para ir más allá de los simples cálculos de números, mientras que otros, incluido el propio Babbage, se centraron únicamente en estas capacidades.\n\nSu posición social y su educación la llevaron a conocer a científicos importantes como Andrew Crosse, sir David Brewster, Charles Wheatstone, Michael Faraday y al novelista Charles Dickens, relaciones que aprovechó para llegar más lejos en su educación. Entre estas relaciones se encuentra Mary Somerville, que fue su tutora durante un tiempo, además de amiga y estímulo intelectual. Ada Byron se refería a sí misma como una científica poetisa y como analista (y metafísica).\n\nA una edad temprana, su talento matemático la condujo a una relación de amistad prolongada con el matemático inglés Charles Babbage, y concretamente con la obra de Babbage sobre la máquina analítica. Entre 1842 y 1843, tradujo un artículo del ingeniero militar italiano Luigi Menabrea sobre la máquina, que complementó con un amplio conjunto de notas propias, denominado simplemente Notas. Estas notas contienen lo que se considera como el primer programa de ordenador, esto es, un algoritmo codificado para que una máquina lo procese. Las notas de Lovelace son importantes en la historia de la computación. Otros historiadores rechazan esta perspectiva y señalan que las notas personales de Babbage de los años 1836/1837 contienen los primeros programas para el motor. También desarrolló una visión de la capacidad de las computadoras para ir más allá del mero cálculo o el cálculo de números, mientras que muchos otros, incluido el propio Babbage, se centraron solo en esas capacidades. Su mentalidad de 'ciencia poética' la llevó a hacer preguntas sobre el motor analítico (como se muestra en sus notas) examinando cómo los individuos y la sociedad se relacionan con la tecnología como una herramienta de colaboración.\n\nAda fue la única hija legítima de Anna Isabella y del poeta lord Byron, quien esperaba que su hijo fuera un niño y se sintió decepcionado cuando su esposa dio a luz a una niña. Nació el domingo 10 de diciembre de 1815. La niña lleva el nombre de la media hermana de Byron, Augusta Leigh, y fue llamada Ada por el propio Byron. El 16 de enero de 1816, por orden de lord Byron, lady Byron se fue a la casa de sus padres en Kirkby Mallory (Leicestershire) llevando a su hija de cinco semanas con ella. Aunque la ley inglesa en ese momento otorgaba la custodia total de los hijos al padre en casos de separación, lord Byron no intentó reclamar sus derechos parentales, pero solicitó que su hermana lo mantuviera informado sobre el bienestar de Ada. En abril de 1816 su padre abandonó Inglaterra huyendo de sus acreedores y del escándalo que se cernía sobre él por los rumores de incesto. Meses más tarde, Annabella presentó una demanda de separación. Durante los ocho años que lord Byron estuvo fuera de su país hasta su muerte escribía con frecuencia a Augusta y preguntaba por la hija de ambos. A Lovelace no se le mostró el retrato familiar de su padre hasta que cumplió 20 años.\n\nLovelace no tuvo una relación cercana con su madre. A menudo la dejaban al cuidado de su abuela materna Judith, Hon. Lady Milbanke, que la adoraba. Sin embargo, debido a las actitudes sociales de la época, que favorecían al marido en cualquier separación, con el bienestar de cualquier niño que actuara como mitigante, lady Byron tuvo que presentarse como una madre amorosa para el resto de la sociedad. Esto incluía escribir cartas de ansiedad a lady Milbanke sobre el bienestar de su hija, con una nota de presentación que decía que debía retener las cartas en caso de que tuviera que usarlas para mostrar preocupación materna.\n\nDesde niña Ada despertó el interés de una sociedad en la que se vivían continuos escándalos. Su madre puso mucho empeño en protegerla, pero solo lo consiguió hasta cierto punto.\n\nLady Byron quería darle una educación esmerada a su hija, muy parecida a la que ella misma había recibido, pero más exigente. Ada no se podía relacionar con otros niños sin la previa aprobación de su madre, por lo que la mayor parte de su infancia la pasó sola o con adultos. Su educación empezó cuando era muy pequeña; a los cuatro años ya tenía preceptores e institutrices. A los ocho años (en 1824) la jornada normal de Ada comenzaba con clase de música a las 10:00 de la mañana, a las 11:15 tocaba lectura de francés, a las 11:30 clase de aritmética, a las 13:30 hacía deberes, a las 15:15 música otra vez y a las 16:30 finalizaba con ejercicios de francés. Lady Byron le impuso una disciplina estricta basada en un sistema de recompensas y castigos, y también buscando el estímulo intelectual con lecturas y relaciones con intelectuales. Puso mucho empeño en que su hija aprendiera matemáticas, disciplina que ella misma practicaba. En este contexto, Ada conoce a la matemática y científica escocesa Mary Somerville, que durante un tiempo fue su tutora. Somerville, en tanto que mujer científica, se convierte en un importante estímulo y gran influencia en su vida. Ambas, alumna y tutora, comparten aficiones científicas estableciéndose entre ellas una gran complicidad.",
+      "source": {
+        "site": "Wikipedia",
+        "title": "Ada Lovelace",
+        "url": "https://es.wikipedia.org/w/index.php?oldid=175886330",
+        "revision": 175886330,
+        "license": "CC BY-SA 4.0",
+        "retrieved_at": "2026-10-30"
+      }
+    }
+  ],
+  "configurations": [
+    {
+      "id": "corto",
+      "label": "Corto",
+      "max_new_tokens": 40,
+      "min_new_tokens": 24,
+      "num_beams": 4
+    },
+    {
+      "id": "medio",
+      "label": "Medio",
+      "max_new_tokens": 80,
+      "min_new_tokens": 24,
+      "num_beams": 4
+    },
+    {
+      "id": "largo",
+      "label": "Largo",
+      "max_new_tokens": 150,
+      "min_new_tokens": 24,
+      "num_beams": 4
+    },
+    {
+      "id": "extenso",
+      "label": "Extenso forzado",
+      "max_new_tokens": 150,
+      "min_new_tokens": 80,
+      "num_beams": 4
+    },
+    {
+      "id": "medio-voraz",
+      "label": "Medio con un haz",
+      "max_new_tokens": 80,
+      "min_new_tokens": 24,
+      "num_beams": 1
+    }
+  ]
+}

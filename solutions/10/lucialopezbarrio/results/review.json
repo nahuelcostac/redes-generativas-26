@@ -1,0 +1,235 @@
+{
+  "schema_version": 1,
+  "status": "pendiente",
+  "method": "Cada resumen se comparó con el texto original completo. Las listas recogen datos importantes ausentes y afirmaciones que el original no respalda. El criterio de importancia es subjetivo.",
+  "reviews": [
+    {
+      "prompt_id": "noticia-corta",
+      "configuration_id": "corto",
+      "omissions": [
+        "No dice que la sonda es china ni la llama Chang'e-I.",
+        "No dice que la sonda entró en órbita tras 11 días de viaje.",
+        "Omite los planes de 2012 y 2017."
+      ],
+      "unsupported": []
+    },
+    {
+      "prompt_id": "noticia-corta",
+      "configuration_id": "medio",
+      "omissions": [
+        "No dice que la sonda es china ni la llama Chang'e-I.",
+        "No dice que la sonda entró en órbita tras 11 días de viaje.",
+        "Omite los planes de 2012 y 2017."
+      ],
+      "unsupported": []
+    },
+    {
+      "prompt_id": "noticia-corta",
+      "configuration_id": "largo",
+      "omissions": [
+        "No dice que la sonda es china ni la llama Chang'e-I.",
+        "No dice que la sonda entró en órbita tras 11 días de viaje.",
+        "Omite los planes de 2012 y 2017."
+      ],
+      "unsupported": []
+    },
+    {
+      "prompt_id": "noticia-corta",
+      "configuration_id": "extenso",
+      "omissions": [
+        "Omite que la sonda tomará imágenes durante un año.",
+        "Omite la hora de entrada en órbita y la desaceleración controlada."
+      ],
+      "unsupported": []
+    },
+    {
+      "prompt_id": "noticia-corta",
+      "configuration_id": "medio-voraz",
+      "omissions": [
+        "Omite que la sonda tomará imágenes durante un año.",
+        "Omite los planes de 2012 y 2017."
+      ],
+      "unsupported": []
+    },
+    {
+      "prompt_id": "noticia-media",
+      "configuration_id": "corto",
+      "omissions": [
+        "Omite la publicación en Nature Medicine.",
+        "Omite el método: una matriz de riñón sin células sobre la que crecen células nuevas.",
+        "Omite la ventaja principal: evitar el rechazo y aumentar los riñones disponibles.",
+        "Omite el resultado medido: orina al 23% de los niveles normales.",
+        "No dice que la técnica aún no se puede aplicar en humanos."
+      ],
+      "unsupported": []
+    },
+    {
+      "prompt_id": "noticia-media",
+      "configuration_id": "medio",
+      "omissions": [
+        "Omite la publicación en Nature Medicine.",
+        "Omite el método: una matriz de riñón sin células sobre la que crecen células nuevas.",
+        "Omite la ventaja principal: evitar el rechazo y aumentar los riñones disponibles.",
+        "Omite el resultado medido: orina al 23% de los niveles normales.",
+        "No dice que la técnica aún no se puede aplicar en humanos."
+      ],
+      "unsupported": []
+    },
+    {
+      "prompt_id": "noticia-media",
+      "configuration_id": "largo",
+      "omissions": [
+        "Omite la publicación en Nature Medicine.",
+        "Omite el método: una matriz de riñón sin células sobre la que crecen células nuevas.",
+        "Omite la ventaja principal: evitar el rechazo y aumentar los riñones disponibles.",
+        "Omite el resultado medido: orina al 23% de los niveles normales.",
+        "No dice que la técnica aún no se puede aplicar en humanos."
+      ],
+      "unsupported": []
+    },
+    {
+      "prompt_id": "noticia-media",
+      "configuration_id": "extenso",
+      "omissions": [
+        "Omite el método de creación de los riñones.",
+        "Omite la ventaja principal: evitar el rechazo y aumentar los riñones disponibles.",
+        "Omite el resultado medido: orina al 23% de los niveles normales.",
+        "No atribuye la opinión ni la cita a Harald C. Ott.",
+        "No dice que la técnica aún no se puede aplicar en humanos."
+      ],
+      "unsupported": [
+        "Altera una cita textual: escribe «hemodialización» donde el original dice «hemodiálisis»."
+      ]
+    },
+    {
+      "prompt_id": "noticia-media",
+      "configuration_id": "medio-voraz",
+      "omissions": [
+        "Omite la publicación en Nature Medicine.",
+        "Omite el método: una matriz de riñón sin células sobre la que crecen células nuevas.",
+        "Omite la ventaja principal: evitar el rechazo y aumentar los riñones disponibles.",
+        "Omite el resultado medido: orina al 23% de los niveles normales.",
+        "No dice que la técnica aún no se puede aplicar en humanos."
+      ],
+      "unsupported": []
+    },
+    {
+      "prompt_id": "articulo-largo",
+      "configuration_id": "corto",
+      "omissions": [
+        "No dice qué es el Ebro: un río del noreste de la península ibérica.",
+        "Omite la longitud de 930 km.",
+        "Omite el nacimiento en Cantabria y la desembocadura en el Mediterráneo.",
+        "Omite las provincias que atraviesa y el origen del nombre."
+      ],
+      "unsupported": []
+    },
+    {
+      "prompt_id": "articulo-largo",
+      "configuration_id": "medio",
+      "omissions": [
+        "No dice qué es el Ebro: un río del noreste de la península ibérica.",
+        "Omite la longitud de 930 km.",
+        "Omite el nacimiento en Cantabria y la desembocadura en el Mediterráneo.",
+        "Omite las provincias que atraviesa y el origen del nombre."
+      ],
+      "unsupported": []
+    },
+    {
+      "prompt_id": "articulo-largo",
+      "configuration_id": "largo",
+      "omissions": [
+        "No dice qué es el Ebro: un río del noreste de la península ibérica.",
+        "Omite la longitud de 930 km.",
+        "Omite el nacimiento en Cantabria y la desembocadura en el Mediterráneo.",
+        "Omite las provincias que atraviesa y el origen del nombre."
+      ],
+      "unsupported": []
+    },
+    {
+      "prompt_id": "articulo-largo",
+      "configuration_id": "extenso",
+      "omissions": [
+        "No dice qué es el Ebro: un río del noreste de la península ibérica.",
+        "Omite la longitud de 930 km.",
+        "Omite el nacimiento en Cantabria y la desembocadura en el Mediterráneo."
+      ],
+      "unsupported": [
+        "Altera una palabra griega: escribe «Ἴβηr», con una letra latina, donde el original dice «Ἴβηρ»."
+      ]
+    },
+    {
+      "prompt_id": "articulo-largo",
+      "configuration_id": "medio-voraz",
+      "omissions": [
+        "No nombra el Ebro.",
+        "Omite la longitud de 930 km.",
+        "Omite el recorrido, la cuenca y el origen del nombre."
+      ],
+      "unsupported": [
+        "Cambia el sentido de la comparación. Sin «y caudaloso» y «respectivamente», parece que dos ríos superan al Ebro en longitud. El original solo sitúa al Tajo por delante en longitud.",
+        "«De esta» no tiene referente: el resumen ha eliminado la mención de la península ibérica."
+      ]
+    },
+    {
+      "prompt_id": "articulo-muy-largo",
+      "configuration_id": "corto",
+      "omissions": [
+        "La frase queda cortada por el límite de 40 tokens.",
+        "No nombra a Ada Lovelace.",
+        "Omite las dudas sobre su papel: no hay pruebas documentales de esas afirmaciones.",
+        "Omite su relación con Charles Babbage y las Notas.",
+        "Queda fuera de los 768 tokens leídos toda la biografía posterior a la introducción, incluida su infancia y su educación."
+      ],
+      "unsupported": []
+    },
+    {
+      "prompt_id": "articulo-muy-largo",
+      "configuration_id": "medio",
+      "omissions": [
+        "No nombra a Ada Lovelace.",
+        "No aclara que la máquina es la máquina analítica de Charles Babbage.",
+        "Omite el primer algoritmo y las dudas sobre esa atribución.",
+        "Omite las Notas de 1842 y 1843.",
+        "Queda fuera de los 768 tokens leídos toda la biografía posterior a la introducción, incluida su infancia y su educación."
+      ],
+      "unsupported": []
+    },
+    {
+      "prompt_id": "articulo-muy-largo",
+      "configuration_id": "largo",
+      "omissions": [
+        "No nombra a Ada Lovelace.",
+        "No aclara que la máquina es la máquina analítica de Charles Babbage.",
+        "Omite el primer algoritmo y las dudas sobre esa atribución.",
+        "Omite las Notas de 1842 y 1843.",
+        "Queda fuera de los 768 tokens leídos toda la biografía posterior a la introducción, incluida su infancia y su educación."
+      ],
+      "unsupported": []
+    },
+    {
+      "prompt_id": "articulo-muy-largo",
+      "configuration_id": "extenso",
+      "omissions": [
+        "No nombra a Ada Lovelace.",
+        "Omite las dudas sobre el primer algoritmo: no hay pruebas documentales de esas afirmaciones.",
+        "Omite las Notas y que era hija de Lord Byron.",
+        "Queda fuera de los 768 tokens leídos toda la biografía posterior a la introducción, incluida su infancia y su educación."
+      ],
+      "unsupported": []
+    },
+    {
+      "prompt_id": "articulo-muy-largo",
+      "configuration_id": "medio-voraz",
+      "omissions": [
+        "No nombra a Ada Lovelace ni a Charles Babbage.",
+        "Omite que era matemática.",
+        "Omite las dudas sobre su papel.",
+        "Queda fuera de los 768 tokens leídos toda la biografía posterior a la introducción, incluida su infancia y su educación."
+      ],
+      "unsupported": [
+        "Mezcla dos ideas. El original habla de las aplicaciones de la máquina, no de la capacidad de «el algoritmo de una máquina»."
+      ]
+    }
+  ]
+}
