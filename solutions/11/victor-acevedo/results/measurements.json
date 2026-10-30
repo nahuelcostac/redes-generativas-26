@@ -1,0 +1,189 @@
+[
+  {
+    "folder": "astronauta",
+    "date": "2026-10-30T15:39:32.245Z",
+    "model": "Xenova/swin2SR-lightweight-x2-64",
+    "revision": "92a21aca5713f20faf9a87590cdfbdce2e34112c",
+    "transformers": "4.3.1",
+    "dtype": "fp32",
+    "device": "wasm",
+    "numThreads": 1,
+    "scale": 2,
+    "tileSize": 64,
+    "halo": 8,
+    "source": "Astronauta",
+    "inputSize": [
+      96,
+      96
+    ],
+    "outputSize": [
+      192,
+      192
+    ],
+    "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "hardwareConcurrency": 8,
+    "loadMs": 10494.5,
+    "inferenceMs": 3058.7999999523163,
+    "reusedModel": false,
+    "reduction": "Canvas 2D, imageSmoothingQuality low, factor 0.5",
+    "interpolation": "Canvas 2D, imageSmoothingQuality low, factor 2",
+    "psnr": {
+      "modelPsnrDb": 28.8739701437381,
+      "interpolationPsnrDb": 27.24515527539679
+    },
+    "checkedHashes": [
+      "input",
+      "output",
+      "interpolation",
+      "reference"
+    ]
+  },
+  {
+    "folder": "cafe",
+    "date": "2026-10-30T15:41:10.513Z",
+    "model": "Xenova/swin2SR-lightweight-x2-64",
+    "revision": "92a21aca5713f20faf9a87590cdfbdce2e34112c",
+    "transformers": "4.3.1",
+    "dtype": "fp32",
+    "device": "wasm",
+    "numThreads": 1,
+    "scale": 2,
+    "tileSize": 64,
+    "halo": 8,
+    "source": "Café",
+    "inputSize": [
+      96,
+      96
+    ],
+    "outputSize": [
+      192,
+      192
+    ],
+    "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "hardwareConcurrency": 8,
+    "loadMs": 0,
+    "inferenceMs": 2530.3000000715256,
+    "reusedModel": true,
+    "reduction": "Canvas 2D, imageSmoothingQuality low, factor 0.5",
+    "interpolation": "Canvas 2D, imageSmoothingQuality low, factor 2",
+    "psnr": {
+      "modelPsnrDb": 29.571232345603896,
+      "interpolationPsnrDb": 27.37064755747385
+    },
+    "checkedHashes": [
+      "input",
+      "output",
+      "interpolation",
+      "reference"
+    ]
+  },
+  {
+    "folder": "geometria",
+    "date": "2026-10-30T15:41:45.892Z",
+    "model": "Xenova/swin2SR-lightweight-x2-64",
+    "revision": "92a21aca5713f20faf9a87590cdfbdce2e34112c",
+    "transformers": "4.3.1",
+    "dtype": "fp32",
+    "device": "wasm",
+    "numThreads": 1,
+    "scale": 2,
+    "tileSize": 64,
+    "halo": 8,
+    "source": "Geometría",
+    "inputSize": [
+      96,
+      96
+    ],
+    "outputSize": [
+      192,
+      192
+    ],
+    "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "hardwareConcurrency": 8,
+    "loadMs": 0,
+    "inferenceMs": 2833.899999976158,
+    "reusedModel": true,
+    "reduction": "Canvas 2D, imageSmoothingQuality low, factor 0.5",
+    "interpolation": "Canvas 2D, imageSmoothingQuality low, factor 2",
+    "psnr": {
+      "modelPsnrDb": 21.75093842802072,
+      "interpolationPsnrDb": 17.137842986912542
+    },
+    "checkedHashes": [
+      "input",
+      "output",
+      "interpolation",
+      "reference"
+    ]
+  },
+  {
+    "folder": "impar",
+    "date": "2026-10-30T15:43:28.535Z",
+    "model": "Xenova/swin2SR-lightweight-x2-64",
+    "revision": "92a21aca5713f20faf9a87590cdfbdce2e34112c",
+    "transformers": "4.3.1",
+    "dtype": "fp32",
+    "device": "wasm",
+    "numThreads": 1,
+    "scale": 2,
+    "tileSize": 64,
+    "halo": 8,
+    "source": "Archivo local",
+    "inputSize": [
+      91,
+      137
+    ],
+    "outputSize": [
+      182,
+      274
+    ],
+    "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "hardwareConcurrency": 8,
+    "loadMs": 9993.399999976158,
+    "inferenceMs": 4117.5,
+    "reusedModel": false,
+    "reduction": null,
+    "interpolation": "Canvas 2D, imageSmoothingQuality low, factor 2",
+    "psnr": null,
+    "checkedHashes": [
+      "input",
+      "output",
+      "interpolation"
+    ]
+  },
+  {
+    "folder": "maxima",
+    "date": "2026-10-30T15:44:09.568Z",
+    "model": "Xenova/swin2SR-lightweight-x2-64",
+    "revision": "92a21aca5713f20faf9a87590cdfbdce2e34112c",
+    "transformers": "4.3.1",
+    "dtype": "fp32",
+    "device": "wasm",
+    "numThreads": 1,
+    "scale": 2,
+    "tileSize": 64,
+    "halo": 8,
+    "source": "Archivo local",
+    "inputSize": [
+      256,
+      256
+    ],
+    "outputSize": [
+      512,
+      512
+    ],
+    "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+    "hardwareConcurrency": 8,
+    "loadMs": 0,
+    "inferenceMs": 18358.199999928474,
+    "reusedModel": true,
+    "reduction": null,
+    "interpolation": "Canvas 2D, imageSmoothingQuality low, factor 2",
+    "psnr": null,
+    "checkedHashes": [
+      "input",
+      "output",
+      "interpolation"
+    ]
+  }
+]

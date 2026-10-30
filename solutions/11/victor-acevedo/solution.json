@@ -1,0 +1,9 @@
+{
+  "issue": 11,
+  "author": "victor-acevedo",
+  "title": "Superresolución ×2 con Swin2SR",
+  "summary": "Amplía imágenes en el navegador, compara el resultado con interpolación y una referencia, y descarga un PNG.",
+  "mode": "browser",
+  "status": "ready",
+  "entry": "web/index.html"
+}

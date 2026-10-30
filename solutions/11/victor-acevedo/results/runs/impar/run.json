@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-30T15:43:28.535Z",
+  "model": "Xenova/swin2SR-lightweight-x2-64",
+  "revision": "92a21aca5713f20faf9a87590cdfbdce2e34112c",
+  "transformers": "4.3.1",
+  "dtype": "fp32",
+  "device": "wasm",
+  "numThreads": 1,
+  "scale": 2,
+  "tileSize": 64,
+  "halo": 8,
+  "source": "Archivo local",
+  "inputSize": [
+    91,
+    137
+  ],
+  "outputSize": [
+    182,
+    274
+  ],
+  "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36",
+  "hardwareConcurrency": 8,
+  "loadMs": 9993.399999976158,
+  "inferenceMs": 4117.5,
+  "reusedModel": false,
+  "reduction": null,
+  "interpolation": "Canvas 2D, imageSmoothingQuality low, factor 2",
+  "psnr": null,
+  "files": {
+    "input": {
+      "path": "input.png",
+      "sha256": "457ccff8060e337ac50821cbc37b0719d6bde6c350cbbe0f16a80b5e2c6e515a"
+    },
+    "output": {
+      "path": "output.png",
+      "sha256": "cbb46f92d18dfebf9795985ea59ff6e548ae2a5bbd7dfa657f3b315c07e91de7"
+    },
+    "interpolation": {
+      "path": "interpolation.png",
+      "sha256": "cbb46f92d18dfebf9795985ea59ff6e548ae2a5bbd7dfa657f3b315c07e91de7"
+    }
+  }
+}
