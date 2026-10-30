@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Preguntas sobre la Universidad de Oviedo · Redes Generativas</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Ir al contenido</a>
+    <header class="solution-header container">
+      <a id="catalogue-link" class="text-link" href="../../../../index.html"
+        >← Volver al catálogo</a
+      >
+      <a
+        id="issue-link"
+        class="text-link"
+        href="https://github.com/nahuelcostac/redes-generativas-26/issues/12"
+        >Ver issue ↗</a
+      >
+    </header>
+    <main id="main" class="container">
+      <p class="eyebrow" id="solution-mode">Resultados calculados previamente</p>
+      <h1>Preguntas sobre la Universidad de Oviedo</h1>
+      <p class="solution-summary">
+        Un sistema RAG busca fragmentos en artículos de Wikipedia sobre la Universidad de Oviedo y
+        los da como contexto a un modelo generativo. Puedes comparar cada respuesta con la que da el
+        mismo modelo sin documentos.
+      </p>
+      <p class="solution-author" id="solution-author"></p>
+      <p id="load-status" role="status">Cargando los resultados…</p>
+      <div id="load-error" role="alert" hidden>
+        <p>No se pudieron cargar los resultados. Comprueba la conexión y vuelve a intentarlo.</p>
+        <button id="retry" class="button" type="button">Volver a cargar</button>
+      </div>
+      <div id="explorer" hidden>
+        <section class="question-section" aria-labelledby="question-title">
+          <div class="section-heading">
+            <h2 id="question-title">Pregunta</h2>
+            <div class="question-control">
+              <label for="question">Elegir pregunta</label>
+              <select id="question"></select>
+            </div>
+          </div>
+          <p id="question-text" class="question-text"></p>
+          <p id="question-type" class="tag"></p>
+          <p class="hint">
+            Los modelos se ejecutaron en local. Esta página solo muestra las salidas guardadas.
+          </p>
+        </section>
+
+        <section class="comparison-section" aria-labelledby="comparison-title">
+          <h2 id="comparison-title">Comparar respuestas</h2>
+          <div class="comparison" aria-live="polite">
+            <article class="result" aria-labelledby="with-title">
+              <h3 id="with-title">Con contexto documental</h3>
+              <p class="answer" id="answer-with"></p>
+              <p class="run-info" id="info-with"></p>
+              <p class="verdict" id="verdict-with"></p>
+            </article>
+            <article class="result" aria-labelledby="without-title">
+              <h3 id="without-title">Sin contexto</h3>
+              <p class="answer" id="answer-without"></p>
+              <p class="run-info" id="info-without"></p>
+              <p class="verdict" id="verdict-without"></p>
+            </article>
+          </div>
+          <p class="hint" id="review-method"></p>
+        </section>
+
+        <section class="fragments-section" aria-labelledby="fragments-title">
+          <h2 id="fragments-title">Fragmentos recuperados</h2>
+          <p class="hint" id="fragments-hint"></p>
+          <ol id="fragments" class="fragments"></ol>
+          <details class="prompt">
+            <summary>Ver el prompt completo con contexto</summary>
+            <pre id="prompt-with"></pre>
+          </details>
+          <details class="prompt">
+            <summary>Ver el prompt completo sin contexto</summary>
+            <pre id="prompt-without"></pre>
+          </details>
+        </section>
+
+        <details class="execution">
+          <summary>Parámetros, modelos y equipo</summary>
+          <dl id="execution-data"></dl>
+        </details>
+        <details class="execution">
+          <summary>Documentos de la colección</summary>
+          <p class="hint" id="corpus-info"></p>
+          <ul id="documents" class="documents"></ul>
+        </details>
+      </div>
+
+      <section class="local-section" aria-labelledby="local-title">
+        <h2 id="local-title">Probar en local</h2>
+        <p>El script acepta una pregunta nueva y recalcula la recuperación y las dos respuestas.</p>
+        <pre><code>python rag.py --question "¿Dónde está la Facultad de Química?" \
+  --top-k 4 --output ../results/mi-consulta.json</code></pre>
+        <a id="instructions-link" class="text-link">Instalación y ejecución ↗</a>
+      </section>
+    </main>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
