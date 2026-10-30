@@ -1,0 +1,261 @@
+{
+  "created_at": "2026-10-30T14:40:18+00:00",
+  "models": {
+    "embedding": {
+      "id": "intfloat/multilingual-e5-small",
+      "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+      "dtype": "float32",
+      "pooling": "mean",
+      "normalized": true
+    },
+    "generator": {
+      "id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+      "dtype": "float16"
+    }
+  },
+  "parameters": {
+    "chunk_words": 120,
+    "overlap_words": 30,
+    "top_k": 8,
+    "max_new_tokens": 256,
+    "do_sample": false,
+    "system_with_context": "Eres un asistente que responde preguntas sobre la Universidad de Oviedo. Responde en español y usa solo la información de los fragmentos. Cita los fragmentos que uses con su número entre corchetes, por ejemplo [1]. Si los fragmentos no contienen la respuesta, responde exactamente: No puedo responder con los documentos disponibles.",
+    "system_without_context": "Eres un asistente que responde preguntas sobre la Universidad de Oviedo. Responde en español de forma breve."
+  },
+  "corpus": {
+    "source": "Wikipedia en español",
+    "license": "CC BY-SA 4.0",
+    "fetched_at": "2026-10-30T14:35:35+00:00",
+    "documents": 14,
+    "chunks": 157,
+    "max_chunk_tokens": 270
+  },
+  "documents": [
+    {
+      "id": "universidad",
+      "title": "Universidad de Oviedo",
+      "url": "https://es.wikipedia.org/wiki/Universidad_de_Oviedo?oldid=175269172",
+      "revision": 175269172
+    },
+    {
+      "id": "campus-milan",
+      "title": "Campus de El Milán",
+      "url": "https://es.wikipedia.org/wiki/Campus_de_El_Mil%C3%A1n?oldid=175908259",
+      "revision": 175908259
+    },
+    {
+      "id": "campus-cristo",
+      "title": "Campus del Cristo",
+      "url": "https://es.wikipedia.org/wiki/Campus_del_Cristo?oldid=175073497",
+      "revision": 175073497
+    },
+    {
+      "id": "campus-catalanes",
+      "title": "Campus de los Catalanes",
+      "url": "https://es.wikipedia.org/wiki/Campus_de_los_Catalanes?oldid=173846227",
+      "revision": 173846227
+    },
+    {
+      "id": "campus-gijon",
+      "title": "Campus de Gijón",
+      "url": "https://es.wikipedia.org/wiki/Campus_de_Gij%C3%B3n?oldid=171169230",
+      "revision": 171169230
+    },
+    {
+      "id": "campus-mieres",
+      "title": "Campus de Mieres",
+      "url": "https://es.wikipedia.org/wiki/Campus_de_Mieres?oldid=175802291",
+      "revision": 175802291
+    },
+    {
+      "id": "informatica",
+      "title": "Escuela de Ingeniería Informática (Universidad de Oviedo)",
+      "url": "https://es.wikipedia.org/wiki/Escuela_de_Ingenier%C3%ADa_Inform%C3%A1tica_(Universidad_de_Oviedo)?oldid=163779150",
+      "revision": 163779150
+    },
+    {
+      "id": "politecnica-gijon",
+      "title": "Escuela Politécnica de Ingeniería de Gijón",
+      "url": "https://es.wikipedia.org/wiki/Escuela_Polit%C3%A9cnica_de_Ingenier%C3%ADa_de_Gij%C3%B3n?oldid=172396827",
+      "revision": 172396827
+    },
+    {
+      "id": "politecnica-mieres",
+      "title": "Escuela Politécnica de Mieres",
+      "url": "https://es.wikipedia.org/wiki/Escuela_Polit%C3%A9cnica_de_Mieres?oldid=169989901",
+      "revision": 169989901
+    },
+    {
+      "id": "minas",
+      "title": "Escuela de Minas de Oviedo",
+      "url": "https://es.wikipedia.org/wiki/Escuela_de_Minas_de_Oviedo?oldid=166302344",
+      "revision": 166302344
+    },
+    {
+      "id": "derecho",
+      "title": "Facultad de Derecho (Universidad de Oviedo)",
+      "url": "https://es.wikipedia.org/wiki/Facultad_de_Derecho_(Universidad_de_Oviedo)?oldid=174625294",
+      "revision": 174625294
+    },
+    {
+      "id": "enfermeria-gijon",
+      "title": "Facultad de Enfermería de Gijón",
+      "url": "https://es.wikipedia.org/wiki/Facultad_de_Enfermer%C3%ADa_de_Gij%C3%B3n?oldid=167221416",
+      "revision": 167221416
+    },
+    {
+      "id": "jovellanos",
+      "title": "Facultad de Comercio, Turismo y Ciencias Sociales Jovellanos",
+      "url": "https://es.wikipedia.org/wiki/Facultad_de_Comercio,_Turismo_y_Ciencias_Sociales_Jovellanos?oldid=175669412",
+      "revision": 175669412
+    },
+    {
+      "id": "museo-geologia",
+      "title": "Museo de Geología de la Universidad de Oviedo",
+      "url": "https://es.wikipedia.org/wiki/Museo_de_Geolog%C3%ADa_de_la_Universidad_de_Oviedo?oldid=170874040",
+      "revision": 170874040
+    }
+  ],
+  "chunks": [
+    {
+      "id": "campus-gijon-49",
+      "document_id": "campus-gijon",
+      "section": "Introducción",
+      "text": "El Campus de Gijón es un campus de la Universidad de Oviedo ubicado en Gijón (Asturias). Se sitúa al este de la ciudad, sobre las parroquias de Somió, Bernueces y Cabueñes. También se le conoce como Campus de Viesques, aunque ninguna zona del campus pertenece a dicho barrio cercano. El Campus forma parte de la Milla del Conocimiento Margarita Salas, denominación institucional que recibe esta zona de la ciudad, que consiste en un eje de una milla con equipamientos culturales, científicos y educativos. Su primer edificio abrió en 1982 y se consolidó definitivamente en 2007 con el traslado de la Facultad de Comercio a la Universidad Laboral."
+    },
+    {
+      "id": "campus-gijon-50",
+      "document_id": "campus-gijon",
+      "section": "Descripción",
+      "text": "En el campus de Gijón se ubican las siguientes facultades y escuelas de la Universidad de Oviedo: Escuela Politécnica de Ingeniería de Gijón Escuela Superior de la Marina Civil de Gijón Facultad de Comercio, Turismo y Ciencias Sociales Jovellanos y el siguiente centro adscrito: Facultad de Enfermería de Gijón"
+    },
+    {
+      "id": "campus-gijon-51",
+      "document_id": "campus-gijon",
+      "section": "Historia",
+      "text": "En 1972 la Escuela Superior de Comercio, ubicada en la plaza del Instituto de Gijón, fue absorbida por la Universidad de Oviedo, siendo el primer centro de la universidad que no se ubicaba en Oviedo. Ese mismo año, la Escuela de Peritos (en la calle Manuel Llaneza) pasó también bajo administración de la Universidad de Oviedo. Quedó entonces un campus desconectado entre sí. En 1980 el Ayuntamiento de Gijón acordó con la Universidad construir un nuevo campus en los terrenos ocupados anteriormente por la \"Fundación José Antonio Girón\", los cuales habían estado destinados a las necesidades de la Universidad Laboral de Gijón y pertenecían al Ministerio de Trabajo. El 14 de octubre de 1982 se inauguró el edificio de la"
+    },
+    {
+      "id": "politecnica-gijon-100",
+      "document_id": "politecnica-gijon",
+      "section": "Universidad Politécnica Jovellanos",
+      "text": "En 2011, el gobierno del Principado liderado por Francisco Álvarez-Cascos planeó la creación de la Universidad Politécnica Jovellanos. Se buscaba independizar la escuela gijonesa de la Universidad de Oviedo y crear una segunda universidad en Asturias, de manera similar a lo que sucede en Cambridge (Massachusetts), donde conviven la Universidad de Harvard y el Instituto de Tecnología de Massachusetts (MIT). El proyecto fue descartado al no tener el respaldo parlamentario necesario para salir adelante."
+    },
+    {
+      "id": "jovellanos-144",
+      "document_id": "jovellanos",
+      "section": "Introducción",
+      "text": "La Facultad de Comercio, Turismo y Ciencias Sociales Jovellanos es una facultad universitaria de la Universidad de Oviedo perteneciente a su campus en Gijón. La facultad remonta su origen a 1899 y desde 2007 está situada en parte del edificio de la antigua Universidad Laboral (Gijón, Asturias)."
+    },
+    {
+      "id": "jovellanos-145",
+      "document_id": "jovellanos",
+      "section": "Historia",
+      "text": "En 1862 el Real Instituto Jovellanos comenzó a impartir estudios de comercio en el Antiguo Instituto Jovellanos (Gijón).En 1899 estos estudios se independizan y forman la Escuela Elemental de Comercio, la cual en 1908 se convirtió en la Escuela Superior de Comercio, con sede en el centro de Gijón desde 1915. En 1972 se incorporó a la Universidad de Oviedo como Escuela Universitaria de Estudios Empresariales, creando así el campus de Gijón.Como centro perteneciente a la Universidad en 1994 se implantó Gestión y Administración Pública, y en años sucesivos nuevos posgrados y también los estudios de Turismo.En 2000 volvió a cambiar de nombre, a Escuela Universitaria Jovellanos, para poder englobar a todos los estudios que se estaban impartiendo en la"
+    },
+    {
+      "id": "jovellanos-147",
+      "document_id": "jovellanos",
+      "section": "Instalaciones",
+      "text": "El centro se ubicó hasta finales del año 2006 en el edificio histórico de la Escuela de Comercio, el cual fue inaugurado en 1915 bajo diseño del arquitecto Manuel del Busto. El inmueble está situado en el barrio de El Centro de Gijón, lejos del resto de centros universitarios de la ciudad, que comenzaron a ubicarse en el campus de Viesques. En enero de 2007 la Escuela Universitaria Jovellanos se trasladó al edificio central de la antigua Universidad Laboral de Gijón. Este cambio se enmarcó dentro del plan de usos que el Gobierno de Asturias estaba haciendo en La Laboral, incluyendo así al equipamiento universitario dentro del complejo. Dispone de 40 aulas, 11 salas de reuniones, 6 aulas de informática"
+    },
+    {
+      "id": "jovellanos-148",
+      "document_id": "jovellanos",
+      "section": "Instalaciones",
+      "text": "que el Gobierno de Asturias estaba haciendo en La Laboral, incluyendo así al equipamiento universitario dentro del complejo. Dispone de 40 aulas, 11 salas de reuniones, 6 aulas de informática (con unos 144 ordenadores) para clases prácticas, 3 aulas de Informática abiertas permanentemente al alumnado (con 76 ordenadores) y una biblioteca con capacidad para más de 60.000 volúmenes y más de 200 puestos de estudio, distribuidos en 3 pisos, en espacios abiertos, a los que se unen dos salas cerradas para trabajos en grupo (de 10 y 20 puestos). También cuenta con un Paraninfo de 150 asientos para conferencias, celebraciones y otros actos."
+    }
+  ],
+  "runtime": {
+    "device": "cuda",
+    "python": "3.10.22",
+    "torch": "2.9.0+cu126",
+    "transformers": "4.57.1",
+    "huggingface_hub": "0.36.0",
+    "hardware": {
+      "system": "Windows",
+      "release": "10",
+      "architecture": "AMD64",
+      "logical_cpus": 12,
+      "processor": "Intel64 Family 6 Model 158 Stepping 10, GenuineIntel",
+      "memory_bytes": 34298978304,
+      "gpu": "NVIDIA GeForce RTX 4060",
+      "gpu_memory_bytes": 8585084928,
+      "cuda": "12.6"
+    },
+    "peak_gpu_memory_bytes": 3969289728
+  },
+  "timings": {
+    "embedding_load_seconds": 1.735,
+    "index_seconds": 0.605,
+    "generator_load_seconds": 2.737
+  },
+  "questions": [
+    {
+      "id": "consulta",
+      "type": "combinada",
+      "text": "¿Qué centros hay en el campus de Gijón y qué grados ofrece la Facultad Jovellanos?",
+      "retrieved": [
+        {
+          "chunk_id": "campus-gijon-50",
+          "rank": 1,
+          "score": 0.9163
+        },
+        {
+          "chunk_id": "jovellanos-144",
+          "rank": 2,
+          "score": 0.8976
+        },
+        {
+          "chunk_id": "jovellanos-147",
+          "rank": 3,
+          "score": 0.893
+        },
+        {
+          "chunk_id": "jovellanos-145",
+          "rank": 4,
+          "score": 0.888
+        },
+        {
+          "chunk_id": "campus-gijon-49",
+          "rank": 5,
+          "score": 0.8804
+        },
+        {
+          "chunk_id": "jovellanos-148",
+          "rank": 6,
+          "score": 0.8762
+        },
+        {
+          "chunk_id": "politecnica-gijon-100",
+          "rank": 7,
+          "score": 0.8752
+        },
+        {
+          "chunk_id": "campus-gijon-51",
+          "rank": 8,
+          "score": 0.8748
+        }
+      ],
+      "retrieval_seconds": 0.0167,
+      "with_context": {
+        "answer": "El campus de Gijón de la Universidad de Oviedo tiene varios centros:\n\n- Escuela Politécnica de Ingeniería de Gijón\n- Escuela Superior de la Marina Civil de Gijón\n- Facultad de Comercio, Turismo y Ciencias Sociales Jovellanos\n\nLa Facultad de Comercio, Turismo y Ciencias Sociales Jovellanos ofrece Grados como:\n\n- Gestión y Administración Pública\n- Turismo\n- Posgrados\n- Estudios de Comercio y Economía\n- Estudios de Turismo\n- Estudios de Comercio Internacional\n- Estudios de Marketing\n- Estudios de Dirección de Empresas\n- Estudios de Gestión de Empresas\n- Estudios de Gestión de Recursos Humanos\n- Estudios de Gestión de Sistemas de Información\n- Estudios de Gestión de Empresas de Servicios\n- Estudios de Gestión de Empresas de Producción\n- Estudios de Gestión de Empresas de Distribución\n- Estudios de Gestión de Empresas de Servicio Público\n- Estudios de Gestión de Empresas de Transporte y Log",
+        "prompt": "<|im_start|>system\nEres un asistente que responde preguntas sobre la Universidad de Oviedo. Responde en español y usa solo la información de los fragmentos. Cita los fragmentos que uses con su número entre corchetes, por ejemplo [1]. Si los fragmentos no contienen la respuesta, responde exactamente: No puedo responder con los documentos disponibles.<|im_end|>\n<|im_start|>user\nFragmentos:\n[1] Campus de Gijón. Descripción. En el campus de Gijón se ubican las siguientes facultades y escuelas de la Universidad de Oviedo: Escuela Politécnica de Ingeniería de Gijón Escuela Superior de la Marina Civil de Gijón Facultad de Comercio, Turismo y Ciencias Sociales Jovellanos y el siguiente centro adscrito: Facultad de Enfermería de Gijón\n\n[2] Facultad de Comercio, Turismo y Ciencias Sociales Jovellanos. Introducción. La Facultad de Comercio, Turismo y Ciencias Sociales Jovellanos es una facultad universitaria de la Universidad de Oviedo perteneciente a su campus en Gijón. La facultad remonta su origen a 1899 y desde 2007 está situada en parte del edificio de la antigua Universidad Laboral (Gijón, Asturias).\n\n[3] Facultad de Comercio, Turismo y Ciencias Sociales Jovellanos. Instalaciones. El centro se ubicó hasta finales del año 2006 en el edificio histórico de la Escuela de Comercio, el cual fue inaugurado en 1915 bajo diseño del arquitecto Manuel del Busto. El inmueble está situado en el barrio de El Centro de Gijón, lejos del resto de centros universitarios de la ciudad, que comenzaron a ubicarse en el campus de Viesques. En enero de 2007 la Escuela Universitaria Jovellanos se trasladó al edificio central de la antigua Universidad Laboral de Gijón. Este cambio se enmarcó dentro del plan de usos que el Gobierno de Asturias estaba haciendo en La Laboral, incluyendo así al equipamiento universitario dentro del complejo. Dispone de 40 aulas, 11 salas de reuniones, 6 aulas de informática\n\n[4] Facultad de Comercio, Turismo y Ciencias Sociales Jovellanos. Historia. En 1862 el Real Instituto Jovellanos comenzó a impartir estudios de comercio en el Antiguo Instituto Jovellanos (Gijón).En 1899 estos estudios se independizan y forman la Escuela Elemental de Comercio, la cual en 1908 se convirtió en la Escuela Superior de Comercio, con sede en el centro de Gijón desde 1915. En 1972 se incorporó a la Universidad de Oviedo como Escuela Universitaria de Estudios Empresariales, creando así el campus de Gijón.Como centro perteneciente a la Universidad en 1994 se implantó Gestión y Administración Pública, y en años sucesivos nuevos posgrados y también los estudios de Turismo.En 2000 volvió a cambiar de nombre, a Escuela Universitaria Jovellanos, para poder englobar a todos los estudios que se estaban impartiendo en la\n\n[5] Campus de Gijón. Introducción. El Campus de Gijón es un campus de la Universidad de Oviedo ubicado en Gijón (Asturias). Se sitúa al este de la ciudad, sobre las parroquias de Somió, Bernueces y Cabueñes. También se le conoce como Campus de Viesques, aunque ninguna zona del campus pertenece a dicho barrio cercano. El Campus forma parte de la Milla del Conocimiento Margarita Salas, denominación institucional que recibe esta zona de la ciudad, que consiste en un eje de una milla con equipamientos culturales, científicos y educativos. Su primer edificio abrió en 1982 y se consolidó definitivamente en 2007 con el traslado de la Facultad de Comercio a la Universidad Laboral.\n\n[6] Facultad de Comercio, Turismo y Ciencias Sociales Jovellanos. Instalaciones. que el Gobierno de Asturias estaba haciendo en La Laboral, incluyendo así al equipamiento universitario dentro del complejo. Dispone de 40 aulas, 11 salas de reuniones, 6 aulas de informática (con unos 144 ordenadores) para clases prácticas, 3 aulas de Informática abiertas permanentemente al alumnado (con 76 ordenadores) y una biblioteca con capacidad para más de 60.000 volúmenes y más de 200 puestos de estudio, distribuidos en 3 pisos, en espacios abiertos, a los que se unen dos salas cerradas para trabajos en grupo (de 10 y 20 puestos). También cuenta con un Paraninfo de 150 asientos para conferencias, celebraciones y otros actos.\n\n[7] Escuela Politécnica de Ingeniería de Gijón. Universidad Politécnica Jovellanos. En 2011, el gobierno del Principado liderado por Francisco Álvarez-Cascos planeó la creación de la Universidad Politécnica Jovellanos. Se buscaba independizar la escuela gijonesa de la Universidad de Oviedo y crear una segunda universidad en Asturias, de manera similar a lo que sucede en Cambridge (Massachusetts), donde conviven la Universidad de Harvard y el Instituto de Tecnología de Massachusetts (MIT). El proyecto fue descartado al no tener el respaldo parlamentario necesario para salir adelante.\n\n[8] Campus de Gijón. Historia. En 1972 la Escuela Superior de Comercio, ubicada en la plaza del Instituto de Gijón, fue absorbida por la Universidad de Oviedo, siendo el primer centro de la universidad que no se ubicaba en Oviedo. Ese mismo año, la Escuela de Peritos (en la calle Manuel Llaneza) pasó también bajo administración de la Universidad de Oviedo. Quedó entonces un campus desconectado entre sí. En 1980 el Ayuntamiento de Gijón acordó con la Universidad construir un nuevo campus en los terrenos ocupados anteriormente por la \"Fundación José Antonio Girón\", los cuales habían estado destinados a las necesidades de la Universidad Laboral de Gijón y pertenecían al Ministerio de Trabajo. El 14 de octubre de 1982 se inauguró el edificio de la\n\nPregunta: ¿Qué centros hay en el campus de Gijón y qué grados ofrece la Facultad Jovellanos?<|im_end|>\n<|im_start|>assistant\n",
+        "input_tokens": 1606,
+        "output_tokens": 256,
+        "stop_reason": "length",
+        "generation_seconds": 12.027,
+        "cited": []
+      },
+      "without_context": {
+        "answer": "El campus de Gijón tiene dos principales centros:\n\n1. Centro Académico de Ciencias Sociales, Humanidades y Educación (CACSHE)\n2. Centro Académico de Ingeniería y Tecnología (CAT)\n\nLa Facultad Jovellanos ofrece los siguientes grados:\n\n- Licenciatura en Administración de Empresas\n- Licenciatura en Contabilidad\n- Licenciatura en Economía\n- Licenciatura en Gestión del Desarrollo Rural\n- Grado en Ingeniería Informática\n- Grado en Ingeniería Mecánica\n- Grado en Ingeniería Electrónica\n- Grado en Ingeniería Química\n- Grado en Ingeniería Civil\n\nEstos son algunos de los programas más destacados de la facultad.",
+        "prompt": "<|im_start|>system\nEres un asistente que responde preguntas sobre la Universidad de Oviedo. Responde en español de forma breve.<|im_end|>\n<|im_start|>user\n¿Qué centros hay en el campus de Gijón y qué grados ofrece la Facultad Jovellanos?<|im_end|>\n<|im_start|>assistant\n",
+        "input_tokens": 66,
+        "output_tokens": 172,
+        "stop_reason": "eos",
+        "generation_seconds": 7.644
+      }
+    }
+  ]
+}

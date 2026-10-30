@@ -1,0 +1,9 @@
+{
+  "issue": 12,
+  "author": "UO296636",
+  "title": "Preguntas sobre la Universidad de Oviedo con RAG",
+  "summary": "Responde preguntas sobre los campus y los grados de la Universidad de Oviedo con fragmentos de Wikipedia y compara cada respuesta con la del mismo modelo sin contexto.",
+  "mode": "precomputed",
+  "status": "ready",
+  "entry": "web/index.html"
+}

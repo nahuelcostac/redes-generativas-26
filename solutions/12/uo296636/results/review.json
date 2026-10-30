@@ -1,0 +1,82 @@
+{
+  "method": "Revisión directa y contrastada de las 14 respuestas literales de results/answers.json con los cuatro fragmentos recuperados por pregunta y el texto íntegro de los 14 artículos de results/documents.json. Se evaluó el respaldo de cada afirmación y, por separado, si las citas [n] señalan el fragmento correcto. Para las respuestas sin contexto, «unsupported» significa que contienen afirmaciones incorrectas respecto al corpus o no respaldadas por este; no equivale por sí solo a demostrar falsedad externa. La imposibilidad de obtener una nota de admisión superior a 14 puntos se contrastó adicionalmente con la información oficial de acceso de la Universidad de Oviedo. Revisión efectuada por ChatGPT, no presentada como revisión del alumno.",
+  "reviewed_at": "2026-10-30",
+  "verdicts": {
+    "supported": "Respaldada por los documentos",
+    "partial": "Respaldada en parte",
+    "unsupported": "No respaldada por los documentos",
+    "abstained": "No responde, de forma correcta"
+  },
+  "questions": {
+    "fundacion": {
+      "with_context": {
+        "verdict": "supported",
+        "note": "Respuesta correcta: el fragmento recuperado [1] (universidad-1, Historia) indica expresamente que comenzó sus actividades el 21 de septiembre de 1608. No incluye la cita [1] exigida en el prompt."
+      },
+      "without_context": {
+        "verdict": "unsupported",
+        "note": "Respuesta incorrecta: afirma que inició su actividad el 1 de octubre de 1968; el artículo de la universidad indica el 21 de septiembre de 1608."
+      }
+    },
+    "sede-informatica": {
+      "with_context": {
+        "verdict": "supported",
+        "note": "Respuesta correcta: el Campus de los Catalanes y el edificio Valdés Salas aparecen en [1] (informatica-65) y [2] (campus-catalanes-48). Omite las referencias [n] exigidas."
+      },
+      "without_context": {
+        "verdict": "unsupported",
+        "note": "Respuesta incorrecta: indica un genérico «Campus Universitario de Oviedo» y un «Edificio 10», en lugar del Campus de los Catalanes y el edificio Valdés Salas. El Edificio 10 no figura como sede en la documentación."
+      }
+    },
+    "grados-mieres": {
+      "with_context": {
+        "verdict": "partial",
+        "note": "Parcial: enumera correctamente cinco grados individuales y un doble grado, según [2] (politecnica-mieres-117), pero añade cinco másteres como si fueran grados. La única cita de la respuesta es [1], que corresponde a una introducción sin la lista de titulaciones, por lo que no respalda la enumeración."
+      },
+      "without_context": {
+        "verdict": "unsupported",
+        "note": "Parcialmente acertada en un dato, pero globalmente no respaldada: solo Ingeniería Civil pertenece a los grados de Mieres de los cinco títulos que enumera. Ingeniería Industrial, Electrónica y Telecomunicaciones, Informática y Química no figuran como grados impartidos por la escuela en el artículo."
+      }
+    },
+    "campus-gijon": {
+      "with_context": {
+        "verdict": "partial",
+        "note": "Parcial: los cuatro centros se ajustan a [1] (campus-gijon-50), donde Enfermería se identifica como centro adscrito. La respuesta no enumera los grados reales de Jovellanos: utiliza etiquetas genéricas, denomina erróneamente «grados de postgrado» a Gestión y Administración Pública y Turismo y añade áreas no justificadas. El artículo íntegro de Jovellanos sí especifica Comercio y Marketing, Gestión y Administración Pública, Trabajo Social y Turismo, pero su sección «Oferta académica» (jovellanos-149) no está entre los cuatro fragmentos recuperados. Omite citas [n]."
+      },
+      "without_context": {
+        "verdict": "unsupported",
+        "note": "Respuesta incorrecta: inventa dos centros denominados «Centro Académico de Ciencias Sociales, Humanidades y Educación (CACSHE)» y «Centro Académico de Ingeniería y Tecnología (CAT)», ausentes del artículo del campus, y atribuye a Jovellanos nueve licenciaturas y grados que no coinciden con su oferta académica documental."
+      }
+    },
+    "derecho-letras": {
+      "with_context": {
+        "verdict": "supported",
+        "note": "Respuesta correcta: la Facultad de Derecho se sitúa en el Campus del Cristo Alto, según [1] (campus-cristo-44); Filosofía y Letras se sitúa en El Milán, según [2] (campus-milan-23). No cita los fragmentos [1] y [2] como exige el prompt."
+      },
+      "without_context": {
+        "verdict": "unsupported",
+        "note": "Respuesta incorrecta: ubica Derecho en un supuesto «Campus de San Juan» y Filosofía y Letras en un «Campus de Oviedo» genérico; los documentos indican Cristo Alto y El Milán, respectivamente."
+      }
+    },
+    "precio-matricula": {
+      "with_context": {
+        "verdict": "abstained",
+        "note": "Abstención correcta: la respuesta coincide exactamente con la frase prevista («No puedo responder con los documentos disponibles.»). Ninguno de los artículos de la colección ofrece el precio por crédito del Grado en Ingeniería Informática del Software."
+      },
+      "without_context": {
+        "verdict": "unsupported",
+        "note": "No respaldada: proporciona una horquilla de 150 a 200 euros al mes sin fuente, aunque la pregunta pedía el precio de un crédito de matrícula. Confunde precio por crédito con pago mensual y no aporta el dato solicitado."
+      }
+    },
+    "nota-medicina": {
+      "with_context": {
+        "verdict": "abstained",
+        "note": "Abstención correcta: utiliza exactamente la frase prevista. No aparecen notas de corte de Medicina en los catorce artículos de la colección."
+      },
+      "without_context": {
+        "verdict": "unsupported",
+        "note": "Respuesta incorrecta: propone una horquilla de 14 a 16 puntos sin fuente. La nota máxima de admisión ordinaria para los grados en la Universidad de Oviedo es 14 puntos, por lo que el extremo de 16 es imposible; la colección documental tampoco contiene una nota de corte."
+      }
+    }
+  }
+}
