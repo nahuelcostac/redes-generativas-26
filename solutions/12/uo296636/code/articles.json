@@ -1,0 +1,16 @@
+[
+  { "id": "universidad", "title": "Universidad de Oviedo" },
+  { "id": "campus-milan", "title": "Campus de El Milán" },
+  { "id": "campus-cristo", "title": "Campus del Cristo" },
+  { "id": "campus-catalanes", "title": "Campus de los Catalanes" },
+  { "id": "campus-gijon", "title": "Campus de Gijón" },
+  { "id": "campus-mieres", "title": "Campus de Mieres" },
+  { "id": "informatica", "title": "Escuela de Ingeniería Informática (Universidad de Oviedo)" },
+  { "id": "politecnica-gijon", "title": "Escuela Politécnica de Ingeniería de Gijón" },
+  { "id": "politecnica-mieres", "title": "Escuela Politécnica de Mieres" },
+  { "id": "minas", "title": "Escuela de Minas de Oviedo" },
+  { "id": "derecho", "title": "Facultad de Derecho (Universidad de Oviedo)" },
+  { "id": "enfermeria-gijon", "title": "Facultad de Enfermería de Gijón" },
+  { "id": "jovellanos", "title": "Facultad de Comercio, Turismo y Ciencias Sociales Jovellanos" },
+  { "id": "museo-geologia", "title": "Museo de Geología de la Universidad de Oviedo" }
+]

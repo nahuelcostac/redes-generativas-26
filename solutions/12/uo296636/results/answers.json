@@ -1,0 +1,627 @@
+{
+  "created_at": "2026-10-30T14:39:26+00:00",
+  "models": {
+    "embedding": {
+      "id": "intfloat/multilingual-e5-small",
+      "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+      "dtype": "float32",
+      "pooling": "mean",
+      "normalized": true
+    },
+    "generator": {
+      "id": "Qwen/Qwen2.5-1.5B-Instruct",
+      "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+      "dtype": "float16"
+    }
+  },
+  "parameters": {
+    "chunk_words": 120,
+    "overlap_words": 30,
+    "top_k": 4,
+    "max_new_tokens": 256,
+    "do_sample": false,
+    "system_with_context": "Eres un asistente que responde preguntas sobre la Universidad de Oviedo. Responde en español y usa solo la información de los fragmentos. Cita los fragmentos que uses con su número entre corchetes, por ejemplo [1]. Si los fragmentos no contienen la respuesta, responde exactamente: No puedo responder con los documentos disponibles.",
+    "system_without_context": "Eres un asistente que responde preguntas sobre la Universidad de Oviedo. Responde en español de forma breve."
+  },
+  "corpus": {
+    "source": "Wikipedia en español",
+    "license": "CC BY-SA 4.0",
+    "fetched_at": "2026-10-30T14:35:35+00:00",
+    "documents": 14,
+    "chunks": 157,
+    "max_chunk_tokens": 270
+  },
+  "documents": [
+    {
+      "id": "universidad",
+      "title": "Universidad de Oviedo",
+      "url": "https://es.wikipedia.org/wiki/Universidad_de_Oviedo?oldid=175269172",
+      "revision": 175269172
+    },
+    {
+      "id": "campus-milan",
+      "title": "Campus de El Milán",
+      "url": "https://es.wikipedia.org/wiki/Campus_de_El_Mil%C3%A1n?oldid=175908259",
+      "revision": 175908259
+    },
+    {
+      "id": "campus-cristo",
+      "title": "Campus del Cristo",
+      "url": "https://es.wikipedia.org/wiki/Campus_del_Cristo?oldid=175073497",
+      "revision": 175073497
+    },
+    {
+      "id": "campus-catalanes",
+      "title": "Campus de los Catalanes",
+      "url": "https://es.wikipedia.org/wiki/Campus_de_los_Catalanes?oldid=173846227",
+      "revision": 173846227
+    },
+    {
+      "id": "campus-gijon",
+      "title": "Campus de Gijón",
+      "url": "https://es.wikipedia.org/wiki/Campus_de_Gij%C3%B3n?oldid=171169230",
+      "revision": 171169230
+    },
+    {
+      "id": "campus-mieres",
+      "title": "Campus de Mieres",
+      "url": "https://es.wikipedia.org/wiki/Campus_de_Mieres?oldid=175802291",
+      "revision": 175802291
+    },
+    {
+      "id": "informatica",
+      "title": "Escuela de Ingeniería Informática (Universidad de Oviedo)",
+      "url": "https://es.wikipedia.org/wiki/Escuela_de_Ingenier%C3%ADa_Inform%C3%A1tica_(Universidad_de_Oviedo)?oldid=163779150",
+      "revision": 163779150
+    },
+    {
+      "id": "politecnica-gijon",
+      "title": "Escuela Politécnica de Ingeniería de Gijón",
+      "url": "https://es.wikipedia.org/wiki/Escuela_Polit%C3%A9cnica_de_Ingenier%C3%ADa_de_Gij%C3%B3n?oldid=172396827",
+      "revision": 172396827
+    },
+    {
+      "id": "politecnica-mieres",
+      "title": "Escuela Politécnica de Mieres",
+      "url": "https://es.wikipedia.org/wiki/Escuela_Polit%C3%A9cnica_de_Mieres?oldid=169989901",
+      "revision": 169989901
+    },
+    {
+      "id": "minas",
+      "title": "Escuela de Minas de Oviedo",
+      "url": "https://es.wikipedia.org/wiki/Escuela_de_Minas_de_Oviedo?oldid=166302344",
+      "revision": 166302344
+    },
+    {
+      "id": "derecho",
+      "title": "Facultad de Derecho (Universidad de Oviedo)",
+      "url": "https://es.wikipedia.org/wiki/Facultad_de_Derecho_(Universidad_de_Oviedo)?oldid=174625294",
+      "revision": 174625294
+    },
+    {
+      "id": "enfermeria-gijon",
+      "title": "Facultad de Enfermería de Gijón",
+      "url": "https://es.wikipedia.org/wiki/Facultad_de_Enfermer%C3%ADa_de_Gij%C3%B3n?oldid=167221416",
+      "revision": 167221416
+    },
+    {
+      "id": "jovellanos",
+      "title": "Facultad de Comercio, Turismo y Ciencias Sociales Jovellanos",
+      "url": "https://es.wikipedia.org/wiki/Facultad_de_Comercio,_Turismo_y_Ciencias_Sociales_Jovellanos?oldid=175669412",
+      "revision": 175669412
+    },
+    {
+      "id": "museo-geologia",
+      "title": "Museo de Geología de la Universidad de Oviedo",
+      "url": "https://es.wikipedia.org/wiki/Museo_de_Geolog%C3%ADa_de_la_Universidad_de_Oviedo?oldid=170874040",
+      "revision": 170874040
+    }
+  ],
+  "chunks": [
+    {
+      "id": "universidad-0",
+      "document_id": "universidad",
+      "section": "Introducción",
+      "text": "La Universidad de Oviedo es una universidad pública ubicada en la ciudad de Oviedo (Asturias, España), con campus en Oviedo, Gijón y Mieres. La Universidad se fundó en 1608 a instancias de Fernando Valdés Salas y fue una de las diez universidades de España durante el siglo XIX. En la actualidad la Universidad condensa a unos 20.000 estudiantes en sus 7 campus. Es la única universidad en la comunidad autónoma, motivo que en 1997 le permitió fundar el Grupo 9 de Universidades (G9) españolas. También forma parte de la iniciativa Ingenium de la Comisión Europea."
+    },
+    {
+      "id": "universidad-1",
+      "document_id": "universidad",
+      "section": "Historia",
+      "text": "La Universidad de Oviedo fue ideada en el siglo XVI por el arzobispo Fernando Valdés Salas. Inició sus actividades en Oviedo el 21 de septiembre de 1608 con la facultad menor de Artes y las tres mayores de Cánones, Leyes y Teología. Se cumplía así con la voluntad expresada en el testamento de Fernando Valdés Salas, fallecido en 1568. Este religioso había desempeñado los cargos de Presidente del Consejo de Castilla, Arzobispo de Sevilla e Inquisidor general de las Españas durante los reinados de Carlos I y Felipe II. Ya había fundado antes el Colegio de San Gregorio, para el estudio de Gramática y Latinidad y el Colegio de Niñas Huérfanas Recoletas. En la actualidad el Rectorado tiene su sede"
+    },
+    {
+      "id": "universidad-4",
+      "document_id": "universidad",
+      "section": "Historia",
+      "text": "parte, gracias a un grupo de profesores vinculados al krausismo y la Institución Libre de Enseñanza, entre los que se encontraban Leopoldo Alas, Clarín, Rafael Altamira y Adolfo González Posada. El Grupo de Oviedo impulsó numerosas actividades de extensión universitaria, de acuerdo con los ideales krausoinstitucionistas. Durante la revolución de octubre 1934, el actual edificio histórico de la Universidad se vio seriamente afectado por un incendio posterior a la ocupación del inmueble por parte de los revolucionarios. El incendio arrasó con parte del archivo. El ministerio de Instrucción Pública le encomendó al arquitecto José Avelino Díaz y Fernández-Omaña supervisar la reconstrucción del edificio a partir de enero de 1935, pudiendo concluirse al poco tiempo. No obstante, al iniciarse la Guerra"
+    },
+    {
+      "id": "universidad-7",
+      "document_id": "universidad",
+      "section": "Historia",
+      "text": "de Ciencias. Fue el primer edificio alejado del edificio histórico. En 1970, la nueva Ley General de Educación supuso un revulsivo para la Universidad, puesto que hizo que se le incorporaran las Escuelas Técnicas y profesionales ubicadas en Asturias, como la Escuela de Comercio (Gijón). En Oviedo la universidad se estaba expandiendo con la creación de facultades como la de Medicina (1968) y Ciencias Económicas y Empresariales (1975). Ya en democracia, la Universidad continuó su crecimiento. En 1982 se crearon las facultades de Química, de Geología y de Biología, a partir de la Facultad de Ciencias. En ese mismo año la Facultad de Filosofía y Letras también se subdividió en tres facultades diferentes: Filosofía y Ciencias de la Educación, Filología"
+    },
+    {
+      "id": "campus-milan-23",
+      "document_id": "campus-milan",
+      "section": "Introducción",
+      "text": "El Campus de El Milán o Campus de Humanidades es uno de los siete campus de la Universidad de Oviedo y uno de los cinco de ellos que se sitúan en la ciudad de Oviedo. Este campus alberga una única facultad, la Facultad de Filosofía y Letras −fruto de la fusión de las facultades de Filología, Filosofía y Geografía e Historia en julio de 2010−, en la que se imparten los grados en Estudios Clásicos y Románicos, Estudios Ingleses, Filosofía, Geografía y Ordenación del Territorio, Historia, Historia del Arte, Historia y Ciencias de la Música, Lengua Española y sus Literaturas y Lenguas Modernas y sus Literaturas, además de dos másteres oficiales: el Máster Interuniversitario en Patrimonio Musical y el Máster"
+    },
+    {
+      "id": "campus-milan-33",
+      "document_id": "campus-milan",
+      "section": "Seminario de Santo Tomás de Aquino (1895-1922)",
+      "text": "a tonsurar. Además, durante los recreos los estudiantes internos estaban separados de aquellos que no permanecían en régimen de internado, los cuales solo podían regresar a sus casas dos horas al mediodía para comer y al anochecer. El plan de estudios impartido en el Seminario de Santo Tomás de Aquino estaba dividido en tres ciclos: un primer ciclo de cuatro cursos de Humanidades (conocido como «Grado Latín») sobre Historia, Geografía, Griego y Latín; un segundo ciclo de tres cursos de Filosofía y Ciencias, homologable al Bachiller del Estado; y un tercer ciclo de cuatro cursos de Teología, dirigido a aquellos que quisieran realizar la carrera eclesiástica. Además, estos últimos podían cursar un quinto año que les otorgaba los títulos de"
+    },
+    {
+      "id": "campus-cristo-44",
+      "document_id": "campus-cristo",
+      "section": "Campus del Cristo Alto",
+      "text": "Tienen su sede en esta parte del campus: Facultad de Derecho Facultad de Economía y Empresa Biblioteca de Ciencias Jurídicas y Sociales"
+    },
+    {
+      "id": "campus-cristo-45",
+      "document_id": "campus-cristo",
+      "section": "Campus del Cristo Bajo",
+      "text": "Tienen su sede en esta parte del campus: Facultad de Química Facultad de Medicina y Ciencias de la Salud Escuela Universitaria de Enfermería y Fisioterapia Facultad de Biología Servicios Científico-Técnicos Servicio de Informática y Comunicaciones Oficina de Transferencia de Resultados de la Investigación"
+    },
+    {
+      "id": "campus-catalanes-48",
+      "document_id": "campus-catalanes",
+      "section": "Descripción",
+      "text": "En el campus de los Catalanes se encuentran la Escuela de Ingeniería Informática, ubicada en el edificio Valdés Salas, el Estadio Universitario San Gregorio y varias instalaciones deportivas más, los dos colegios mayores, Colegio Mayor América y Colegio Mayor San Gregorio, y la residencia universitaria, Residencia Universitaria Rafael Altamira de la universidad de Oviedo. También se ubica en este Campus el Servicio de Prevención de Riesgos Laborales de la Universidad de Oviedo (edificio blanco). Se emplaza en los terrenos de la antigua quinta de los Catalanes, cuyos edificios quedaron muy afectados durante la Guerra Civil."
+    },
+    {
+      "id": "campus-gijon-50",
+      "document_id": "campus-gijon",
+      "section": "Descripción",
+      "text": "En el campus de Gijón se ubican las siguientes facultades y escuelas de la Universidad de Oviedo: Escuela Politécnica de Ingeniería de Gijón Escuela Superior de la Marina Civil de Gijón Facultad de Comercio, Turismo y Ciencias Sociales Jovellanos y el siguiente centro adscrito: Facultad de Enfermería de Gijón"
+    },
+    {
+      "id": "informatica-65",
+      "document_id": "informatica",
+      "section": "Introducción",
+      "text": "La Escuela de Ingeniería Informática es una escuela de ingeniería especializada en el campo de la Ingeniería Informática perteneciente a la Universidad de Oviedo. Está situada en el Campus de los Catalanes en Oviedo. Su sede se encuentra en el Edificio Valdés Salas, inaugurado en 2004 por el expresidente del Principado de Asturias, Vicente Álvarez Areces, y por el rector en ese momento, Juan Vázquez."
+    },
+    {
+      "id": "informatica-71",
+      "document_id": "informatica",
+      "section": "Historia",
+      "text": "1992 cambia su denominación por la de Escuela Universitaria de Ingeniería Técnica Informática de Oviedo (EUITIO). En el curso 1992-93 entra en vigor el nuevo plan de estudios y comienzan a impartirse las titulaciones de Ingeniero Técnico en Informática de Gestión (BOE del 19-2-93) e Ingeniero Técnico en Informática de Sistemas (BOE del 18-2-93). Son dos carreras diferentes, con listados de entrada en el Centro diferentes, aunque tengan muchas asignaturas comunes. Lo anterior supone que el alumno que en el primer curso ingresa en una de las carreras, no tiene opción de cambiar a la otra de forma sistemática. Durante el curso 1995-96, debido a los problemas de remodelación del aulario de la Facultad de Geología, se utilizaron aulas de"
+    },
+    {
+      "id": "informatica-73",
+      "document_id": "informatica",
+      "section": "Historia",
+      "text": "Campus de Llamaquique, y se aprobó el Reglamento de Régimen Interno y el Reglamento de Proyectos Fin de Carrera. Desde dicho curso también se han puesto en marcha cuatro laboratorios nuevos de software y dos nuevos servidores. Durante el curso 1998-1999 se constituyó la Comisión de Reforma del Plan de Estudios, que fue disuelta en junio del 2002, una vez conseguidos los objetivos, y homologados por el Consejo de Coordinación Universitaria los nuevos Planes de Estudios, que se comienzan a impartir el curso 2002-03. A su vez, se creó la Comisión de Seguimiento de la Implantación y Calidad del Plan de Estudios para garantizar una implantación adecuada de los nuevos planes. Durante el verano de 2004 se produce el traslado"
+    },
+    {
+      "id": "informatica-82",
+      "document_id": "informatica",
+      "section": "Oferta formativa",
+      "text": "Se imparte: Grado en Ingeniería Informática del Software. Grado base para la formación de Ingenieros Informáticos expertos en el desarrollo de Software. Está basado en la currícula de Ingeniería del software de ACM/IEEE. Dura 4 años y no tiene restricciones de acceso. Ingeniería Técnica en Informática de Sistemas. Plan de 2002 actualmente extinto debido a la implantación de la reforma de la Educación Superior en España. Ingeniería Técnica en Informática de Gestión. Plan de 2002 actualmente extinto debido a la implantación de la reforma de la Educación Superior en España. Máster de Ingeniería Web Formación avanzada para profesionales e investigadores de tecnologías web. Carrera dual con especialización en desarrollo (título de máster) o en investigación (título de Doctor)."
+    },
+    {
+      "id": "informatica-83",
+      "document_id": "informatica",
+      "section": "Ubicación",
+      "text": "La Escuela de Ingeniería Informática se encuentra en Oviedo, capital del Principado de Asturias. Durante los años 89-90 el centro se ubica en las instalaciones actuales del recién remodelado edificio de Ciencias (que antiguamente era Facultad de Químicas) compartidas con las licenciaturas de Matemáticas y Física de reciente creación, así como con las sedes departamentales de Física y Matemáticas y el Centro de Cálculo de la Universidad de Oviedo. A partir de la década de los noventa, se impartieron además, clases en aulas de la Escuela de Magisterio, de la Facultad de Ciencias de la Educación y de la Escuela de Magisterio. En el año 2004 se trasladó la Escuela de manera oficial al Edificio Valdés Salas (reformado con este"
+    },
+    {
+      "id": "informatica-84",
+      "document_id": "informatica",
+      "section": "Ubicación",
+      "text": "Facultad de Ciencias de la Educación y de la Escuela de Magisterio. En el año 2004 se trasladó la Escuela de manera oficial al Edificio Valdés Salas (reformado con este fin), en el Campus de los Catalanes. Mientras se finalizaba el traslado, se mantuvieron algunos laboratorios en el edificio de Ciencias junto con el aulario situado en el Campus de Llamaquique."
+    },
+    {
+      "id": "politecnica-gijon-104",
+      "document_id": "politecnica-gijon",
+      "section": "Títulos propios",
+      "text": "Máster en Internet de las Cosas. Máster en Soldadura y Tecnologías de Unión. Máster en Impresión 3D Creativa. Máster en Industria 4.0: Consultoría, Gestión y Desarrollo. Experto en Sonificación de Datos, Productos y Procesos. Experto en Seguridad Perimetral. Experto en Startups Milla del Conocimiento."
+    },
+    {
+      "id": "politecnica-mieres-109",
+      "document_id": "politecnica-mieres",
+      "section": "Introducción",
+      "text": "La Escuela Politécnica de Mieres es una escuela de ingeniería de la Universidad de Oviedo ubicada en el campus de Mieres, Asturias (España)."
+    },
+    {
+      "id": "politecnica-mieres-114",
+      "document_id": "politecnica-mieres",
+      "section": "Historia",
+      "text": "2002 se inaugura el nuevo Edificio Científico Tecnológico del campus de Mieres y se traslada allí la escuela en septiembre, siendo su anterior ubicación los terrenos del actual Centro de Salud de Mieres, en la Calle Reinerio García, pasando a denominarse Escuela Universitaria de Ingenierías Técnicas de Mieres. En 2009 vuelve a cambiar de nombre al actual, Escuela Politécnica de Mieres y asume la impartición de la titulación de Ingeniería Geológica. En 2011 comienza a impartirse la titulación de Ingeniería Civil, para lo que se crea una nueva Área de Conocimiento en la universidad en Ingeniería Hidráulica con nuevo profesorado y laboratorios. En 2016 se implantan los estudios oficiales de Máster Universitario en Ingeniería de Caminos, Canales y Puertos, el"
+    },
+    {
+      "id": "politecnica-mieres-115",
+      "document_id": "politecnica-mieres",
+      "section": "Historia",
+      "text": "Conocimiento en la universidad en Ingeniería Hidráulica con nuevo profesorado y laboratorios. En 2016 se implantan los estudios oficiales de Máster Universitario en Ingeniería de Caminos, Canales y Puertos, el primer título impartido en el centro en toda su historia que habilita para el ejercicio de una profesión regulada de Ingeniero (y no Ingeniero Técnico), correspondiente con Nivel 3 del Marco Español de Cualificaciones para la Educación Superior (MECES). Con el fin de reforzar el equipo docente, la universidad incorpora nuevo profesorado con formación en ámbitos de la ingeniería civil como son las estructuras, la construcción y los transportes. En el año 2022 la Junta de Centro publica un manifiesto de adhesión a la Resolución de la AG-ONU llamada \"2030"
+    },
+    {
+      "id": "politecnica-mieres-117",
+      "document_id": "politecnica-mieres",
+      "section": "Titulaciones",
+      "text": "Grado habilitante para el ejercicio de una profesión regulada en España: Grado en Ingeniería Civil Grado en Ingeniería de los Recursos Mineros y Energéticos Grado en Ingeniería Forestal y del Medio Natural Grado en Ingeniería Geomática Doble grado en Ingeniería Civil e Ingeniería de los Recursos Mineros y Energéticos Grado universitario oficial: Grado en Ingeniería de las Tecnologías Mineras Máster habilitante para el ejercicio de una profesión regulada en España: Máster en Ingeniería de Caminos, Canales y Puertos Máster en Ingeniería de Minas Máster universitario oficial: Máster en Geotecnología y Desarrollo de Sistema de información geográfica (SIG) Máster en Ingeniería Energética Máster en Prevención de Riesgos Laborales Máster en Ciencia y Tecnología de Materiales"
+    },
+    {
+      "id": "derecho-127",
+      "document_id": "derecho",
+      "section": "Introducción",
+      "text": "La Facultad de Derecho de la Universidad de Oviedo es una de las facultades de dicha universidad, en la que se imparten el Grado en Derecho, la Doble titulación del Grado en Derecho con el Grado en Administración y Dirección de Empresas, el Máster de Abogacía y Procura y el Máster en Protección Jurídica de Colectivos Vulnerables. Tenía su sede en el edificio histórico de la Universidad hasta que fue trasladada a su nueva sede en el Campus del Cristo de Oviedo en el año 1989 por falta de espacio. Se encuentra en las 300 mejores Facultades de Derecho del mundo de acuerdo con el ranking de Times Higher Education. La Facultad es el germen mismo de la Universidad con"
+    },
+    {
+      "id": "derecho-129",
+      "document_id": "derecho",
+      "section": "Estudios de la Facultad",
+      "text": "Grado en Derecho. PCEO Grado en Administración y Dirección de Empresas - Grado en Derecho. Grado en Criminología (a partir de septiembre de 2024). PCEO Grado en Derecho - Grado en Criminología (a partir de septiembre de 2024). Máster Universitario en Protección Jurídica de Personas y Grupos Vulnerables. Máster Universitario en Abogacía y Procura (a partir de septiembre de 2023)."
+    },
+    {
+      "id": "jovellanos-144",
+      "document_id": "jovellanos",
+      "section": "Introducción",
+      "text": "La Facultad de Comercio, Turismo y Ciencias Sociales Jovellanos es una facultad universitaria de la Universidad de Oviedo perteneciente a su campus en Gijón. La facultad remonta su origen a 1899 y desde 2007 está situada en parte del edificio de la antigua Universidad Laboral (Gijón, Asturias)."
+    },
+    {
+      "id": "jovellanos-145",
+      "document_id": "jovellanos",
+      "section": "Historia",
+      "text": "En 1862 el Real Instituto Jovellanos comenzó a impartir estudios de comercio en el Antiguo Instituto Jovellanos (Gijón).En 1899 estos estudios se independizan y forman la Escuela Elemental de Comercio, la cual en 1908 se convirtió en la Escuela Superior de Comercio, con sede en el centro de Gijón desde 1915. En 1972 se incorporó a la Universidad de Oviedo como Escuela Universitaria de Estudios Empresariales, creando así el campus de Gijón.Como centro perteneciente a la Universidad en 1994 se implantó Gestión y Administración Pública, y en años sucesivos nuevos posgrados y también los estudios de Turismo.En 2000 volvió a cambiar de nombre, a Escuela Universitaria Jovellanos, para poder englobar a todos los estudios que se estaban impartiendo en la"
+    },
+    {
+      "id": "jovellanos-147",
+      "document_id": "jovellanos",
+      "section": "Instalaciones",
+      "text": "El centro se ubicó hasta finales del año 2006 en el edificio histórico de la Escuela de Comercio, el cual fue inaugurado en 1915 bajo diseño del arquitecto Manuel del Busto. El inmueble está situado en el barrio de El Centro de Gijón, lejos del resto de centros universitarios de la ciudad, que comenzaron a ubicarse en el campus de Viesques. En enero de 2007 la Escuela Universitaria Jovellanos se trasladó al edificio central de la antigua Universidad Laboral de Gijón. Este cambio se enmarcó dentro del plan de usos que el Gobierno de Asturias estaba haciendo en La Laboral, incluyendo así al equipamiento universitario dentro del complejo. Dispone de 40 aulas, 11 salas de reuniones, 6 aulas de informática"
+    },
+    {
+      "id": "jovellanos-149",
+      "document_id": "jovellanos",
+      "section": "Oferta académica",
+      "text": "En la facultad se imparten las siguientes titulaciones adaptadas al Espacio Europeo de Educación Superior: Grado en Comercio y Marketing Grado en Gestión y Administración Pública (en línea) Grado en Trabajo Social Grado en Turismo Grado en Gestión y Administración Pública (en línea) Máster Interuniversitario en Ciencias Actuariales y Financieras Máster Universitario en Dirección y Planificación del Turismo Máster Universitario en Intervención Social Aula del Máster en Abogacía de la facultad de Derecho"
+    }
+  ],
+  "runtime": {
+    "device": "cuda",
+    "python": "3.10.22",
+    "torch": "2.9.0+cu126",
+    "transformers": "4.57.1",
+    "huggingface_hub": "0.36.0",
+    "hardware": {
+      "system": "Windows",
+      "release": "10",
+      "architecture": "AMD64",
+      "logical_cpus": 12,
+      "processor": "Intel64 Family 6 Model 158 Stepping 10, GenuineIntel",
+      "memory_bytes": 34298978304,
+      "gpu": "NVIDIA GeForce RTX 4060",
+      "gpu_memory_bytes": 8585084928,
+      "cuda": "12.6"
+    },
+    "peak_gpu_memory_bytes": 3738804736
+  },
+  "timings": {
+    "embedding_load_seconds": 10.581,
+    "index_seconds": 0.623,
+    "generator_load_seconds": 56.336
+  },
+  "questions": [
+    {
+      "id": "fundacion",
+      "type": "directa",
+      "text": "¿En qué fecha comenzó sus actividades la Universidad de Oviedo?",
+      "retrieved": [
+        {
+          "chunk_id": "universidad-1",
+          "rank": 1,
+          "score": 0.8944
+        },
+        {
+          "chunk_id": "universidad-0",
+          "rank": 2,
+          "score": 0.8854
+        },
+        {
+          "chunk_id": "universidad-4",
+          "rank": 3,
+          "score": 0.8753
+        },
+        {
+          "chunk_id": "universidad-7",
+          "rank": 4,
+          "score": 0.8744
+        }
+      ],
+      "retrieval_seconds": 0.0174,
+      "with_context": {
+        "answer": "La Universidad de Oviedo comenzó sus actividades el 21 de septiembre de 1608.",
+        "prompt": "<|im_start|>system\nEres un asistente que responde preguntas sobre la Universidad de Oviedo. Responde en español y usa solo la información de los fragmentos. Cita los fragmentos que uses con su número entre corchetes, por ejemplo [1]. Si los fragmentos no contienen la respuesta, responde exactamente: No puedo responder con los documentos disponibles.<|im_end|>\n<|im_start|>user\nFragmentos:\n[1] Universidad de Oviedo. Historia. La Universidad de Oviedo fue ideada en el siglo XVI por el arzobispo Fernando Valdés Salas. Inició sus actividades en Oviedo el 21 de septiembre de 1608 con la facultad menor de Artes y las tres mayores de Cánones, Leyes y Teología. Se cumplía así con la voluntad expresada en el testamento de Fernando Valdés Salas, fallecido en 1568. Este religioso había desempeñado los cargos de Presidente del Consejo de Castilla, Arzobispo de Sevilla e Inquisidor general de las Españas durante los reinados de Carlos I y Felipe II. Ya había fundado antes el Colegio de San Gregorio, para el estudio de Gramática y Latinidad y el Colegio de Niñas Huérfanas Recoletas. En la actualidad el Rectorado tiene su sede\n\n[2] Universidad de Oviedo. Introducción. La Universidad de Oviedo es una universidad pública ubicada en la ciudad de Oviedo (Asturias, España), con campus en Oviedo, Gijón y Mieres. La Universidad se fundó en 1608 a instancias de Fernando Valdés Salas y fue una de las diez universidades de España durante el siglo XIX. En la actualidad la Universidad condensa a unos 20.000 estudiantes en sus 7 campus. Es la única universidad en la comunidad autónoma, motivo que en 1997 le permitió fundar el Grupo 9 de Universidades (G9) españolas. También forma parte de la iniciativa Ingenium de la Comisión Europea.\n\n[3] Universidad de Oviedo. Historia. parte, gracias a un grupo de profesores vinculados al krausismo y la Institución Libre de Enseñanza, entre los que se encontraban Leopoldo Alas, Clarín, Rafael Altamira y Adolfo González Posada. El Grupo de Oviedo impulsó numerosas actividades de extensión universitaria, de acuerdo con los ideales krausoinstitucionistas. Durante la revolución de octubre 1934, el actual edificio histórico de la Universidad se vio seriamente afectado por un incendio posterior a la ocupación del inmueble por parte de los revolucionarios. El incendio arrasó con parte del archivo. El ministerio de Instrucción Pública le encomendó al arquitecto José Avelino Díaz y Fernández-Omaña supervisar la reconstrucción del edificio a partir de enero de 1935, pudiendo concluirse al poco tiempo. No obstante, al iniciarse la Guerra\n\n[4] Universidad de Oviedo. Historia. de Ciencias. Fue el primer edificio alejado del edificio histórico. En 1970, la nueva Ley General de Educación supuso un revulsivo para la Universidad, puesto que hizo que se le incorporaran las Escuelas Técnicas y profesionales ubicadas en Asturias, como la Escuela de Comercio (Gijón). En Oviedo la universidad se estaba expandiendo con la creación de facultades como la de Medicina (1968) y Ciencias Económicas y Empresariales (1975). Ya en democracia, la Universidad continuó su crecimiento. En 1982 se crearon las facultades de Química, de Geología y de Biología, a partir de la Facultad de Ciencias. En ese mismo año la Facultad de Filosofía y Letras también se subdividió en tres facultades diferentes: Filosofía y Ciencias de la Educación, Filología\n\nPregunta: ¿En qué fecha comenzó sus actividades la Universidad de Oviedo?<|im_end|>\n<|im_start|>assistant\n",
+        "input_tokens": 962,
+        "output_tokens": 25,
+        "stop_reason": "eos",
+        "generation_seconds": 1.536,
+        "cited": []
+      },
+      "without_context": {
+        "answer": "La Universidad de Oviedo inició sus actividades el 1 de octubre de 1968.",
+        "prompt": "<|im_start|>system\nEres un asistente que responde preguntas sobre la Universidad de Oviedo. Responde en español de forma breve.<|im_end|>\n<|im_start|>user\n¿En qué fecha comenzó sus actividades la Universidad de Oviedo?<|im_end|>\n<|im_start|>assistant\n",
+        "input_tokens": 55,
+        "output_tokens": 24,
+        "stop_reason": "eos",
+        "generation_seconds": 1.112
+      }
+    },
+    {
+      "id": "sede-informatica",
+      "type": "directa",
+      "text": "¿En qué campus y en qué edificio está la Escuela de Ingeniería Informática?",
+      "retrieved": [
+        {
+          "chunk_id": "informatica-65",
+          "rank": 1,
+          "score": 0.9055
+        },
+        {
+          "chunk_id": "campus-catalanes-48",
+          "rank": 2,
+          "score": 0.8892
+        },
+        {
+          "chunk_id": "informatica-84",
+          "rank": 3,
+          "score": 0.8877
+        },
+        {
+          "chunk_id": "informatica-83",
+          "rank": 4,
+          "score": 0.88
+        }
+      ],
+      "retrieval_seconds": 0.0104,
+      "with_context": {
+        "answer": "La Escuela de Ingeniería Informática está situada en el Campus de los Catalanes, específicamente en el edificio Valdés Salas.",
+        "prompt": "<|im_start|>system\nEres un asistente que responde preguntas sobre la Universidad de Oviedo. Responde en español y usa solo la información de los fragmentos. Cita los fragmentos que uses con su número entre corchetes, por ejemplo [1]. Si los fragmentos no contienen la respuesta, responde exactamente: No puedo responder con los documentos disponibles.<|im_end|>\n<|im_start|>user\nFragmentos:\n[1] Escuela de Ingeniería Informática (Universidad de Oviedo). Introducción. La Escuela de Ingeniería Informática es una escuela de ingeniería especializada en el campo de la Ingeniería Informática perteneciente a la Universidad de Oviedo. Está situada en el Campus de los Catalanes en Oviedo. Su sede se encuentra en el Edificio Valdés Salas, inaugurado en 2004 por el expresidente del Principado de Asturias, Vicente Álvarez Areces, y por el rector en ese momento, Juan Vázquez.\n\n[2] Campus de los Catalanes. Descripción. En el campus de los Catalanes se encuentran la Escuela de Ingeniería Informática, ubicada en el edificio Valdés Salas, el Estadio Universitario San Gregorio y varias instalaciones deportivas más, los dos colegios mayores, Colegio Mayor América y Colegio Mayor San Gregorio, y la residencia universitaria, Residencia Universitaria Rafael Altamira de la universidad de Oviedo. También se ubica en este Campus el Servicio de Prevención de Riesgos Laborales de la Universidad de Oviedo (edificio blanco). Se emplaza en los terrenos de la antigua quinta de los Catalanes, cuyos edificios quedaron muy afectados durante la Guerra Civil.\n\n[3] Escuela de Ingeniería Informática (Universidad de Oviedo). Ubicación. Facultad de Ciencias de la Educación y de la Escuela de Magisterio. En el año 2004 se trasladó la Escuela de manera oficial al Edificio Valdés Salas (reformado con este fin), en el Campus de los Catalanes. Mientras se finalizaba el traslado, se mantuvieron algunos laboratorios en el edificio de Ciencias junto con el aulario situado en el Campus de Llamaquique.\n\n[4] Escuela de Ingeniería Informática (Universidad de Oviedo). Ubicación. La Escuela de Ingeniería Informática se encuentra en Oviedo, capital del Principado de Asturias. Durante los años 89-90 el centro se ubica en las instalaciones actuales del recién remodelado edificio de Ciencias (que antiguamente era Facultad de Químicas) compartidas con las licenciaturas de Matemáticas y Física de reciente creación, así como con las sedes departamentales de Física y Matemáticas y el Centro de Cálculo de la Universidad de Oviedo. A partir de la década de los noventa, se impartieron además, clases en aulas de la Escuela de Magisterio, de la Facultad de Ciencias de la Educación y de la Escuela de Magisterio. En el año 2004 se trasladó la Escuela de manera oficial al Edificio Valdés Salas (reformado con este\n\nPregunta: ¿En qué campus y en qué edificio está la Escuela de Ingeniería Informática?<|im_end|>\n<|im_start|>assistant\n",
+        "input_tokens": 780,
+        "output_tokens": 33,
+        "stop_reason": "eos",
+        "generation_seconds": 1.519,
+        "cited": []
+      },
+      "without_context": {
+        "answer": "La Escuela de Ingeniería Informática está ubicada en el Campus Universitario de Oviedo, específicamente en el Edificio 10 del mismo nombre.",
+        "prompt": "<|im_start|>system\nEres un asistente que responde preguntas sobre la Universidad de Oviedo. Responde en español de forma breve.<|im_end|>\n<|im_start|>user\n¿En qué campus y en qué edificio está la Escuela de Ingeniería Informática?<|im_end|>\n<|im_start|>assistant\n",
+        "input_tokens": 60,
+        "output_tokens": 37,
+        "stop_reason": "eos",
+        "generation_seconds": 1.684
+      }
+    },
+    {
+      "id": "grados-mieres",
+      "type": "directa",
+      "text": "¿Qué grados se imparten en la Escuela Politécnica de Mieres?",
+      "retrieved": [
+        {
+          "chunk_id": "politecnica-mieres-109",
+          "rank": 1,
+          "score": 0.9157
+        },
+        {
+          "chunk_id": "politecnica-mieres-117",
+          "rank": 2,
+          "score": 0.9079
+        },
+        {
+          "chunk_id": "politecnica-mieres-115",
+          "rank": 3,
+          "score": 0.9032
+        },
+        {
+          "chunk_id": "politecnica-mieres-114",
+          "rank": 4,
+          "score": 0.9018
+        }
+      ],
+      "retrieval_seconds": 0.0103,
+      "with_context": {
+        "answer": "Según el fragmento [1], la Escuela Politécnica de Mieres ofrece los siguientes grados:\n\n1. Grado en Ingeniería Civil\n2. Grado en Ingeniería de los Recursos Mineros y Energéticos\n3. Grado en Ingeniería Forestal y del Medio Natural\n4. Grado en Ingeniería Geomática\n5. Doble grado en Ingeniería Civil e Ingeniería de los Recursos Mineros y Energéticos\n6. Grado universitario oficial: Grado en Ingeniería de las Tecnologías Mineras\n7. Máster habilitante para el ejercicio de una profesión regulada en España: Máster en Ingeniería de Caminos, Canales y Puertos\n8. Máster universitario oficial: Máster en Geotecnología y Desarrollo de Sistema de información geográfica (SIG)\n9. Máster en Ingeniería Energética\n10. Máster en Prevención de Riesgos Laborales\n11. Máster en Ciencia y Tecnología de Materiales",
+        "prompt": "<|im_start|>system\nEres un asistente que responde preguntas sobre la Universidad de Oviedo. Responde en español y usa solo la información de los fragmentos. Cita los fragmentos que uses con su número entre corchetes, por ejemplo [1]. Si los fragmentos no contienen la respuesta, responde exactamente: No puedo responder con los documentos disponibles.<|im_end|>\n<|im_start|>user\nFragmentos:\n[1] Escuela Politécnica de Mieres. Introducción. La Escuela Politécnica de Mieres es una escuela de ingeniería de la Universidad de Oviedo ubicada en el campus de Mieres, Asturias (España).\n\n[2] Escuela Politécnica de Mieres. Titulaciones. Grado habilitante para el ejercicio de una profesión regulada en España: Grado en Ingeniería Civil Grado en Ingeniería de los Recursos Mineros y Energéticos Grado en Ingeniería Forestal y del Medio Natural Grado en Ingeniería Geomática Doble grado en Ingeniería Civil e Ingeniería de los Recursos Mineros y Energéticos Grado universitario oficial: Grado en Ingeniería de las Tecnologías Mineras Máster habilitante para el ejercicio de una profesión regulada en España: Máster en Ingeniería de Caminos, Canales y Puertos Máster en Ingeniería de Minas Máster universitario oficial: Máster en Geotecnología y Desarrollo de Sistema de información geográfica (SIG) Máster en Ingeniería Energética Máster en Prevención de Riesgos Laborales Máster en Ciencia y Tecnología de Materiales\n\n[3] Escuela Politécnica de Mieres. Historia. Conocimiento en la universidad en Ingeniería Hidráulica con nuevo profesorado y laboratorios. En 2016 se implantan los estudios oficiales de Máster Universitario en Ingeniería de Caminos, Canales y Puertos, el primer título impartido en el centro en toda su historia que habilita para el ejercicio de una profesión regulada de Ingeniero (y no Ingeniero Técnico), correspondiente con Nivel 3 del Marco Español de Cualificaciones para la Educación Superior (MECES). Con el fin de reforzar el equipo docente, la universidad incorpora nuevo profesorado con formación en ámbitos de la ingeniería civil como son las estructuras, la construcción y los transportes. En el año 2022 la Junta de Centro publica un manifiesto de adhesión a la Resolución de la AG-ONU llamada \"2030\n\n[4] Escuela Politécnica de Mieres. Historia. 2002 se inaugura el nuevo Edificio Científico Tecnológico del campus de Mieres y se traslada allí la escuela en septiembre, siendo su anterior ubicación los terrenos del actual Centro de Salud de Mieres, en la Calle Reinerio García, pasando a denominarse Escuela Universitaria de Ingenierías Técnicas de Mieres. En 2009 vuelve a cambiar de nombre al actual, Escuela Politécnica de Mieres y asume la impartición de la titulación de Ingeniería Geológica. En 2011 comienza a impartirse la titulación de Ingeniería Civil, para lo que se crea una nueva Área de Conocimiento en la universidad en Ingeniería Hidráulica con nuevo profesorado y laboratorios. En 2016 se implantan los estudios oficiales de Máster Universitario en Ingeniería de Caminos, Canales y Puertos, el\n\nPregunta: ¿Qué grados se imparten en la Escuela Politécnica de Mieres?<|im_end|>\n<|im_start|>assistant\n",
+        "input_tokens": 852,
+        "output_tokens": 236,
+        "stop_reason": "eos",
+        "generation_seconds": 10.699,
+        "cited": [
+          1
+        ]
+      },
+      "without_context": {
+        "answer": "La Escuela Politécnica de Mieres ofrece los siguientes grados:\n\n1. Ingeniería Industrial\n2. Ingeniería Electrónica y Telecomunicaciones\n3. Ingeniería Informática\n4. Ingeniería Química\n5. Ingeniería Civil\n\nEstos son los principales estudios ofertados por esta institución educativa.",
+        "prompt": "<|im_start|>system\nEres un asistente que responde preguntas sobre la Universidad de Oviedo. Responde en español de forma breve.<|im_end|>\n<|im_start|>user\n¿Qué grados se imparten en la Escuela Politécnica de Mieres?<|im_end|>\n<|im_start|>assistant\n",
+        "input_tokens": 59,
+        "output_tokens": 78,
+        "stop_reason": "eos",
+        "generation_seconds": 3.505
+      }
+    },
+    {
+      "id": "campus-gijon",
+      "type": "combinada",
+      "text": "¿Qué centros hay en el campus de Gijón y qué grados ofrece la Facultad Jovellanos?",
+      "retrieved": [
+        {
+          "chunk_id": "campus-gijon-50",
+          "rank": 1,
+          "score": 0.9163
+        },
+        {
+          "chunk_id": "jovellanos-144",
+          "rank": 2,
+          "score": 0.8976
+        },
+        {
+          "chunk_id": "jovellanos-147",
+          "rank": 3,
+          "score": 0.893
+        },
+        {
+          "chunk_id": "jovellanos-145",
+          "rank": 4,
+          "score": 0.888
+        }
+      ],
+      "retrieval_seconds": 0.0126,
+      "with_context": {
+        "answer": "El campus de Gijón de la Universidad de Oviedo tiene varios centros:\n\n- Escuela Politécnica de Ingeniería de Gijón\n- Escuela Superior de la Marina Civil de Gijón\n- Facultad de Comercio, Turismo y Ciencias Sociales Jovellanos\n- Facultad de Enfermería de Gijón\n\nLa Facultad de Comercio, Turismo y Ciencias Sociales Jovellanos ofrece diferentes grados, incluyendo:\n\n- Grados de grado profesional en Comercio, Turismo y Ciencias Sociales\n- Grados de postgrado en Gestión y Administración Pública\n- Grados de postgrado en Turismo\n- Grados de postgrado en otros campos relacionados con la Facultad\n\nEstos grados están distribuidos en varias áreas temáticas dentro de la Facultad, como Comercio, Turismo, Economía, Sociología, etc.",
+        "prompt": "<|im_start|>system\nEres un asistente que responde preguntas sobre la Universidad de Oviedo. Responde en español y usa solo la información de los fragmentos. Cita los fragmentos que uses con su número entre corchetes, por ejemplo [1]. Si los fragmentos no contienen la respuesta, responde exactamente: No puedo responder con los documentos disponibles.<|im_end|>\n<|im_start|>user\nFragmentos:\n[1] Campus de Gijón. Descripción. En el campus de Gijón se ubican las siguientes facultades y escuelas de la Universidad de Oviedo: Escuela Politécnica de Ingeniería de Gijón Escuela Superior de la Marina Civil de Gijón Facultad de Comercio, Turismo y Ciencias Sociales Jovellanos y el siguiente centro adscrito: Facultad de Enfermería de Gijón\n\n[2] Facultad de Comercio, Turismo y Ciencias Sociales Jovellanos. Introducción. La Facultad de Comercio, Turismo y Ciencias Sociales Jovellanos es una facultad universitaria de la Universidad de Oviedo perteneciente a su campus en Gijón. La facultad remonta su origen a 1899 y desde 2007 está situada en parte del edificio de la antigua Universidad Laboral (Gijón, Asturias).\n\n[3] Facultad de Comercio, Turismo y Ciencias Sociales Jovellanos. Instalaciones. El centro se ubicó hasta finales del año 2006 en el edificio histórico de la Escuela de Comercio, el cual fue inaugurado en 1915 bajo diseño del arquitecto Manuel del Busto. El inmueble está situado en el barrio de El Centro de Gijón, lejos del resto de centros universitarios de la ciudad, que comenzaron a ubicarse en el campus de Viesques. En enero de 2007 la Escuela Universitaria Jovellanos se trasladó al edificio central de la antigua Universidad Laboral de Gijón. Este cambio se enmarcó dentro del plan de usos que el Gobierno de Asturias estaba haciendo en La Laboral, incluyendo así al equipamiento universitario dentro del complejo. Dispone de 40 aulas, 11 salas de reuniones, 6 aulas de informática\n\n[4] Facultad de Comercio, Turismo y Ciencias Sociales Jovellanos. Historia. En 1862 el Real Instituto Jovellanos comenzó a impartir estudios de comercio en el Antiguo Instituto Jovellanos (Gijón).En 1899 estos estudios se independizan y forman la Escuela Elemental de Comercio, la cual en 1908 se convirtió en la Escuela Superior de Comercio, con sede en el centro de Gijón desde 1915. En 1972 se incorporó a la Universidad de Oviedo como Escuela Universitaria de Estudios Empresariales, creando así el campus de Gijón.Como centro perteneciente a la Universidad en 1994 se implantó Gestión y Administración Pública, y en años sucesivos nuevos posgrados y también los estudios de Turismo.En 2000 volvió a cambiar de nombre, a Escuela Universitaria Jovellanos, para poder englobar a todos los estudios que se estaban impartiendo en la\n\nPregunta: ¿Qué centros hay en el campus de Gijón y qué grados ofrece la Facultad Jovellanos?<|im_end|>\n<|im_start|>assistant\n",
+        "input_tokens": 828,
+        "output_tokens": 211,
+        "stop_reason": "eos",
+        "generation_seconds": 9.676,
+        "cited": []
+      },
+      "without_context": {
+        "answer": "El campus de Gijón tiene dos principales centros:\n\n1. Centro Académico de Ciencias Sociales, Humanidades y Educación (CACSHE)\n2. Centro Académico de Ingeniería y Tecnología (CAT)\n\nLa Facultad Jovellanos ofrece los siguientes grados:\n\n- Licenciatura en Administración de Empresas\n- Licenciatura en Contabilidad\n- Licenciatura en Economía\n- Licenciatura en Gestión del Desarrollo Rural\n- Grado en Ingeniería Informática\n- Grado en Ingeniería Mecánica\n- Grado en Ingeniería Electrónica\n- Grado en Ingeniería Química\n- Grado en Ingeniería Civil\n\nEstos son algunos de los programas más destacados de la facultad.",
+        "prompt": "<|im_start|>system\nEres un asistente que responde preguntas sobre la Universidad de Oviedo. Responde en español de forma breve.<|im_end|>\n<|im_start|>user\n¿Qué centros hay en el campus de Gijón y qué grados ofrece la Facultad Jovellanos?<|im_end|>\n<|im_start|>assistant\n",
+        "input_tokens": 66,
+        "output_tokens": 172,
+        "stop_reason": "eos",
+        "generation_seconds": 7.674
+      }
+    },
+    {
+      "id": "derecho-letras",
+      "type": "combinada",
+      "text": "¿En qué campus están la Facultad de Derecho y la Facultad de Filosofía y Letras?",
+      "retrieved": [
+        {
+          "chunk_id": "campus-cristo-44",
+          "rank": 1,
+          "score": 0.8749
+        },
+        {
+          "chunk_id": "campus-milan-23",
+          "rank": 2,
+          "score": 0.8703
+        },
+        {
+          "chunk_id": "derecho-127",
+          "rank": 3,
+          "score": 0.856
+        },
+        {
+          "chunk_id": "campus-cristo-45",
+          "rank": 4,
+          "score": 0.8416
+        }
+      ],
+      "retrieval_seconds": 0.0096,
+      "with_context": {
+        "answer": "La Facultad de Derecho está en el Campus del Cristo Alto y la Facultad de Filosofía y Letras está en el Campus de El Milán.",
+        "prompt": "<|im_start|>system\nEres un asistente que responde preguntas sobre la Universidad de Oviedo. Responde en español y usa solo la información de los fragmentos. Cita los fragmentos que uses con su número entre corchetes, por ejemplo [1]. Si los fragmentos no contienen la respuesta, responde exactamente: No puedo responder con los documentos disponibles.<|im_end|>\n<|im_start|>user\nFragmentos:\n[1] Campus del Cristo. Campus del Cristo Alto. Tienen su sede en esta parte del campus: Facultad de Derecho Facultad de Economía y Empresa Biblioteca de Ciencias Jurídicas y Sociales\n\n[2] Campus de El Milán. Introducción. El Campus de El Milán o Campus de Humanidades es uno de los siete campus de la Universidad de Oviedo y uno de los cinco de ellos que se sitúan en la ciudad de Oviedo. Este campus alberga una única facultad, la Facultad de Filosofía y Letras −fruto de la fusión de las facultades de Filología, Filosofía y Geografía e Historia en julio de 2010−, en la que se imparten los grados en Estudios Clásicos y Románicos, Estudios Ingleses, Filosofía, Geografía y Ordenación del Territorio, Historia, Historia del Arte, Historia y Ciencias de la Música, Lengua Española y sus Literaturas y Lenguas Modernas y sus Literaturas, además de dos másteres oficiales: el Máster Interuniversitario en Patrimonio Musical y el Máster\n\n[3] Facultad de Derecho (Universidad de Oviedo). Introducción. La Facultad de Derecho de la Universidad de Oviedo es una de las facultades de dicha universidad, en la que se imparten el Grado en Derecho, la Doble titulación del Grado en Derecho con el Grado en Administración y Dirección de Empresas, el Máster de Abogacía y Procura y el Máster en Protección Jurídica de Colectivos Vulnerables. Tenía su sede en el edificio histórico de la Universidad hasta que fue trasladada a su nueva sede en el Campus del Cristo de Oviedo en el año 1989 por falta de espacio. Se encuentra en las 300 mejores Facultades de Derecho del mundo de acuerdo con el ranking de Times Higher Education. La Facultad es el germen mismo de la Universidad con\n\n[4] Campus del Cristo. Campus del Cristo Bajo. Tienen su sede en esta parte del campus: Facultad de Química Facultad de Medicina y Ciencias de la Salud Escuela Universitaria de Enfermería y Fisioterapia Facultad de Biología Servicios Científico-Técnicos Servicio de Informática y Comunicaciones Oficina de Transferencia de Resultados de la Investigación\n\nPregunta: ¿En qué campus están la Facultad de Derecho y la Facultad de Filosofía y Letras?<|im_end|>\n<|im_start|>assistant\n",
+        "input_tokens": 692,
+        "output_tokens": 38,
+        "stop_reason": "eos",
+        "generation_seconds": 1.805,
+        "cited": []
+      },
+      "without_context": {
+        "answer": "La Facultad de Derecho está ubicada en el Campus de San Juan, mientras que la Facultad de Filosofía y Letras se encuentra en el Campus de Oviedo.",
+        "prompt": "<|im_start|>system\nEres un asistente que responde preguntas sobre la Universidad de Oviedo. Responde en español de forma breve.<|im_end|>\n<|im_start|>user\n¿En qué campus están la Facultad de Derecho y la Facultad de Filosofía y Letras?<|im_end|>\n<|im_start|>assistant\n",
+        "input_tokens": 66,
+        "output_tokens": 42,
+        "stop_reason": "eos",
+        "generation_seconds": 1.836
+      }
+    },
+    {
+      "id": "precio-matricula",
+      "type": "sin-respuesta",
+      "text": "¿Cuánto cuesta un crédito de matrícula en el Grado en Ingeniería Informática del Software?",
+      "retrieved": [
+        {
+          "chunk_id": "informatica-82",
+          "rank": 1,
+          "score": 0.8749
+        },
+        {
+          "chunk_id": "informatica-71",
+          "rank": 2,
+          "score": 0.8361
+        },
+        {
+          "chunk_id": "informatica-73",
+          "rank": 3,
+          "score": 0.8356
+        },
+        {
+          "chunk_id": "politecnica-gijon-104",
+          "rank": 4,
+          "score": 0.8322
+        }
+      ],
+      "retrieval_seconds": 0.0107,
+      "with_context": {
+        "answer": "No puedo responder con los documentos disponibles.",
+        "prompt": "<|im_start|>system\nEres un asistente que responde preguntas sobre la Universidad de Oviedo. Responde en español y usa solo la información de los fragmentos. Cita los fragmentos que uses con su número entre corchetes, por ejemplo [1]. Si los fragmentos no contienen la respuesta, responde exactamente: No puedo responder con los documentos disponibles.<|im_end|>\n<|im_start|>user\nFragmentos:\n[1] Escuela de Ingeniería Informática (Universidad de Oviedo). Oferta formativa. Se imparte: Grado en Ingeniería Informática del Software. Grado base para la formación de Ingenieros Informáticos expertos en el desarrollo de Software. Está basado en la currícula de Ingeniería del software de ACM/IEEE. Dura 4 años y no tiene restricciones de acceso. Ingeniería Técnica en Informática de Sistemas. Plan de 2002 actualmente extinto debido a la implantación de la reforma de la Educación Superior en España. Ingeniería Técnica en Informática de Gestión. Plan de 2002 actualmente extinto debido a la implantación de la reforma de la Educación Superior en España. Máster de Ingeniería Web Formación avanzada para profesionales e investigadores de tecnologías web. Carrera dual con especialización en desarrollo (título de máster) o en investigación (título de Doctor).\n\n[2] Escuela de Ingeniería Informática (Universidad de Oviedo). Historia. 1992 cambia su denominación por la de Escuela Universitaria de Ingeniería Técnica Informática de Oviedo (EUITIO). En el curso 1992-93 entra en vigor el nuevo plan de estudios y comienzan a impartirse las titulaciones de Ingeniero Técnico en Informática de Gestión (BOE del 19-2-93) e Ingeniero Técnico en Informática de Sistemas (BOE del 18-2-93). Son dos carreras diferentes, con listados de entrada en el Centro diferentes, aunque tengan muchas asignaturas comunes. Lo anterior supone que el alumno que en el primer curso ingresa en una de las carreras, no tiene opción de cambiar a la otra de forma sistemática. Durante el curso 1995-96, debido a los problemas de remodelación del aulario de la Facultad de Geología, se utilizaron aulas de\n\n[3] Escuela de Ingeniería Informática (Universidad de Oviedo). Historia. Campus de Llamaquique, y se aprobó el Reglamento de Régimen Interno y el Reglamento de Proyectos Fin de Carrera. Desde dicho curso también se han puesto en marcha cuatro laboratorios nuevos de software y dos nuevos servidores. Durante el curso 1998-1999 se constituyó la Comisión de Reforma del Plan de Estudios, que fue disuelta en junio del 2002, una vez conseguidos los objetivos, y homologados por el Consejo de Coordinación Universitaria los nuevos Planes de Estudios, que se comienzan a impartir el curso 2002-03. A su vez, se creó la Comisión de Seguimiento de la Implantación y Calidad del Plan de Estudios para garantizar una implantación adecuada de los nuevos planes. Durante el verano de 2004 se produce el traslado\n\n[4] Escuela Politécnica de Ingeniería de Gijón. Títulos propios. Máster en Internet de las Cosas. Máster en Soldadura y Tecnologías de Unión. Máster en Impresión 3D Creativa. Máster en Industria 4.0: Consultoría, Gestión y Desarrollo. Experto en Sonificación de Datos, Productos y Procesos. Experto en Seguridad Perimetral. Experto en Startups Milla del Conocimiento.\n\nPregunta: ¿Cuánto cuesta un crédito de matrícula en el Grado en Ingeniería Informática del Software?<|im_end|>\n<|im_start|>assistant\n",
+        "input_tokens": 936,
+        "output_tokens": 9,
+        "stop_reason": "eos",
+        "generation_seconds": 0.534,
+        "cited": []
+      },
+      "without_context": {
+        "answer": "El coste exacto puede variar dependiendo de varios factores, como la modalidad (presencial o online), la universidad y las ayudas disponibles. En general, los créditos de matrícula para este grado pueden rondar entre 150 a 200 euros al mes durante todo el curso académico. Recuerda consultar directamente con la universidad para obtener información precisa.",
+        "prompt": "<|im_start|>system\nEres un asistente que responde preguntas sobre la Universidad de Oviedo. Responde en español de forma breve.<|im_end|>\n<|im_start|>user\n¿Cuánto cuesta un crédito de matrícula en el Grado en Ingeniería Informática del Software?<|im_end|>\n<|im_start|>assistant\n",
+        "input_tokens": 66,
+        "output_tokens": 88,
+        "stop_reason": "eos",
+        "generation_seconds": 4.026
+      }
+    },
+    {
+      "id": "nota-medicina",
+      "type": "sin-respuesta",
+      "text": "¿Cuál es la nota de corte para entrar en el Grado en Medicina?",
+      "retrieved": [
+        {
+          "chunk_id": "derecho-129",
+          "rank": 1,
+          "score": 0.819
+        },
+        {
+          "chunk_id": "politecnica-mieres-117",
+          "rank": 2,
+          "score": 0.8154
+        },
+        {
+          "chunk_id": "campus-milan-33",
+          "rank": 3,
+          "score": 0.8142
+        },
+        {
+          "chunk_id": "jovellanos-149",
+          "rank": 4,
+          "score": 0.8094
+        }
+      ],
+      "retrieval_seconds": 0.0119,
+      "with_context": {
+        "answer": "No puedo responder con los documentos disponibles.",
+        "prompt": "<|im_start|>system\nEres un asistente que responde preguntas sobre la Universidad de Oviedo. Responde en español y usa solo la información de los fragmentos. Cita los fragmentos que uses con su número entre corchetes, por ejemplo [1]. Si los fragmentos no contienen la respuesta, responde exactamente: No puedo responder con los documentos disponibles.<|im_end|>\n<|im_start|>user\nFragmentos:\n[1] Facultad de Derecho (Universidad de Oviedo). Estudios de la Facultad. Grado en Derecho. PCEO Grado en Administración y Dirección de Empresas - Grado en Derecho. Grado en Criminología (a partir de septiembre de 2024). PCEO Grado en Derecho - Grado en Criminología (a partir de septiembre de 2024). Máster Universitario en Protección Jurídica de Personas y Grupos Vulnerables. Máster Universitario en Abogacía y Procura (a partir de septiembre de 2023).\n\n[2] Escuela Politécnica de Mieres. Titulaciones. Grado habilitante para el ejercicio de una profesión regulada en España: Grado en Ingeniería Civil Grado en Ingeniería de los Recursos Mineros y Energéticos Grado en Ingeniería Forestal y del Medio Natural Grado en Ingeniería Geomática Doble grado en Ingeniería Civil e Ingeniería de los Recursos Mineros y Energéticos Grado universitario oficial: Grado en Ingeniería de las Tecnologías Mineras Máster habilitante para el ejercicio de una profesión regulada en España: Máster en Ingeniería de Caminos, Canales y Puertos Máster en Ingeniería de Minas Máster universitario oficial: Máster en Geotecnología y Desarrollo de Sistema de información geográfica (SIG) Máster en Ingeniería Energética Máster en Prevención de Riesgos Laborales Máster en Ciencia y Tecnología de Materiales\n\n[3] Campus de El Milán. Seminario de Santo Tomás de Aquino (1895-1922). a tonsurar. Además, durante los recreos los estudiantes internos estaban separados de aquellos que no permanecían en régimen de internado, los cuales solo podían regresar a sus casas dos horas al mediodía para comer y al anochecer. El plan de estudios impartido en el Seminario de Santo Tomás de Aquino estaba dividido en tres ciclos: un primer ciclo de cuatro cursos de Humanidades (conocido como «Grado Latín») sobre Historia, Geografía, Griego y Latín; un segundo ciclo de tres cursos de Filosofía y Ciencias, homologable al Bachiller del Estado; y un tercer ciclo de cuatro cursos de Teología, dirigido a aquellos que quisieran realizar la carrera eclesiástica. Además, estos últimos podían cursar un quinto año que les otorgaba los títulos de\n\n[4] Facultad de Comercio, Turismo y Ciencias Sociales Jovellanos. Oferta académica. En la facultad se imparten las siguientes titulaciones adaptadas al Espacio Europeo de Educación Superior: Grado en Comercio y Marketing Grado en Gestión y Administración Pública (en línea) Grado en Trabajo Social Grado en Turismo Grado en Gestión y Administración Pública (en línea) Máster Interuniversitario en Ciencias Actuariales y Financieras Máster Universitario en Dirección y Planificación del Turismo Máster Universitario en Intervención Social Aula del Máster en Abogacía de la facultad de Derecho\n\nPregunta: ¿Cuál es la nota de corte para entrar en el Grado en Medicina?<|im_end|>\n<|im_start|>assistant\n",
+        "input_tokens": 860,
+        "output_tokens": 9,
+        "stop_reason": "eos",
+        "generation_seconds": 0.536,
+        "cited": []
+      },
+      "without_context": {
+        "answer": "La nota de corte para ingresar al Grado en Medicina en la Universidad de Oviedo puede variar según las ediciones y años académicos, pero generalmente se sitúa entre los 14 y los 16 puntos. Es recomendable consultar directamente con la Dirección General de Estudios Universitarios o visitar su página oficial para obtener información más precisa e actualizada.",
+        "prompt": "<|im_start|>system\nEres un asistente que responde preguntas sobre la Universidad de Oviedo. Responde en español de forma breve.<|im_end|>\n<|im_start|>user\n¿Cuál es la nota de corte para entrar en el Grado en Medicina?<|im_end|>\n<|im_start|>assistant\n",
+        "input_tokens": 59,
+        "output_tokens": 84,
+        "stop_reason": "eos",
+        "generation_seconds": 3.886
+      }
+    }
+  ]
+}

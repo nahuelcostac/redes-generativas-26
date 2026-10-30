@@ -1,0 +1,45 @@
+{
+  "parameters": {
+    "chunk_words": 120,
+    "overlap_words": 30,
+    "top_k": 4,
+    "max_new_tokens": 256
+  },
+  "questions": [
+    {
+      "id": "fundacion",
+      "type": "directa",
+      "text": "¿En qué fecha comenzó sus actividades la Universidad de Oviedo?"
+    },
+    {
+      "id": "sede-informatica",
+      "type": "directa",
+      "text": "¿En qué campus y en qué edificio está la Escuela de Ingeniería Informática?"
+    },
+    {
+      "id": "grados-mieres",
+      "type": "directa",
+      "text": "¿Qué grados se imparten en la Escuela Politécnica de Mieres?"
+    },
+    {
+      "id": "campus-gijon",
+      "type": "combinada",
+      "text": "¿Qué centros hay en el campus de Gijón y qué grados ofrece la Facultad Jovellanos?"
+    },
+    {
+      "id": "derecho-letras",
+      "type": "combinada",
+      "text": "¿En qué campus están la Facultad de Derecho y la Facultad de Filosofía y Letras?"
+    },
+    {
+      "id": "precio-matricula",
+      "type": "sin-respuesta",
+      "text": "¿Cuánto cuesta un crédito de matrícula en el Grado en Ingeniería Informática del Software?"
+    },
+    {
+      "id": "nota-medicina",
+      "type": "sin-respuesta",
+      "text": "¿Cuál es la nota de corte para entrar en el Grado en Medicina?"
+    }
+  ]
+}
