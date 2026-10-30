@@ -1,0 +1,162 @@
+{
+  "generated_at_utc": "2026-10-30T16:10:58Z",
+  "model": {
+    "embedding": {
+      "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42"
+    },
+    "generator": {
+      "id": "Qwen/Qwen2.5-0.5B-Instruct",
+      "revision": "7ae557604adf67be50417f59c2c2f167def9a775"
+    }
+  },
+  "runtime": {
+    "python": "3.10.7",
+    "platform": "Windows-10-10.0.26100-SP0",
+    "torch": "2.2.2+cpu",
+    "device": "cpu",
+    "threads": 4,
+    "embedding_load_seconds": 6.8203,
+    "generator_load_seconds": 9.9801
+  },
+  "documents": [
+    {
+      "id": "guia-energia",
+      "title": "Guía de energía de la biblioteca ficticia La Encina",
+      "source": "Documento de ejemplo redactado para esta práctica"
+    },
+    {
+      "id": "memoria-uso",
+      "title": "Memoria anual de la biblioteca La Encina, 2023",
+      "source": "Documento de ejemplo redactado para esta práctica"
+    }
+  ],
+  "examples": [
+    {
+      "id": "dato",
+      "question": "¿Cuánta electricidad produjo la instalación solar en 2023?",
+      "expected_behavior": "El dato aparece en un fragmento.",
+      "answer_with_context": "En 2023, la instalación solar de la biblioteca La Encina produjo 21.600 kilovatios hora (kWh) de electricidad.",
+      "answer_without_context": "No se puede determinar con los documentos disponibles.",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "guia-energia-1",
+          "document_id": "guia-energia",
+          "document_title": "Guía de energía de la biblioteca ficticia La Encina",
+          "source": "Documento de ejemplo redactado para esta práctica",
+          "text": "La biblioteca La Encina instaló paneles solares en 2022. El sistema tiene una potencia de 18 kilovatios pico (kWp). En 2023 produjo 21.600 kilovatios hora (kWh) de electricidad. La biblioteca consume parte de esa energía durante el día y vierte el excedente",
+          "score": 0.769585
+        },
+        {
+          "chunk_id": "memoria-uso-1",
+          "document_id": "memoria-uso",
+          "document_title": "Memoria anual de la biblioteca La Encina, 2023",
+          "source": "Documento de ejemplo redactado para esta práctica",
+          "text": "Durante 2023, el consumo eléctrico total de la biblioteca La Encina fue de 30.000 kWh. De la energía solar producida ese año, 15.000 kWh se consumieron directamente en el edificio. El resto de la producción solar se vertió a la red. La",
+          "score": 0.725334
+        }
+      ],
+      "parameters": {
+        "top_k": 2,
+        "chunk_words": 42,
+        "overlap_words": 10,
+        "max_new_tokens": 96,
+        "sampling": false,
+        "device": "cpu",
+        "threads": 4
+      },
+      "with_context": {
+        "generation_seconds": 21.3256,
+        "new_tokens": 41
+      },
+      "without_context": {
+        "generation_seconds": 5.1235,
+        "new_tokens": 11
+      }
+    },
+    {
+      "id": "combinacion",
+      "question": "¿Qué proporción del consumo eléctrico total cubrió la energía solar consumida directamente en 2023?",
+      "expected_behavior": "Hay que combinar la producción solar y el consumo total de los dos documentos.",
+      "answer_with_context": "El consumo eléctrico total de la biblioteca La Encina en 2023 fue de 30.000 kWh, mientras que la energía solar consumida directamente en el edificio fue de 15.000 kWh. Por lo tanto, la proporción del consumo eléctrico total cubrió aproximadamente el 75% de la energía solar consumida directamente en 2023.",
+      "answer_without_context": "No se puede determinar con los documentos disponibles.",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "memoria-uso-1",
+          "document_id": "memoria-uso",
+          "document_title": "Memoria anual de la biblioteca La Encina, 2023",
+          "source": "Documento de ejemplo redactado para esta práctica",
+          "text": "Durante 2023, el consumo eléctrico total de la biblioteca La Encina fue de 30.000 kWh. De la energía solar producida ese año, 15.000 kWh se consumieron directamente en el edificio. El resto de la producción solar se vertió a la red. La",
+          "score": 0.732002
+        },
+        {
+          "chunk_id": "guia-energia-1",
+          "document_id": "guia-energia",
+          "document_title": "Guía de energía de la biblioteca ficticia La Encina",
+          "source": "Documento de ejemplo redactado para esta práctica",
+          "text": "La biblioteca La Encina instaló paneles solares en 2022. El sistema tiene una potencia de 18 kilovatios pico (kWp). En 2023 produjo 21.600 kilovatios hora (kWh) de electricidad. La biblioteca consume parte de esa energía durante el día y vierte el excedente",
+          "score": 0.704234
+        }
+      ],
+      "parameters": {
+        "top_k": 2,
+        "chunk_words": 42,
+        "overlap_words": 10,
+        "max_new_tokens": 96,
+        "sampling": false,
+        "device": "cpu",
+        "threads": 4
+      },
+      "with_context": {
+        "generation_seconds": 31.2423,
+        "new_tokens": 93
+      },
+      "without_context": {
+        "generation_seconds": 5.207,
+        "new_tokens": 11
+      }
+    },
+    {
+      "id": "sin-respuesta",
+      "question": "¿Cuántos paneles solares tiene la biblioteca?",
+      "expected_behavior": "La colección no indica el número de paneles.",
+      "answer_with_context": "La biblioteca La Encina tiene 20 paneles solares instalados.",
+      "answer_without_context": "La biblioteca no proporciona información sobre el número de paneles solares que tiene.",
+      "retrieved_chunks": [
+        {
+          "chunk_id": "guia-energia-1",
+          "document_id": "guia-energia",
+          "document_title": "Guía de energía de la biblioteca ficticia La Encina",
+          "source": "Documento de ejemplo redactado para esta práctica",
+          "text": "La biblioteca La Encina instaló paneles solares en 2022. El sistema tiene una potencia de 18 kilovatios pico (kWp). En 2023 produjo 21.600 kilovatios hora (kWh) de electricidad. La biblioteca consume parte de esa energía durante el día y vierte el excedente",
+          "score": 0.72261
+        },
+        {
+          "chunk_id": "memoria-uso-2",
+          "document_id": "memoria-uso",
+          "document_title": "Memoria anual de la biblioteca La Encina, 2023",
+          "source": "Documento de ejemplo redactado para esta práctica",
+          "text": "de la producción solar se vertió a la red. La biblioteca abre de lunes a sábado.",
+          "score": 0.595077
+        }
+      ],
+      "parameters": {
+        "top_k": 2,
+        "chunk_words": 42,
+        "overlap_words": 10,
+        "max_new_tokens": 96,
+        "sampling": false,
+        "device": "cpu",
+        "threads": 4
+      },
+      "with_context": {
+        "generation_seconds": 9.1027,
+        "new_tokens": 18
+      },
+      "without_context": {
+        "generation_seconds": 8.0074,
+        "new_tokens": 19
+      }
+    }
+  ]
+}

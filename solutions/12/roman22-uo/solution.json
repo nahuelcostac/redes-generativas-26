@@ -1,0 +1,9 @@
+{
+  "issue": 12,
+  "author": "Roman22-uo",
+  "title": "Responder preguntas sobre documentos",
+  "summary": "Compara respuestas generadas con y sin contexto y permite inspeccionar los fragmentos recuperados.",
+  "mode": "precomputed",
+  "status": "draft",
+  "entry": "web/index.html"
+}

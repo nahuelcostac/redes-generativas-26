@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Responder preguntas sobre documentos</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Ir al contenido</a>
+    <header class="solution-header container">
+      <a id="catalogue-link" class="text-link" href="../../../../index.html"
+        >← Volver al catálogo</a
+      >
+      <a id="issue-link" class="text-link">Ver issue ↗</a>
+    </header>
+    <main id="main" class="container">
+      <p class="eyebrow" id="solution-mode"></p>
+      <h1 id="solution-title"></h1>
+      <p id="solution-summary" class="solution-summary"></p>
+      <p id="solution-author" class="solution-author"></p>
+      <section class="workspace" aria-labelledby="consulta-titulo">
+        <div class="intro-row">
+          <div>
+            <p class="eyebrow">Colección de documentos · RAG</p>
+            <h2 id="consulta-titulo">Explora una consulta</h2>
+          </div>
+          <label for="question-select">Pregunta disponible</label>
+        </div>
+        <select id="question-select" disabled>
+          <option>Cargando resultados…</option>
+        </select>
+        <p id="status" role="status" aria-live="polite">Cargando resultados precalculados…</p>
+        <div class="answers">
+          <article class="answer-card">
+            <h3>Con contexto recuperado</h3>
+            <p class="answer" id="answer-rag"></p>
+            <p class="answer-meta" id="rag-meta"></p>
+            <p class="review" id="rag-review"></p>
+          </article>
+          <article class="answer-card">
+            <h3>Sin contexto documental</h3>
+            <p class="answer" id="answer-base"></p>
+            <p class="answer-meta" id="base-meta"></p>
+            <p class="review" id="base-review"></p>
+          </article>
+        </div>
+        <h3>Fragmentos recuperados</h3>
+        <div id="chunks" class="chunks"></div>
+        <details>
+          <summary>Parámetros y ejecución</summary>
+          <pre id="parameters"></pre>
+        </details>
+      </section>
+      <section class="workspace" aria-labelledby="acerca-titulo">
+        <h2 id="acerca-titulo">Qué muestra esta comparación</h2>
+        <p>
+          El recuperador busca fragmentos por similitud semántica. El generador responde una vez con
+          esos fragmentos y otra vez sin ellos. Las respuestas son salidas del modelo, no hechos
+          verificados. Comprueba las citas en los fragmentos antes de confiar en una respuesta.
+        </p>
+        <p>
+          Los resultados se calculan previamente en local. Esta página no descarga modelos ni
+          procesa documentos.
+        </p>
+      </section>
+    </main>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

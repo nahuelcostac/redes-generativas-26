@@ -1,0 +1,84 @@
+@import url('../../../../shared/solution.css');
+
+.intro-row {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.intro-row h2 {
+  margin-top: 0;
+}
+label {
+  font-weight: 650;
+}
+select {
+  width: 100%;
+  max-width: 48rem;
+  padding: 0.8rem 1rem;
+  border: 1px solid #aab2c0;
+  border-radius: 0.6rem;
+  background: white;
+  color: #172033;
+  font: inherit;
+}
+#status {
+  min-height: 1.5rem;
+  color: #526078;
+}
+.answers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.answer-card,
+.chunk {
+  border: 1px solid #d9dee8;
+  border-radius: 0.8rem;
+  padding: 1rem 1.2rem;
+  background: #fff;
+}
+.answer-card h3,
+.chunk h4 {
+  margin-top: 0;
+}
+.answer {
+  line-height: 1.65;
+  white-space: pre-wrap;
+}
+.answer-meta,
+.chunk-meta {
+  color: #596579;
+  font-size: 0.9rem;
+}
+.review {
+  border-left: 4px solid #68758a;
+  padding: 0.55rem 0.75rem;
+  background: #f3f5f8;
+  font-size: 0.95rem;
+}
+.review.supported {
+  border-color: #16804a;
+  background: #edf8f1;
+}
+.review.unsupported {
+  border-color: #b6382f;
+  background: #fff1ef;
+}
+.chunks {
+  display: grid;
+  gap: 0.8rem;
+}
+.chunk blockquote {
+  margin: 0.7rem 0;
+  line-height: 1.55;
+}
+details {
+  margin-top: 1.4rem;
+}
+pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
