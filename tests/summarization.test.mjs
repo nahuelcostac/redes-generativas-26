@@ -7,12 +7,12 @@ import {
   splitText,
   validateResults,
   validateReview,
-} from '../solutions/10/lucialopezbarrio/web/results.mjs';
+} from '../solutions/10/lucia-lopezbarrio/web/results.mjs';
 
 const load = async (name) =>
   JSON.parse(
     await readFile(
-      new URL(`../solutions/10/lucialopezbarrio/results/${name}`, import.meta.url),
+      new URL(`../solutions/10/lucia-lopezbarrio/results/${name}`, import.meta.url),
       'utf8',
     ),
   );

@@ -1,6 +1,6 @@
 # Resumir documentos
 
-[Issue en GitHub](https://github.com/nahuelcostac/redes-generativas-26/issues/10) · Autor `lucialopezbarrio`
+[Issue en GitHub](https://github.com/nahuelcostac/redes-generativas-26/issues/10) · Autor `lucia-lopezbarrio`
 
 El modelo recibe un texto en español y genera un resumen en local. La web permite elegir un texto, verlo junto a su resumen, consultar los parámetros y comparar dos configuraciones. La web no ejecuta el modelo. Solo muestra resultados calculados previamente.
 
