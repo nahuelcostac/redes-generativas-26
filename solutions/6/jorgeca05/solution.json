@@ -1,0 +1,9 @@
+{
+  "issue": 6,
+  "author": "JorgeCA05",
+  "title": "Clasificar textos con categorías definidas por el usuario",
+  "summary": "Describe qué permite hacer tu solución.",
+  "mode": "browser",
+  "status": "ready",
+  "entry": "web/index.html"
+}

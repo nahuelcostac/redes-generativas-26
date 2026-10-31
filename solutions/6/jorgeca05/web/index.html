@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Solución · Redes Generativas</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Ir al contenido</a>
+    <header class="solution-header container">
+      <a id="catalogue-link" class="text-link" href="../../../../index.html"
+        >← Volver al catálogo</a
+      >
+      <a id="issue-link" class="text-link">Ver issue ↗</a>
+    </header>
+    <main id="main" class="container">
+      <p class="eyebrow" id="solution-mode"></p>
+      <h1 id="solution-title"></h1>
+      <p id="solution-summary" class="solution-summary"></p>
+      <p id="solution-author" class="solution-author"></p>
+      <section class="workspace" aria-labelledby="workspace-title">
+        <h2 id="workspace-title">Interfaz</h2>
+        <div id="app" style="display: flex; flex-direction: column; gap: 1rem">
+          <div>
+            <label for="inputText"><strong>Texto a clasificar:</strong></label>
+            <textarea
+              id="inputText"
+              rows="4"
+              style="width: 100%; padding: 0.5rem"
+              placeholder="Escribe aquí..."
+            ></textarea>
+          </div>
+          <div>
+            <label><strong>Ejemplos para probar:</strong></label>
+            <button id="btnEj1">1. Categoría clara (Deportes)</button>
+            <button id="btnEj2">2. Texto ambiguo (Política/Economía)</button>
+            <button id="btnEj3">3. No encaja (Receta de cocina)</button>
+          </div>
+          <div>
+            <label for="categories"
+              ><strong
+                >Categorías (separadas por comas para añadir/modificar/eliminar):</strong
+              ></label
+            >
+            <input
+              type="text"
+              id="categories"
+              style="width: 100%; padding: 0.5rem"
+              value="deportes, política, tecnología, economía"
+            />
+          </div>
+          <button id="classifyBtn" disabled style="padding: 0.5rem">Cargando modelo...</button>
+          <progress
+            id="progressBar"
+            value="0"
+            max="100"
+            style="width: 100%; display: none"
+          ></progress>
+          <p id="status" style="font-weight: bold; color: blue; margin: 0">
+            Estado: Inicializando...
+          </p>
+          <div
+            id="results"
+            style="padding: 1rem; border: 1px solid #ccc; background: #f9f9f9; min-height: 50px"
+          ></div>
+        </div>
+      </section>
+      <section class="workspace" aria-labelledby="notes-title">
+        <h2 id="notes-title">Cómo usarla</h2>
+        <p>1. Introduce un texto o selecciona uno de los ejemplos.</p>
+        <p>
+          2. Añade, modifica o elimina las categorías editando el cuadro de texto (separadas por
+          comas).
+        </p>
+        <p>
+          3. Pulsa el botón para clasificar. La primera vez tardará unos segundos en descargar el
+          modelo en caché. Se registran los tiempos de ejecución tras cada clasificación.
+        </p>
+      </section>
+    </main>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
