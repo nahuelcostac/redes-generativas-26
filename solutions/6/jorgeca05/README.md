@@ -4,12 +4,14 @@ Solución de JorgeCA05 para la issue #6.
 
 ## Ejecución
 
-El proyecto está diseñado con una arquitectura basada en el navegador (modo `browser`), por lo que no requiere de la carpeta `code/` ni de scripts de Python locales. 
+El proyecto está diseñado con una arquitectura basada en el navegador (modo `browser`), por lo que no requiere de la carpeta `code/` ni de scripts de Python locales.
 
 **Requisitos:**
+
 - Node.js (versión 22.12 o posterior) y `npm`.
 
 **Comandos para su ejecución:**
+
 1. Instalar dependencias del catálogo: `npm ci`
 2. Levantar el entorno de desarrollo: `npm run dev`
 3. Abrir la URL local (normalmente `http://localhost:5173`), navegar a la issue #6 y pulsar en "Abrir solución →".
@@ -26,6 +28,7 @@ La librería `@xenova/transformers` se importa directamente desde las dependenci
 ## Resultados
 
 **Qué funciona:**
+
 - La descarga e inicialización del modelo directamente en el cliente con una barra de progreso visible.
 - La clasificación interactiva de textos utilizando categorías personalizadas y dinámicas (separadas por comas).
 - La interfaz valida correctamente entradas vacías o insuficiencia de categorías (mínimo 2).
@@ -33,10 +36,12 @@ La librería `@xenova/transformers` se importa directamente desde las dependenci
 
 **Limitaciones detectadas:**
 El modelo utilizado (`Xenova/mobilebert-uncased-mnli`) presenta un rendimiento muy deficiente al clasificar textos en español, ya que está optimizado para inglés.
-- *Ejemplo probado:* Al introducir el texto "El delantero marcó un hat-trick en la final del torneo", el modelo falló la clasificación, asignando una mayor probabilidad a "tecnología" (34.82%) o "política" (31.52%) que a la correcta "deportes" (20.20%).
-- *Conclusión:* Para entornos reales con textos en español, sería necesario utilizar un modelo multilingüe más robusto, asumiendo el coste de un mayor tamaño de descarga o gestionando tokens de acceso.
+
+- _Ejemplo probado:_ Al introducir el texto "El delantero marcó un hat-trick en la final del torneo", el modelo falló la clasificación, asignando una mayor probabilidad a "tecnología" (34.82%) o "política" (31.52%) que a la correcta "deportes" (20.20%).
+- _Conclusión:_ Para entornos reales con textos en español, sería necesario utilizar un modelo multilingüe más robusto, asumiendo el coste de un mayor tamaño de descarga o gestionando tokens de acceso.
 
 **Registro de ejecución:**
+
 - **Equipo:** Portátil con procesador Intel i7, 32GB RAM
 - **Navegador:** Google Chrome
 - **Tiempo de descarga inicial:** 4s
