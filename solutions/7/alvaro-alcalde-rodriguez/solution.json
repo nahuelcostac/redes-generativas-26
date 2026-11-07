@@ -1,0 +1,9 @@
+{
+  "issue": 7,
+  "author": "alvaro-alcalde-rodriguez",
+  "title": "Generar imágenes a partir de texto",
+  "summary": "Explora imágenes generadas con SD-Turbo y compara el efecto de la semilla y los pasos de inferencia.",
+  "mode": "precomputed",
+  "status": "ready",
+  "entry": "web/index.html"
+}
