@@ -1,0 +1,79 @@
+{
+  "texts": [
+    {
+      "id": "saludo",
+      "label": "Frase corta",
+      "text": "Buenos días. Hoy vamos a convertir este texto en voz."
+    },
+    {
+      "id": "pregunta",
+      "label": "Pregunta y exclamación",
+      "text": "¿Has escuchado alguna vez tu propia voz grabada? ¡Suena muy diferente!"
+    },
+    {
+      "id": "numeros",
+      "label": "Números y fechas",
+      "text": "El tren sale a las 7 y 45 del 12 de marzo de 2026, desde el andén 3."
+    },
+    {
+      "id": "numeros-letras",
+      "label": "Números escritos con letras",
+      "text": "El tren sale a las siete y cuarenta y cinco del doce de marzo de dos mil veintiséis, desde el andén tres."
+    },
+    {
+      "id": "parrafo",
+      "label": "Párrafo descriptivo",
+      "text": "La síntesis de voz transforma un texto escrito en una señal de audio. Primero, el modelo convierte los caracteres en una representación interna. Después, predice la duración de cada sonido y genera la forma de onda final."
+    }
+  ],
+  "configurations": [
+    {
+      "id": "base",
+      "label": "Valores por defecto",
+      "speaking_rate": 1.0,
+      "noise_scale": 0.667,
+      "noise_scale_duration": 0.8,
+      "seed": 42
+    },
+    {
+      "id": "otra-semilla",
+      "label": "Otra semilla",
+      "speaking_rate": 1.0,
+      "noise_scale": 0.667,
+      "noise_scale_duration": 0.8,
+      "seed": 7
+    },
+    {
+      "id": "lenta",
+      "label": "Habla lenta",
+      "speaking_rate": 0.75,
+      "noise_scale": 0.667,
+      "noise_scale_duration": 0.8,
+      "seed": 42
+    },
+    {
+      "id": "rapida",
+      "label": "Habla rápida",
+      "speaking_rate": 1.4,
+      "noise_scale": 0.667,
+      "noise_scale_duration": 0.8,
+      "seed": 42
+    },
+    {
+      "id": "sin-ruido",
+      "label": "Sin ruido",
+      "speaking_rate": 1.0,
+      "noise_scale": 0.0,
+      "noise_scale_duration": 0.0,
+      "seed": 42
+    },
+    {
+      "id": "ruido-alto",
+      "label": "Ruido alto",
+      "speaking_rate": 1.0,
+      "noise_scale": 1.2,
+      "noise_scale_duration": 1.2,
+      "seed": 42
+    }
+  ]
+}
