@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Amplía una imagen al doble con un modelo de superresolución que se ejecuta en el navegador."
+    />
+    <title>Superresolución ×2 · Redes Generativas</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Ir al contenido</a>
+    <header class="solution-header container">
+      <a id="catalogue-link" class="text-link" href="../../../../index.html"
+        >← Volver al catálogo</a
+      >
+      <a id="issue-link" class="text-link">Ver issue #11 ↗</a>
+    </header>
+    <main id="main" class="container">
+      <div class="hero">
+        <div>
+          <p class="eyebrow" id="solution-mode"></p>
+          <h1 id="solution-title"></h1>
+          <p id="solution-summary" class="solution-summary"></p>
+          <p id="solution-author" class="solution-author"></p>
+        </div>
+        <p class="scale" aria-label="Factor de ampliación dos">×2</p>
+      </div>
+      <section class="workspace" aria-labelledby="upload-title">
+        <div class="section-title">
+          <h2 id="upload-title">1. Selecciona una imagen</h2>
+          <span>PNG, JPEG o WebP · hasta 8 MiB</span>
+        </div>
+        <div class="upload-grid">
+          <label class="upload-control" for="file-input"
+            ><strong>Elegir archivo</strong><span>Entre 16 y 256 px por lado</span
+            ><input id="file-input" type="file" accept="image/png,image/jpeg,image/webp"
+          /></label>
+          <div class="sample">
+            <h3>Ejemplo incluido</h3>
+            <p>
+              Un patrón de prueba creado en el navegador para esta solución. Se ofrece como CC0.
+            </p>
+            <button id="example-button" class="secondary" type="button">
+              Usar patrón de prueba
+            </button>
+          </div>
+        </div>
+        <p id="source" class="hint"></p>
+        <div class="actions">
+          <button id="run-button" class="button" type="button" disabled>Ampliar ×2</button
+          ><button id="cancel-button" class="secondary" type="button" hidden>Cancelar</button
+          ><a id="download-link" class="button" download="superresolucion-x2.png" hidden
+            >Descargar PNG</a
+          >
+        </div>
+        <div class="status-box">
+          <p id="status" role="status" aria-live="polite">Selecciona una imagen para empezar.</p>
+          <progress
+            id="progress"
+            max="100"
+            hidden
+            aria-label="Progreso de carga y procesamiento"
+          ></progress>
+        </div>
+        <p id="error" role="alert" hidden></p>
+      </section>
+      <section class="workspace" aria-labelledby="comparison-title">
+        <div class="section-title">
+          <h2 id="comparison-title">2. Compara el resultado</h2>
+          <span id="dimension-note">Aún no hay una imagen.</span>
+        </div>
+        <div id="comparison-empty" class="empty">
+          La imagen original, la interpolación y el resultado aparecerán aquí.
+        </div>
+        <div id="comparison" class="comparison" hidden>
+          <figure>
+            <canvas id="original-canvas"></canvas>
+            <figcaption id="original-caption">Entrada</figcaption>
+          </figure>
+          <figure>
+            <canvas id="interpolation-canvas"></canvas>
+            <figcaption>Interpolación bilineal ×2</figcaption>
+          </figure>
+          <figure>
+            <canvas id="output-canvas"></canvas>
+            <figcaption>Resultado de Swin2SR ×2</figcaption>
+          </figure>
+        </div>
+        <p id="timing" class="hint"></p>
+      </section>
+      <section class="notes" aria-labelledby="notes-title">
+        <h2 id="notes-title">Límites y modelo</h2>
+        <div class="notes-grid">
+          <div>
+            <h3>Modelo</h3>
+            <p>
+              <a href="https://huggingface.co/Xenova/swin2SR-lightweight-x2-64"
+                >Xenova/swin2SR-lightweight-x2-64</a
+              >
+              con la revisión fijada en el código. Transformers.js lo ejecuta con WebAssembly.
+            </p>
+          </div>
+          <div>
+            <h3>Requisitos</h3>
+            <p>
+              Se necesita un navegador moderno, WebAssembly, memoria disponible y conexión en la
+              primera carga. Los archivos no se envían a un servidor.
+            </p>
+          </div>
+          <div>
+            <h3>Interpretación</h3>
+            <p>
+              El modelo estima detalles. Puede suavizar texturas, crear halos o inventar rasgos.
+              Compáralo siempre con la interpolación y con la imagen de referencia si la tienes.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
