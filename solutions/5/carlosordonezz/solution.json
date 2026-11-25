@@ -1,0 +1,9 @@
+{
+  "issue": 5,
+  "author": "carlosordonezz",
+  "title": "Convertir texto en voz",
+  "summary": "Compara voces en español generadas en local con MMS-TTS al cambiar la velocidad, el ruido y la semilla, y mide su inteligibilidad con Whisper.",
+  "mode": "precomputed",
+  "status": "ready",
+  "entry": "web/index.html"
+}

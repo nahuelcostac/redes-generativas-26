@@ -1,0 +1,233 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-11T09:49:30.992464+00:00",
+  "source": "examples.json",
+  "model": {
+    "id": "openai/whisper-small",
+    "revision": "973afd24965f72e36ca33b3055d56a652f456b4d",
+    "license": "Apache-2.0",
+    "language": "es",
+    "decoding": "greedy"
+  },
+  "runtime": {
+    "python": "3.13.18",
+    "torch": "2.9.0+cu128",
+    "transformers": "4.57.1",
+    "device": "cpu",
+    "threads": 4
+  },
+  "normalization": "Minúsculas, sin puntuación. Se conservan tildes y cifras.",
+  "load_seconds": 0.868119,
+  "checks": [
+    {
+      "text_id": "saludo",
+      "configuration_id": "base",
+      "transcript": "Buenos días, hoy vamos a convertir este texto en voz.",
+      "wer": 0.0,
+      "seconds": 1.31249
+    },
+    {
+      "text_id": "saludo",
+      "configuration_id": "otra-semilla",
+      "transcript": "Buenos días, hoy vamos a convertir este texto en voz.",
+      "wer": 0.0,
+      "seconds": 1.251179
+    },
+    {
+      "text_id": "saludo",
+      "configuration_id": "lenta",
+      "transcript": "Buenos días, hoy vamos a convertir este texto en voz.",
+      "wer": 0.0,
+      "seconds": 1.222472
+    },
+    {
+      "text_id": "saludo",
+      "configuration_id": "rapida",
+      "transcript": "Buenos días, hoy vamos a convertir este texto en voz.",
+      "wer": 0.0,
+      "seconds": 1.332066
+    },
+    {
+      "text_id": "saludo",
+      "configuration_id": "sin-ruido",
+      "transcript": "Buenos días, hoy vamos a convertir este texto en voz.",
+      "wer": 0.0,
+      "seconds": 1.361188
+    },
+    {
+      "text_id": "saludo",
+      "configuration_id": "ruido-alto",
+      "transcript": "Buenos días, hoy vamos a convertir este texto en voz.",
+      "wer": 0.0,
+      "seconds": 1.436249
+    },
+    {
+      "text_id": "pregunta",
+      "configuration_id": "base",
+      "transcript": "¿Has escuchado alguna vez tu propia voz grabada suena muy diferente?",
+      "wer": 0.0,
+      "seconds": 1.55502
+    },
+    {
+      "text_id": "pregunta",
+      "configuration_id": "otra-semilla",
+      "transcript": "¿Has escuchado alguna vez tu propia voz grabada suena muy diferente?",
+      "wer": 0.0,
+      "seconds": 1.402509
+    },
+    {
+      "text_id": "pregunta",
+      "configuration_id": "lenta",
+      "transcript": "¿Has escuchado alguna vez tu propia voz grabada? Suena muy diferente.",
+      "wer": 0.0,
+      "seconds": 1.481599
+    },
+    {
+      "text_id": "pregunta",
+      "configuration_id": "rapida",
+      "transcript": "¿Has escuchado alguna vez tu propia voz grabada suena muy diferente?",
+      "wer": 0.0,
+      "seconds": 1.448168
+    },
+    {
+      "text_id": "pregunta",
+      "configuration_id": "sin-ruido",
+      "transcript": "¿Has escuchado alguna vez tu propia voz grabada suena muy diferente?",
+      "wer": 0.0,
+      "seconds": 1.43989
+    },
+    {
+      "text_id": "pregunta",
+      "configuration_id": "ruido-alto",
+      "transcript": "¿Has escuchado alguna vez tu propia voz grafada suena muy diferente?",
+      "wer": 0.0909,
+      "seconds": 1.438611
+    },
+    {
+      "text_id": "numeros",
+      "configuration_id": "base",
+      "transcript": "El tren sale a las Irodembo del 2 de marzo de 2012.",
+      "wer": 0.5,
+      "seconds": 1.575142
+    },
+    {
+      "text_id": "numeros",
+      "configuration_id": "otra-semilla",
+      "transcript": "El tren sale a la Z, y droro, si, no del VDO de marzo de VDO, vdvdvdvdvv, anézels de l'anézels.",
+      "wer": 0.6667,
+      "seconds": 2.41263
+    },
+    {
+      "text_id": "numeros",
+      "configuration_id": "lenta",
+      "transcript": "El tarin sale a la Sígor, de dos del Vídeo de marzo de dos, de dos arigates de Andén.",
+      "wer": 0.6667,
+      "seconds": 1.906296
+    },
+    {
+      "text_id": "numeros",
+      "configuration_id": "rapida",
+      "transcript": "El tren sale a la Sírro de Mno del 2 de marzo de 12 de octubre de Elandén.",
+      "wer": 0.5556,
+      "seconds": 1.781673
+    },
+    {
+      "text_id": "numeros",
+      "configuration_id": "sin-ruido",
+      "transcript": "El tren sale a la C y lo de no del 2 de marzo de 12 de doaí desde el Andén.",
+      "wer": 0.5556,
+      "seconds": 1.851431
+    },
+    {
+      "text_id": "numeros",
+      "configuration_id": "ruido-alto",
+      "transcript": "El carimzal de Alasidil vantelvounu dderidididididos de Marzo de Baurredi, y titula de Lidl del Delandeming.",
+      "wer": 0.8889,
+      "seconds": 2.548753
+    },
+    {
+      "text_id": "numeros-letras",
+      "configuration_id": "base",
+      "transcript": "El tren sale a la 7 y 40 y 5 de marzo de 2026 desde Landenteres.",
+      "wer": 0.5455,
+      "seconds": 1.79411
+    },
+    {
+      "text_id": "numeros-letras",
+      "configuration_id": "otra-semilla",
+      "transcript": "El tren salga a las 7, y 40, y 5 del 12 de marzo de 2026 desde el Andéntres.",
+      "wer": 0.4545,
+      "seconds": 2.07616
+    },
+    {
+      "text_id": "numeros-letras",
+      "configuration_id": "lenta",
+      "transcript": "El tren sale a las 7.40 y 5.12 de marzo de 2026 desde Landenteres.",
+      "wer": 0.5455,
+      "seconds": 1.765014
+    },
+    {
+      "text_id": "numeros-letras",
+      "configuration_id": "rapida",
+      "transcript": "El ten sale a la 7, y 40, y 5 del 12 de mazo de 2026 desde el Andentres.",
+      "wer": 0.5455,
+      "seconds": 1.914344
+    },
+    {
+      "text_id": "numeros-letras",
+      "configuration_id": "sin-ruido",
+      "transcript": "El tren salga a las 7 y 40 y 5 del 12 de marzo de 2026 desde el Andéntres.",
+      "wer": 0.4545,
+      "seconds": 1.855699
+    },
+    {
+      "text_id": "numeros-letras",
+      "configuration_id": "ruido-alto",
+      "transcript": "el tren Sallert-Kalasiete y 40 y 5 del 12 de marzo de 2026 desde Lantenteres",
+      "wer": 0.5909,
+      "seconds": 2.072484
+    },
+    {
+      "text_id": "parrafo",
+      "configuration_id": "base",
+      "transcript": "La síntesis de vos transforma un texto escrito en una señal de audio primero el modelo convierte los caracteres en una representación interna. Después predice la duración de cada sonido y genera la forma de onda final.",
+      "wer": 0.027,
+      "seconds": 2.536022
+    },
+    {
+      "text_id": "parrafo",
+      "configuration_id": "otra-semilla",
+      "transcript": "La síntesis de voz transforma un texto escrito en una señal de audio primero el modelo convierte los caracteres en una representación interna. Después predice la duración de cada sonido y genera la forma de onda final.",
+      "wer": 0.0,
+      "seconds": 2.411124
+    },
+    {
+      "text_id": "parrafo",
+      "configuration_id": "lenta",
+      "transcript": "La síntesis de voz transforma un texto escrito en una señal de audio primero el modelo convierte los caracteres en una representación interna. Después predice la duración de cada sonido y genera la forma de onda final.",
+      "wer": 0.0,
+      "seconds": 2.693537
+    },
+    {
+      "text_id": "parrafo",
+      "configuration_id": "rapida",
+      "transcript": "La síntesis de voz transforma un texto escrito en una señal de audio primero el modelo convierte los caracteres en una representación interna. Después predice la duración de cada sonido y genera la forma de onda final.",
+      "wer": 0.0,
+      "seconds": 2.696937
+    },
+    {
+      "text_id": "parrafo",
+      "configuration_id": "sin-ruido",
+      "transcript": "La síntesis de vos transforma un texto escrito en una señal de audio primero el modelo convierte los caracteres en una representación interna. Después predice la duración de cada sonido y genera la forma de onda final.",
+      "wer": 0.027,
+      "seconds": 2.478226
+    },
+    {
+      "text_id": "parrafo",
+      "configuration_id": "ruido-alto",
+      "transcript": "La síntesis de voz transforma un texto escrito en una señal de audio primer el modelo omierte los caracteres en una representación interna. Después predice la logración de cara sonido y genera la forma de onda final.",
+      "wer": 0.1081,
+      "seconds": 2.419404
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Convertir texto en voz · Redes Generativas</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Ir al contenido</a>
+    <header class="solution-header container">
+      <a id="catalogue-link" class="text-link" href="../../../../index.html"
+        >← Volver al catálogo</a
+      >
+      <a
+        id="issue-link"
+        class="text-link"
+        href="https://github.com/nahuelcostac/redes-generativas-26/issues/5"
+        >Ver issue ↗</a
+      >
+    </header>
+    <main id="main" class="container">
+      <p class="eyebrow" id="solution-mode">Resultados calculados previamente</p>
+      <h1>Convertir texto en voz</h1>
+      <p class="solution-summary">
+        Síntesis de voz en español con un modelo VITS. Compara audios del mismo texto con distintos
+        parámetros.
+      </p>
+      <p class="solution-author" id="solution-author"></p>
+      <p id="load-status" role="status">Cargando los audios…</p>
+      <div id="load-error" role="alert" hidden>
+        <p>No se pudieron cargar los resultados. Comprueba la conexión y vuelve a intentarlo.</p>
+        <button id="retry" class="button" type="button">Volver a cargar</button>
+      </div>
+      <div id="explorer" hidden>
+        <section class="input-section" aria-labelledby="input-title">
+          <div class="section-heading">
+            <h2 id="input-title">Texto de entrada</h2>
+            <div class="text-control">
+              <label for="text">Elegir ejemplo</label>
+              <select id="text"></select>
+            </div>
+          </div>
+          <p id="text-original" class="text-original"></p>
+          <p class="model-text-label">Texto que lee el modelo</p>
+          <p id="text-model" class="text-model"></p>
+          <p class="hint">
+            El tokenizador pasa el texto a minúsculas y elimina la puntuación. Por eso el modelo no
+            distingue una pregunta de una afirmación.
+          </p>
+          <p id="text-note" class="note" hidden></p>
+        </section>
+
+        <section class="comparison-section" aria-labelledby="comparison-title">
+          <h2 id="comparison-title">Comparar audios</h2>
+          <p class="hint">
+            Modelo ejecutado en local. Aquí solo se reproducen los audios guardados.
+          </p>
+          <div class="comparison">
+            <article class="result" aria-labelledby="label-a">
+              <label id="label-a" for="configuration-a">Configuración A</label>
+              <select id="configuration-a"></select>
+              <audio id="audio-a" controls preload="none"></audio>
+              <dl class="parameters" id="parameters-a"></dl>
+              <p class="run-info" id="run-info-a"></p>
+              <div class="asr" aria-live="polite">
+                <p class="asr-label">Lo que entiende Whisper</p>
+                <p class="asr-text" id="asr-a"></p>
+                <p class="asr-wer" id="wer-a"></p>
+              </div>
+            </article>
+            <article class="result" aria-labelledby="label-b">
+              <label id="label-b" for="configuration-b">Configuración B</label>
+              <select id="configuration-b"></select>
+              <audio id="audio-b" controls preload="none"></audio>
+              <dl class="parameters" id="parameters-b"></dl>
+              <p class="run-info" id="run-info-b"></p>
+              <div class="asr" aria-live="polite">
+                <p class="asr-label">Lo que entiende Whisper</p>
+                <p class="asr-text" id="asr-b"></p>
+                <p class="asr-wer" id="wer-b"></p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="summary-section" aria-labelledby="summary-title">
+          <h2 id="summary-title">Inteligibilidad de todos los audios</h2>
+          <p class="hint">
+            Tasa de error de palabras (WER) entre el texto original y la transcripción de Whisper. 0
+            % significa que Whisper reconoce todas las palabras. Pulsa una celda para cargarla en la
+            configuración A.
+          </p>
+          <p class="hint">
+            En «Números escritos con letras» Whisper escribe los números con cifras. Gran parte de
+            ese error viene de la comparación y no del audio. Lee sus transcripciones.
+          </p>
+          <div class="table-wrap">
+            <table id="summary-table"></table>
+          </div>
+        </section>
+
+        <details class="execution">
+          <summary>Modelo, parámetros y equipo</summary>
+          <dl id="execution-data"></dl>
+        </details>
+      </div>
+
+      <section class="local-section" aria-labelledby="local-title">
+        <h2 id="local-title">Probar en local</h2>
+        <p>
+          El script acepta un texto, una velocidad, dos niveles de ruido y una semilla. Guarda un
+          WAV y un JSON con todos los datos.
+        </p>
+        <pre><code>python generate.py --text "Hola, esto es una prueba." \
+  --speaking-rate 1.0 --noise-scale 0.667 --seed 42 \
+  --output ../results/mi-ejemplo.json</code></pre>
+        <a id="instructions-link" class="text-link">Instalación y ejecución ↗</a>
+      </section>
+    </main>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

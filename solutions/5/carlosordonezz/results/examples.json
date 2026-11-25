@@ -1,0 +1,690 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-11-11T09:48:31.789863+00:00",
+  "model": {
+    "id": "facebook/mms-tts-spa",
+    "revision": "833b96c0278c85cf09776d565ba8f1cb2819f7ec",
+    "architecture": "VITS",
+    "dtype": "float32",
+    "license": "CC-BY-NC-4.0",
+    "parameters": 36285936,
+    "sampling_rate": 16000,
+    "defaults": {
+      "speaking_rate": 1.0,
+      "noise_scale": 0.667,
+      "noise_scale_duration": 0.8
+    }
+  },
+  "runtime": {
+    "python": "3.13.18",
+    "torch": "2.9.0+cu128",
+    "transformers": "4.57.1",
+    "huggingface_hub": "0.36.0",
+    "numpy": "2.5.4",
+    "device": "cpu",
+    "threads": 4,
+    "hardware": {
+      "system": "Linux",
+      "release": "6.18.44-fc-v378",
+      "architecture": "x86_64",
+      "logical_cpus": 4,
+      "processor": "Intel(R) Xeon(R) Processor @ 2.30GHz",
+      "memory_bytes": 16867414016
+    }
+  },
+  "load_seconds": 0.44666,
+  "texts": [
+    {
+      "id": "saludo",
+      "label": "Frase corta",
+      "text": "Buenos días. Hoy vamos a convertir este texto en voz.",
+      "model_text": "buenos días hoy vamos a convertir este texto en voz"
+    },
+    {
+      "id": "pregunta",
+      "label": "Pregunta y exclamación",
+      "text": "¿Has escuchado alguna vez tu propia voz grabada? ¡Suena muy diferente!",
+      "model_text": "has escuchado alguna vez tu propia voz grabada suena muy diferente"
+    },
+    {
+      "id": "numeros",
+      "label": "Números y fechas",
+      "text": "El tren sale a las 7 y 45 del 12 de marzo de 2026, desde el andén 3.",
+      "model_text": "el tren sale a las 7 y 45 del 12 de marzo de 2026 desde el andén 3"
+    },
+    {
+      "id": "numeros-letras",
+      "label": "Números escritos con letras",
+      "text": "El tren sale a las siete y cuarenta y cinco del doce de marzo de dos mil veintiséis, desde el andén tres.",
+      "model_text": "el tren sale a las siete y cuarenta y cinco del doce de marzo de dos mil veintiséis desde el andén tres"
+    },
+    {
+      "id": "parrafo",
+      "label": "Párrafo descriptivo",
+      "text": "La síntesis de voz transforma un texto escrito en una señal de audio. Primero, el modelo convierte los caracteres en una representación interna. Después, predice la duración de cada sonido y genera la forma de onda final.",
+      "model_text": "la síntesis de voz transforma un texto escrito en una señal de audio primero el modelo convierte los caracteres en una representación interna después predice la duración de cada sonido y genera la forma de onda final"
+    }
+  ],
+  "configurations": [
+    {
+      "id": "base",
+      "label": "Valores por defecto",
+      "speaking_rate": 1.0,
+      "noise_scale": 0.667,
+      "noise_scale_duration": 0.8,
+      "seed": 42
+    },
+    {
+      "id": "otra-semilla",
+      "label": "Otra semilla",
+      "speaking_rate": 1.0,
+      "noise_scale": 0.667,
+      "noise_scale_duration": 0.8,
+      "seed": 7
+    },
+    {
+      "id": "lenta",
+      "label": "Habla lenta",
+      "speaking_rate": 0.75,
+      "noise_scale": 0.667,
+      "noise_scale_duration": 0.8,
+      "seed": 42
+    },
+    {
+      "id": "rapida",
+      "label": "Habla rápida",
+      "speaking_rate": 1.4,
+      "noise_scale": 0.667,
+      "noise_scale_duration": 0.8,
+      "seed": 42
+    },
+    {
+      "id": "sin-ruido",
+      "label": "Sin ruido",
+      "speaking_rate": 1.0,
+      "noise_scale": 0.0,
+      "noise_scale_duration": 0.0,
+      "seed": 42
+    },
+    {
+      "id": "ruido-alto",
+      "label": "Ruido alto",
+      "speaking_rate": 1.0,
+      "noise_scale": 1.2,
+      "noise_scale_duration": 1.2,
+      "seed": 42
+    }
+  ],
+  "runs": [
+    {
+      "text_id": "saludo",
+      "configuration_id": "base",
+      "parameters": {
+        "speaking_rate": 1.0,
+        "noise_scale": 0.667,
+        "noise_scale_duration": 0.8,
+        "seed": 42
+      },
+      "audio": "audio/examples/saludo--base.wav",
+      "input_tokens": 103,
+      "generation_seconds": 0.773802,
+      "real_time_factor": 0.1668,
+      "samples": 74240,
+      "duration_seconds": 4.64,
+      "peak": 0.8021,
+      "rms_dbfs": -17.15,
+      "clipped_samples": 0
+    },
+    {
+      "text_id": "saludo",
+      "configuration_id": "otra-semilla",
+      "parameters": {
+        "speaking_rate": 1.0,
+        "noise_scale": 0.667,
+        "noise_scale_duration": 0.8,
+        "seed": 7
+      },
+      "audio": "audio/examples/saludo--otra-semilla.wav",
+      "input_tokens": 103,
+      "generation_seconds": 0.584881,
+      "real_time_factor": 0.139,
+      "samples": 67328,
+      "duration_seconds": 4.208,
+      "peak": 0.7508,
+      "rms_dbfs": -17.23,
+      "clipped_samples": 0
+    },
+    {
+      "text_id": "saludo",
+      "configuration_id": "lenta",
+      "parameters": {
+        "speaking_rate": 0.75,
+        "noise_scale": 0.667,
+        "noise_scale_duration": 0.8,
+        "seed": 42
+      },
+      "audio": "audio/examples/saludo--lenta.wav",
+      "input_tokens": 103,
+      "generation_seconds": 0.856658,
+      "real_time_factor": 0.1475,
+      "samples": 92928,
+      "duration_seconds": 5.808,
+      "peak": 0.8028,
+      "rms_dbfs": -17.41,
+      "clipped_samples": 0
+    },
+    {
+      "text_id": "saludo",
+      "configuration_id": "rapida",
+      "parameters": {
+        "speaking_rate": 1.4,
+        "noise_scale": 0.667,
+        "noise_scale_duration": 0.8,
+        "seed": 42
+      },
+      "audio": "audio/examples/saludo--rapida.wav",
+      "input_tokens": 103,
+      "generation_seconds": 0.483608,
+      "real_time_factor": 0.1326,
+      "samples": 58368,
+      "duration_seconds": 3.648,
+      "peak": 0.7351,
+      "rms_dbfs": -17.25,
+      "clipped_samples": 0
+    },
+    {
+      "text_id": "saludo",
+      "configuration_id": "sin-ruido",
+      "parameters": {
+        "speaking_rate": 1.0,
+        "noise_scale": 0.0,
+        "noise_scale_duration": 0.0,
+        "seed": 42
+      },
+      "audio": "audio/examples/saludo--sin-ruido.wav",
+      "input_tokens": 103,
+      "generation_seconds": 0.55,
+      "real_time_factor": 0.1283,
+      "samples": 68608,
+      "duration_seconds": 4.288,
+      "peak": 0.8051,
+      "rms_dbfs": -16.92,
+      "clipped_samples": 0
+    },
+    {
+      "text_id": "saludo",
+      "configuration_id": "ruido-alto",
+      "parameters": {
+        "speaking_rate": 1.0,
+        "noise_scale": 1.2,
+        "noise_scale_duration": 1.2,
+        "seed": 42
+      },
+      "audio": "audio/examples/saludo--ruido-alto.wav",
+      "input_tokens": 103,
+      "generation_seconds": 0.718996,
+      "real_time_factor": 0.1326,
+      "samples": 86784,
+      "duration_seconds": 5.424,
+      "peak": 0.8581,
+      "rms_dbfs": -17.51,
+      "clipped_samples": 0
+    },
+    {
+      "text_id": "pregunta",
+      "configuration_id": "base",
+      "parameters": {
+        "speaking_rate": 1.0,
+        "noise_scale": 0.667,
+        "noise_scale_duration": 0.8,
+        "seed": 42
+      },
+      "audio": "audio/examples/pregunta--base.wav",
+      "input_tokens": 133,
+      "generation_seconds": 0.762535,
+      "real_time_factor": 0.1381,
+      "samples": 88320,
+      "duration_seconds": 5.52,
+      "peak": 0.7783,
+      "rms_dbfs": -18.26,
+      "clipped_samples": 0
+    },
+    {
+      "text_id": "pregunta",
+      "configuration_id": "otra-semilla",
+      "parameters": {
+        "speaking_rate": 1.0,
+        "noise_scale": 0.667,
+        "noise_scale_duration": 0.8,
+        "seed": 7
+      },
+      "audio": "audio/examples/pregunta--otra-semilla.wav",
+      "input_tokens": 133,
+      "generation_seconds": 0.639434,
+      "real_time_factor": 0.1328,
+      "samples": 77056,
+      "duration_seconds": 4.816,
+      "peak": 0.8058,
+      "rms_dbfs": -18.6,
+      "clipped_samples": 0
+    },
+    {
+      "text_id": "pregunta",
+      "configuration_id": "lenta",
+      "parameters": {
+        "speaking_rate": 0.75,
+        "noise_scale": 0.667,
+        "noise_scale_duration": 0.8,
+        "seed": 42
+      },
+      "audio": "audio/examples/pregunta--lenta.wav",
+      "input_tokens": 133,
+      "generation_seconds": 0.953481,
+      "real_time_factor": 0.1399,
+      "samples": 109056,
+      "duration_seconds": 6.816,
+      "peak": 0.8028,
+      "rms_dbfs": -18.36,
+      "clipped_samples": 0
+    },
+    {
+      "text_id": "pregunta",
+      "configuration_id": "rapida",
+      "parameters": {
+        "speaking_rate": 1.4,
+        "noise_scale": 0.667,
+        "noise_scale_duration": 0.8,
+        "seed": 42
+      },
+      "audio": "audio/examples/pregunta--rapida.wav",
+      "input_tokens": 133,
+      "generation_seconds": 0.656492,
+      "real_time_factor": 0.152,
+      "samples": 69120,
+      "duration_seconds": 4.32,
+      "peak": 0.7882,
+      "rms_dbfs": -18.34,
+      "clipped_samples": 0
+    },
+    {
+      "text_id": "pregunta",
+      "configuration_id": "sin-ruido",
+      "parameters": {
+        "speaking_rate": 1.0,
+        "noise_scale": 0.0,
+        "noise_scale_duration": 0.0,
+        "seed": 42
+      },
+      "audio": "audio/examples/pregunta--sin-ruido.wav",
+      "input_tokens": 133,
+      "generation_seconds": 0.557908,
+      "real_time_factor": 0.1215,
+      "samples": 73472,
+      "duration_seconds": 4.592,
+      "peak": 0.764,
+      "rms_dbfs": -18.35,
+      "clipped_samples": 0
+    },
+    {
+      "text_id": "pregunta",
+      "configuration_id": "ruido-alto",
+      "parameters": {
+        "speaking_rate": 1.0,
+        "noise_scale": 1.2,
+        "noise_scale_duration": 1.2,
+        "seed": 42
+      },
+      "audio": "audio/examples/pregunta--ruido-alto.wav",
+      "input_tokens": 133,
+      "generation_seconds": 0.713564,
+      "real_time_factor": 0.1167,
+      "samples": 97792,
+      "duration_seconds": 6.112,
+      "peak": 0.8163,
+      "rms_dbfs": -18.24,
+      "clipped_samples": 0
+    },
+    {
+      "text_id": "numeros",
+      "configuration_id": "base",
+      "parameters": {
+        "speaking_rate": 1.0,
+        "noise_scale": 0.667,
+        "noise_scale_duration": 0.8,
+        "seed": 42
+      },
+      "audio": "audio/examples/numeros--base.wav",
+      "input_tokens": 133,
+      "generation_seconds": 1.012973,
+      "real_time_factor": 0.1324,
+      "samples": 122368,
+      "duration_seconds": 7.648,
+      "peak": 0.8171,
+      "rms_dbfs": -17.81,
+      "clipped_samples": 0
+    },
+    {
+      "text_id": "numeros",
+      "configuration_id": "otra-semilla",
+      "parameters": {
+        "speaking_rate": 1.0,
+        "noise_scale": 0.667,
+        "noise_scale_duration": 0.8,
+        "seed": 7
+      },
+      "audio": "audio/examples/numeros--otra-semilla.wav",
+      "input_tokens": 133,
+      "generation_seconds": 0.85698,
+      "real_time_factor": 0.1152,
+      "samples": 119040,
+      "duration_seconds": 7.44,
+      "peak": 0.8301,
+      "rms_dbfs": -17.79,
+      "clipped_samples": 0
+    },
+    {
+      "text_id": "numeros",
+      "configuration_id": "lenta",
+      "parameters": {
+        "speaking_rate": 0.75,
+        "noise_scale": 0.667,
+        "noise_scale_duration": 0.8,
+        "seed": 42
+      },
+      "audio": "audio/examples/numeros--lenta.wav",
+      "input_tokens": 133,
+      "generation_seconds": 1.349344,
+      "real_time_factor": 0.1389,
+      "samples": 155392,
+      "duration_seconds": 9.712,
+      "peak": 0.8212,
+      "rms_dbfs": -18.07,
+      "clipped_samples": 0
+    },
+    {
+      "text_id": "numeros",
+      "configuration_id": "rapida",
+      "parameters": {
+        "speaking_rate": 1.4,
+        "noise_scale": 0.667,
+        "noise_scale_duration": 0.8,
+        "seed": 42
+      },
+      "audio": "audio/examples/numeros--rapida.wav",
+      "input_tokens": 133,
+      "generation_seconds": 0.698715,
+      "real_time_factor": 0.1174,
+      "samples": 95232,
+      "duration_seconds": 5.952,
+      "peak": 0.8326,
+      "rms_dbfs": -17.55,
+      "clipped_samples": 0
+    },
+    {
+      "text_id": "numeros",
+      "configuration_id": "sin-ruido",
+      "parameters": {
+        "speaking_rate": 1.0,
+        "noise_scale": 0.0,
+        "noise_scale_duration": 0.0,
+        "seed": 42
+      },
+      "audio": "audio/examples/numeros--sin-ruido.wav",
+      "input_tokens": 133,
+      "generation_seconds": 0.890754,
+      "real_time_factor": 0.1295,
+      "samples": 110080,
+      "duration_seconds": 6.88,
+      "peak": 0.822,
+      "rms_dbfs": -17.93,
+      "clipped_samples": 0
+    },
+    {
+      "text_id": "numeros",
+      "configuration_id": "ruido-alto",
+      "parameters": {
+        "speaking_rate": 1.0,
+        "noise_scale": 1.2,
+        "noise_scale_duration": 1.2,
+        "seed": 42
+      },
+      "audio": "audio/examples/numeros--ruido-alto.wav",
+      "input_tokens": 133,
+      "generation_seconds": 1.111626,
+      "real_time_factor": 0.1308,
+      "samples": 135936,
+      "duration_seconds": 8.496,
+      "peak": 0.8745,
+      "rms_dbfs": -17.8,
+      "clipped_samples": 0
+    },
+    {
+      "text_id": "numeros-letras",
+      "configuration_id": "base",
+      "parameters": {
+        "speaking_rate": 1.0,
+        "noise_scale": 0.667,
+        "noise_scale_duration": 0.8,
+        "seed": 42
+      },
+      "audio": "audio/examples/numeros-letras--base.wav",
+      "input_tokens": 207,
+      "generation_seconds": 1.014506,
+      "real_time_factor": 0.1241,
+      "samples": 130816,
+      "duration_seconds": 8.176,
+      "peak": 0.8113,
+      "rms_dbfs": -18.45,
+      "clipped_samples": 0
+    },
+    {
+      "text_id": "numeros-letras",
+      "configuration_id": "otra-semilla",
+      "parameters": {
+        "speaking_rate": 1.0,
+        "noise_scale": 0.667,
+        "noise_scale_duration": 0.8,
+        "seed": 7
+      },
+      "audio": "audio/examples/numeros-letras--otra-semilla.wav",
+      "input_tokens": 207,
+      "generation_seconds": 0.923817,
+      "real_time_factor": 0.1269,
+      "samples": 116480,
+      "duration_seconds": 7.28,
+      "peak": 0.8116,
+      "rms_dbfs": -18.15,
+      "clipped_samples": 0
+    },
+    {
+      "text_id": "numeros-letras",
+      "configuration_id": "lenta",
+      "parameters": {
+        "speaking_rate": 0.75,
+        "noise_scale": 0.667,
+        "noise_scale_duration": 0.8,
+        "seed": 42
+      },
+      "audio": "audio/examples/numeros-letras--lenta.wav",
+      "input_tokens": 207,
+      "generation_seconds": 1.571229,
+      "real_time_factor": 0.1554,
+      "samples": 161792,
+      "duration_seconds": 10.112,
+      "peak": 0.7824,
+      "rms_dbfs": -18.69,
+      "clipped_samples": 0
+    },
+    {
+      "text_id": "numeros-letras",
+      "configuration_id": "rapida",
+      "parameters": {
+        "speaking_rate": 1.4,
+        "noise_scale": 0.667,
+        "noise_scale_duration": 0.8,
+        "seed": 42
+      },
+      "audio": "audio/examples/numeros-letras--rapida.wav",
+      "input_tokens": 207,
+      "generation_seconds": 0.885011,
+      "real_time_factor": 0.1349,
+      "samples": 104960,
+      "duration_seconds": 6.56,
+      "peak": 0.8637,
+      "rms_dbfs": -18.3,
+      "clipped_samples": 0
+    },
+    {
+      "text_id": "numeros-letras",
+      "configuration_id": "sin-ruido",
+      "parameters": {
+        "speaking_rate": 1.0,
+        "noise_scale": 0.0,
+        "noise_scale_duration": 0.0,
+        "seed": 42
+      },
+      "audio": "audio/examples/numeros-letras--sin-ruido.wav",
+      "input_tokens": 207,
+      "generation_seconds": 0.905588,
+      "real_time_factor": 0.1338,
+      "samples": 108288,
+      "duration_seconds": 6.768,
+      "peak": 0.8227,
+      "rms_dbfs": -18.3,
+      "clipped_samples": 0
+    },
+    {
+      "text_id": "numeros-letras",
+      "configuration_id": "ruido-alto",
+      "parameters": {
+        "speaking_rate": 1.0,
+        "noise_scale": 1.2,
+        "noise_scale_duration": 1.2,
+        "seed": 42
+      },
+      "audio": "audio/examples/numeros-letras--ruido-alto.wav",
+      "input_tokens": 207,
+      "generation_seconds": 1.100053,
+      "real_time_factor": 0.1234,
+      "samples": 142592,
+      "duration_seconds": 8.912,
+      "peak": 0.8563,
+      "rms_dbfs": -18.34,
+      "clipped_samples": 0
+    },
+    {
+      "text_id": "parrafo",
+      "configuration_id": "base",
+      "parameters": {
+        "speaking_rate": 1.0,
+        "noise_scale": 0.667,
+        "noise_scale_duration": 0.8,
+        "seed": 42
+      },
+      "audio": "audio/examples/parrafo--base.wav",
+      "input_tokens": 433,
+      "generation_seconds": 3.513818,
+      "real_time_factor": 0.2024,
+      "samples": 277760,
+      "duration_seconds": 17.36,
+      "peak": 0.8343,
+      "rms_dbfs": -18.94,
+      "clipped_samples": 0
+    },
+    {
+      "text_id": "parrafo",
+      "configuration_id": "otra-semilla",
+      "parameters": {
+        "speaking_rate": 1.0,
+        "noise_scale": 0.667,
+        "noise_scale_duration": 0.8,
+        "seed": 7
+      },
+      "audio": "audio/examples/parrafo--otra-semilla.wav",
+      "input_tokens": 433,
+      "generation_seconds": 2.616374,
+      "real_time_factor": 0.1617,
+      "samples": 258816,
+      "duration_seconds": 16.176,
+      "peak": 0.7941,
+      "rms_dbfs": -18.85,
+      "clipped_samples": 0
+    },
+    {
+      "text_id": "parrafo",
+      "configuration_id": "lenta",
+      "parameters": {
+        "speaking_rate": 0.75,
+        "noise_scale": 0.667,
+        "noise_scale_duration": 0.8,
+        "seed": 42
+      },
+      "audio": "audio/examples/parrafo--lenta.wav",
+      "input_tokens": 433,
+      "generation_seconds": 4.032879,
+      "real_time_factor": 0.1856,
+      "samples": 347648,
+      "duration_seconds": 21.728,
+      "peak": 0.7796,
+      "rms_dbfs": -18.93,
+      "clipped_samples": 0
+    },
+    {
+      "text_id": "parrafo",
+      "configuration_id": "rapida",
+      "parameters": {
+        "speaking_rate": 1.4,
+        "noise_scale": 0.667,
+        "noise_scale_duration": 0.8,
+        "seed": 42
+      },
+      "audio": "audio/examples/parrafo--rapida.wav",
+      "input_tokens": 433,
+      "generation_seconds": 1.932568,
+      "real_time_factor": 0.1388,
+      "samples": 222720,
+      "duration_seconds": 13.92,
+      "peak": 0.8846,
+      "rms_dbfs": -19.04,
+      "clipped_samples": 0
+    },
+    {
+      "text_id": "parrafo",
+      "configuration_id": "sin-ruido",
+      "parameters": {
+        "speaking_rate": 1.0,
+        "noise_scale": 0.0,
+        "noise_scale_duration": 0.0,
+        "seed": 42
+      },
+      "audio": "audio/examples/parrafo--sin-ruido.wav",
+      "input_tokens": 433,
+      "generation_seconds": 1.977641,
+      "real_time_factor": 0.1314,
+      "samples": 240896,
+      "duration_seconds": 15.056,
+      "peak": 0.7839,
+      "rms_dbfs": -18.62,
+      "clipped_samples": 0
+    },
+    {
+      "text_id": "parrafo",
+      "configuration_id": "ruido-alto",
+      "parameters": {
+        "speaking_rate": 1.0,
+        "noise_scale": 1.2,
+        "noise_scale_duration": 1.2,
+        "seed": 42
+      },
+      "audio": "audio/examples/parrafo--ruido-alto.wav",
+      "input_tokens": 433,
+      "generation_seconds": 3.093024,
+      "real_time_factor": 0.1629,
+      "samples": 303872,
+      "duration_seconds": 18.992,
+      "peak": 0.9002,
+      "rms_dbfs": -19.12,
+      "clipped_samples": 0
+    }
+  ]
+}
